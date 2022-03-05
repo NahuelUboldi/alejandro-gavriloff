@@ -1,0 +1,19 @@
+@use "../components/mixins" as *;
+@use "../custom" as *;
+
+#contact-form {
+  background-color: $gray-300;
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+  .form-group {
+    input,
+    textarea {
+      background: none;
+      border-radius: 0;
+      border: none;
+      border-bottom: solid 1px $gray-500;
+    }
+  }
+}
+
+// DEE2E6

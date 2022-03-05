@@ -1,0 +1,40 @@
+@use "../custom" as *;
+
+//GRADIENT MIXIN
+@mixin gradient {
+  background: linear-gradient(
+    to right,
+    rgba($primary, 0.95),
+    rgba($secondary, 0.95)
+  );
+}
+
+//ABSOLUTE CENTER
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// TRANSITION PROPERTY
+@mixin transitionProperty {
+  transition: all ease 700ms;
+}
+@mixin transitionLong {
+  transition: all ease 10s;
+}
+@mixin shadowDrop {
+  -webkit-box-shadow: 2px 5px 16px 0px #000, 5px 7px 24px 8px rgba(0, 0, 0, 0);
+  box-shadow: 2px 5px 16px 0px #000, 5px 7px 24px 8px rgba(0, 0, 0, 0);
+}
+
+@mixin backgroundTexture {
+  background-image: url('../img/bg/dark-bg.png');
+}
+@mixin backgroundTextureGray {
+  background-image: url('../img/bg/gray-300-bg.png');
+}
+@mixin backgroundTextureBeige {
+  background-image: url('../img/bg/beige-bg.png');
+}

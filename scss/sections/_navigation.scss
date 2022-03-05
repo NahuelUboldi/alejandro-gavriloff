@@ -1,0 +1,29 @@
+@use "../components/mixins" as *;
+#navigation {
+  position: relative;
+  overflow: hidden;
+  nav.navbar {
+    background: transparent;
+    border: none;
+  }
+  .brand-hidden {
+    display: none;
+  }
+  .rect-bg {
+    @include backgroundTexture;
+    position: absolute;
+    right: -15px;
+    top: -24px;
+    width: 800px;
+    height: 37px;
+    transform: rotate(3deg);
+    z-index: -90;
+  }
+  .navbar-toggler {
+    z-index: 99;
+    background-color: white;
+  }
+  .navbar-link.active {
+    font-weight: 900;
+  }
+}

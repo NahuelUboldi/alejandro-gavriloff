@@ -1,0 +1,9 @@
+@use "../components/mixins" as *;
+/*section quote*/
+#quote {
+  @include backgroundTexture;
+  svg {
+    margin-bottom: -1px;
+    margin-top: -1px;
+  }
+}

@@ -1,0 +1,882 @@
+{
+  "cuadros": [
+    {
+      "id": "1",
+      "year": "",
+      "title": "",
+      "periodo": "1",
+      "category": "acuarela",
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/01-lg.jpg",
+        "md": "img/galeria/acuarelas/01-md.jpg",
+        "sm": "img/galeria/acuarelas/01-sm.jpg",
+        "xs": "img/galeria/acuarelas/01-xs.jpg"
+      }
+    },
+    {
+      "id": "2",
+      "year": "",
+      "title": "",
+      "periodo": "1",
+      "category": "acuarela",
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/02-lg.jpg",
+        "md": "img/galeria/acuarelas/02-md.jpg",
+        "sm": "img/galeria/acuarelas/02-sm.jpg",
+        "xs": "img/galeria/acuarelas/02-xs.jpg"
+      }
+    },
+    {
+      "id": "3",
+      "year": "",
+      "title": "",
+      "periodo": "1",
+      "category": "acuarela",
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/03-lg.jpg",
+        "md": "img/galeria/acuarelas/03-md.jpg",
+        "sm": "img/galeria/acuarelas/03-sm.jpg",
+        "xs": "img/galeria/acuarelas/03-xs.jpg"
+      }
+    },
+    {
+      "id": "4",
+      "year": "",
+      "title": "",
+      "periodo": "1",
+      "category": "acuarela",
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/04-lg.jpg",
+        "md": "img/galeria/acuarelas/04-md.jpg",
+        "sm": "img/galeria/acuarelas/04-sm.jpg",
+        "xs": "img/galeria/acuarelas/04-xs.jpg"
+      }
+    },
+    {
+      "id": "5",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/05-lg.jpg",
+        "md": "img/galeria/acuarelas/05-md.jpg",
+        "sm": "img/galeria/acuarelas/05-sm.jpg",
+        "xs": "img/galeria/acuarelas/05-xs.jpg"
+      }
+    },
+    {
+      "id": "6",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/06-lg.jpg",
+        "md": "img/galeria/acuarelas/06-md.jpg",
+        "sm": "img/galeria/acuarelas/06-sm.jpg",
+        "xs": "img/galeria/acuarelas/06-xs.jpg"
+      }
+    },
+    {
+      "id": "7",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/07-lg.jpg",
+        "md": "img/galeria/acuarelas/07-md.jpg",
+        "sm": "img/galeria/acuarelas/07-sm.jpg",
+        "xs": "img/galeria/acuarelas/07-xs.jpg"
+      }
+    },
+    {
+      "id": "8",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": ["religion"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/08-lg.jpg",
+        "md": "img/galeria/acuarelas/08-md.jpg",
+        "sm": "img/galeria/acuarelas/08-sm.jpg",
+        "xs": "img/galeria/acuarelas/08-xs.jpg"
+      }
+    },
+    {
+      "id": "9",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/09-lg.jpg",
+        "md": "img/galeria/acuarelas/09-md.jpg",
+        "sm": "img/galeria/acuarelas/09-sm.jpg",
+        "xs": "img/galeria/acuarelas/09-xs.jpg"
+      }
+    },
+    {
+      "id": "10",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": ["oriente"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/10-lg.jpg",
+        "md": "img/galeria/acuarelas/10-md.jpg",
+        "sm": "img/galeria/acuarelas/10-sm.jpg",
+        "xs": "img/galeria/acuarelas/10-xs.jpg"
+      }
+    },
+    {
+      "id": "11",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/11-lg.jpg",
+        "md": "img/galeria/acuarelas/11-md.jpg",
+        "sm": "img/galeria/acuarelas/11-sm.jpg",
+        "xs": "img/galeria/acuarelas/11-xs.jpg"
+      }
+    },
+    {
+      "id": "12",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/12-lg.jpg",
+        "md": "img/galeria/acuarelas/12-md.jpg",
+        "sm": "img/galeria/acuarelas/12-sm.jpg",
+        "xs": "img/galeria/acuarelas/12-xs.jpg"
+      }
+    },
+    {
+      "id": "13",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": ["historia"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/13-lg.jpg",
+        "md": "img/galeria/acuarelas/13-md.jpg",
+        "sm": "img/galeria/acuarelas/13-sm.jpg",
+        "xs": "img/galeria/acuarelas/13-xs.jpg"
+      }
+    },
+    {
+      "id": "14",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/14-lg.jpg",
+        "md": "img/galeria/acuarelas/14-md.jpg",
+        "sm": "img/galeria/acuarelas/14-sm.jpg",
+        "xs": "img/galeria/acuarelas/14-xs.jpg"
+      }
+    },
+    {
+      "id": "15",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/15-lg.jpg",
+        "md": "img/galeria/acuarelas/15-md.jpg",
+        "sm": "img/galeria/acuarelas/15-sm.jpg",
+        "xs": "img/galeria/acuarelas/15-xs.jpg"
+      }
+    },
+    {
+      "id": "16",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/16-lg.jpg",
+        "md": "img/galeria/acuarelas/16-md.jpg",
+        "sm": "img/galeria/acuarelas/16-sm.jpg",
+        "xs": "img/galeria/acuarelas/16-xs.jpg"
+      }
+    },
+    {
+      "id": "17",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": ["religion"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/17-lg.jpg",
+        "md": "img/galeria/acuarelas/17-md.jpg",
+        "sm": "img/galeria/acuarelas/17-sm.jpg",
+        "xs": "img/galeria/acuarelas/17-xs.jpg"
+      }
+    },
+    {
+      "id": "18",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/18-lg.jpg",
+        "md": "img/galeria/acuarelas/18-md.jpg",
+        "sm": "img/galeria/acuarelas/18-sm.jpg",
+        "xs": "img/galeria/acuarelas/18-xs.jpg"
+      }
+    },
+    {
+      "id": "19",
+      "year": "",
+      "title": "",
+      "periodo": "1",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/19-lg.jpg",
+        "md": "img/galeria/acuarelas/19-md.jpg",
+        "sm": "img/galeria/acuarelas/19-sm.jpg",
+        "xs": "img/galeria/acuarelas/19-xs.jpg"
+      }
+    },
+    {
+      "id": "20",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/20-lg.jpg",
+        "md": "img/galeria/acuarelas/20-md.jpg",
+        "sm": "img/galeria/acuarelas/20-sm.jpg",
+        "xs": "img/galeria/acuarelas/20-xs.jpg"
+      }
+    },
+    {
+      "id": "21",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/21-lg.jpg",
+        "md": "img/galeria/acuarelas/21-md.jpg",
+        "sm": "img/galeria/acuarelas/21-sm.jpg",
+        "xs": "img/galeria/acuarelas/21-xs.jpg"
+      }
+    },
+    {
+      "id": "22",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/22-lg.jpg",
+        "md": "img/galeria/acuarelas/22-md.jpg",
+        "sm": "img/galeria/acuarelas/22-sm.jpg",
+        "xs": "img/galeria/acuarelas/22-xs.jpg"
+      }
+    },
+    {
+      "id": "23",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/23-lg.jpg",
+        "md": "img/galeria/acuarelas/23-md.jpg",
+        "sm": "img/galeria/acuarelas/23-sm.jpg",
+        "xs": "img/galeria/acuarelas/23-xs.jpg"
+      }
+    },
+    {
+      "id": "24",
+      "year": "",
+      "title": "",
+      "periodo": "1",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/24-lg.jpg",
+        "md": "img/galeria/acuarelas/24-md.jpg",
+        "sm": "img/galeria/acuarelas/24-sm.jpg",
+        "xs": "img/galeria/acuarelas/24-xs.jpg"
+      }
+    },
+    {
+      "id": "25",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/25-lg.jpg",
+        "md": "img/galeria/acuarelas/25-md.jpg",
+        "sm": "img/galeria/acuarelas/25-sm.jpg",
+        "xs": "img/galeria/acuarelas/25-xs.jpg"
+      }
+    },
+    {
+      "id": "26",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/26-lg.jpg",
+        "md": "img/galeria/acuarelas/26-md.jpg",
+        "sm": "img/galeria/acuarelas/26-sm.jpg",
+        "xs": "img/galeria/acuarelas/26-xs.jpg"
+      }
+    },
+    {
+      "id": "27",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/27-lg.jpg",
+        "md": "img/galeria/acuarelas/27-md.jpg",
+        "sm": "img/galeria/acuarelas/27-sm.jpg",
+        "xs": "img/galeria/acuarelas/27-xs.jpg"
+      }
+    },
+    {
+      "id": "28",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/28-lg.jpg",
+        "md": "img/galeria/acuarelas/28-md.jpg",
+        "sm": "img/galeria/acuarelas/28-sm.jpg",
+        "xs": "img/galeria/acuarelas/28-xs.jpg"
+      }
+    },
+    {
+      "id": "29",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/29-lg.jpg",
+        "md": "img/galeria/acuarelas/29-md.jpg",
+        "sm": "img/galeria/acuarelas/29-sm.jpg",
+        "xs": "img/galeria/acuarelas/29-xs.jpg"
+      }
+    },
+    {
+      "id": "30",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/30-lg.jpg",
+        "md": "img/galeria/acuarelas/30-md.jpg",
+        "sm": "img/galeria/acuarelas/30-sm.jpg",
+        "xs": "img/galeria/acuarelas/30-xs.jpg"
+      }
+    },
+    {
+      "id": "31",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/31-lg.jpg",
+        "md": "img/galeria/acuarelas/31-md.jpg",
+        "sm": "img/galeria/acuarelas/31-sm.jpg",
+        "xs": "img/galeria/acuarelas/31-xs.jpg"
+      }
+    },
+    {
+      "id": "32",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/32-lg.jpg",
+        "md": "img/galeria/acuarelas/32-md.jpg",
+        "sm": "img/galeria/acuarelas/32-sm.jpg",
+        "xs": "img/galeria/acuarelas/32-xs.jpg"
+      }
+    },
+    {
+      "id": "33",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/33-lg.jpg",
+        "md": "img/galeria/acuarelas/33-md.jpg",
+        "sm": "img/galeria/acuarelas/33-sm.jpg",
+        "xs": "img/galeria/acuarelas/33-xs.jpg"
+      }
+    },
+    {
+      "id": "34",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/34-lg.jpg",
+        "md": "img/galeria/acuarelas/34-md.jpg",
+        "sm": "img/galeria/acuarelas/34-sm.jpg",
+        "xs": "img/galeria/acuarelas/34-xs.jpg"
+      }
+    },
+    {
+      "id": "35",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/35-lg.jpg",
+        "md": "img/galeria/acuarelas/35-md.jpg",
+        "sm": "img/galeria/acuarelas/35-sm.jpg",
+        "xs": "img/galeria/acuarelas/35-xs.jpg"
+      }
+    },
+    {
+      "id": "36",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/36-lg.jpg",
+        "md": "img/galeria/acuarelas/36-md.jpg",
+        "sm": "img/galeria/acuarelas/36-sm.jpg",
+        "xs": "img/galeria/acuarelas/36-xs.jpg"
+      }
+    },
+    {
+      "id": "37",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/37-lg.jpg",
+        "md": "img/galeria/acuarelas/37-md.jpg",
+        "sm": "img/galeria/acuarelas/37-sm.jpg",
+        "xs": "img/galeria/acuarelas/37-xs.jpg"
+      }
+    },
+    {
+      "id": "38",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/38-lg.jpg",
+        "md": "img/galeria/acuarelas/38-md.jpg",
+        "sm": "img/galeria/acuarelas/38-sm.jpg",
+        "xs": "img/galeria/acuarelas/38-xs.jpg"
+      }
+    },
+    {
+      "id": "39",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/39-lg.jpg",
+        "md": "img/galeria/acuarelas/39-md.jpg",
+        "sm": "img/galeria/acuarelas/39-sm.jpg",
+        "xs": "img/galeria/acuarelas/39-xs.jpg"
+      }
+    },
+    {
+      "id": "40",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/40-lg.jpg",
+        "md": "img/galeria/acuarelas/40-md.jpg",
+        "sm": "img/galeria/acuarelas/40-sm.jpg",
+        "xs": "img/galeria/acuarelas/40-xs.jpg"
+      }
+    },
+    {
+      "id": "41",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/41-lg.jpg",
+        "md": "img/galeria/acuarelas/41-md.jpg",
+        "sm": "img/galeria/acuarelas/41-sm.jpg",
+        "xs": "img/galeria/acuarelas/41-xs.jpg"
+      }
+    },
+    {
+      "id": "42",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/42-lg.jpg",
+        "md": "img/galeria/acuarelas/42-md.jpg",
+        "sm": "img/galeria/acuarelas/42-sm.jpg",
+        "xs": "img/galeria/acuarelas/42-xs.jpg"
+      }
+    },
+    {
+      "id": "43",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/43-lg.jpg",
+        "md": "img/galeria/acuarelas/43-md.jpg",
+        "sm": "img/galeria/acuarelas/43-sm.jpg",
+        "xs": "img/galeria/acuarelas/43-xs.jpg"
+      }
+    },
+    {
+      "id": "44",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/44-lg.jpg",
+        "md": "img/galeria/acuarelas/44-md.jpg",
+        "sm": "img/galeria/acuarelas/44-sm.jpg",
+        "xs": "img/galeria/acuarelas/44-xs.jpg"
+      }
+    },
+    {
+      "id": "45",
+      "year": "",
+      "title": "",
+      "periodo": "1",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/45-lg.jpg",
+        "md": "img/galeria/acuarelas/45-md.jpg",
+        "sm": "img/galeria/acuarelas/45-sm.jpg",
+        "xs": "img/galeria/acuarelas/45-xs.jpg"
+      }
+    },
+    {
+      "id": "46",
+      "year": "",
+      "title": "",
+      "periodo": "1",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/46-lg.jpg",
+        "md": "img/galeria/acuarelas/46-md.jpg",
+        "sm": "img/galeria/acuarelas/46-sm.jpg",
+        "xs": "img/galeria/acuarelas/46-xs.jpg"
+      }
+    },
+    {
+      "id": "47",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/47-lg.jpg",
+        "md": "img/galeria/acuarelas/47-md.jpg",
+        "sm": "img/galeria/acuarelas/47-sm.jpg",
+        "xs": "img/galeria/acuarelas/47-xs.jpg"
+      }
+    },
+    {
+      "id": "48",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/48-lg.jpg",
+        "md": "img/galeria/acuarelas/48-md.jpg",
+        "sm": "img/galeria/acuarelas/48-sm.jpg",
+        "xs": "img/galeria/acuarelas/48-xs.jpg"
+      }
+    },
+    {
+      "id": "49",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/acuarelas/49-lg.jpg",
+        "md": "img/galeria/acuarelas/49-md.jpg",
+        "sm": "img/galeria/acuarelas/49-sm.jpg",
+        "xs": "img/galeria/acuarelas/49-xs.jpg"
+      }
+    },
+    {
+      "id": "50",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/50-lg.jpg",
+        "md": "img/galeria/acuarelas/50-md.jpg",
+        "sm": "img/galeria/acuarelas/50-sm.jpg",
+        "xs": "img/galeria/acuarelas/50-xs.jpg"
+      }
+    },
+    {
+      "id": "51",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/51-lg.jpg",
+        "md": "img/galeria/acuarelas/51-md.jpg",
+        "sm": "img/galeria/acuarelas/51-sm.jpg",
+        "xs": "img/galeria/acuarelas/51-xs.jpg"
+      }
+    },
+    {
+      "id": "52",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/52-lg.jpg",
+        "md": "img/galeria/acuarelas/52-md.jpg",
+        "sm": "img/galeria/acuarelas/52-sm.jpg",
+        "xs": "img/galeria/acuarelas/52-xs.jpg"
+      }
+    },
+    {
+      "id": "53",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/53-lg.jpg",
+        "md": "img/galeria/acuarelas/53-md.jpg",
+        "sm": "img/galeria/acuarelas/53-sm.jpg",
+        "xs": "img/galeria/acuarelas/53-xs.jpg"
+      }
+    },
+    {
+      "id": "54",
+      "year": "",
+      "title": "",
+      "periodo": "2",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/54-lg.jpg",
+        "md": "img/galeria/acuarelas/54-md.jpg",
+        "sm": "img/galeria/acuarelas/54-sm.jpg",
+        "xs": "img/galeria/acuarelas/54-xs.jpg"
+      }
+    },
+    {
+      "id": "55",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/55-lg.jpg",
+        "md": "img/galeria/acuarelas/55-md.jpg",
+        "sm": "img/galeria/acuarelas/55-sm.jpg",
+        "xs": "img/galeria/acuarelas/55-xs.jpg"
+      }
+    },
+    {
+      "id": "56",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": ["desnudo"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/56-lg.jpg",
+        "md": "img/galeria/acuarelas/56-md.jpg",
+        "sm": "img/galeria/acuarelas/56-sm.jpg",
+        "xs": "img/galeria/acuarelas/56-xs.jpg"
+      }
+    },
+    {
+      "id": "57",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": ["desnudo"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/57-lg.jpg",
+        "md": "img/galeria/acuarelas/57-md.jpg",
+        "sm": "img/galeria/acuarelas/57-sm.jpg",
+        "xs": "img/galeria/acuarelas/57-xs.jpg"
+      }
+    },
+    {
+      "id": "58",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": ["desnudo"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/58-lg.jpg",
+        "md": "img/galeria/acuarelas/58-md.jpg",
+        "sm": "img/galeria/acuarelas/58-sm.jpg",
+        "xs": "img/galeria/acuarelas/58-xs.jpg"
+      }
+    },
+    {
+      "id": "59",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "acuarela",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/acuarelas/59-lg.jpg",
+        "md": "img/galeria/acuarelas/59-md.jpg",
+        "sm": "img/galeria/acuarelas/59-sm.jpg",
+        "xs": "img/galeria/acuarelas/59-xs.jpg"
+      }
+    }
+  ]
+}
