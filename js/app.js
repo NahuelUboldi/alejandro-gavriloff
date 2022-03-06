@@ -1,58 +1,8 @@
 // **********************************
-// **********CAROUSEL****************
+// **********GENERAL******************
 // **********************************
-
-// //selectors
-// const slider = document.querySelector('.slider');
-// const innerSlider = document.querySelector('.slider-inner');
-// const sliderImage = document.querySelector('.slide-img');
-
-// let pressed = false;
-// let startx;
-// let x;
-
-// slider.addEventListener('mousedown', (e) => {
-//   pressed = true;
-//   startx = e.offsetX - innerSlider.offsetLeft;
-//   slider.style.cursor = 'url("../img/icons/grabbing-icon.png"), auto';
-// });
-
-// slider.addEventListener('mouseenter', () => {
-//   slider.style.cursor = 'url("../img/icons/grab-icon.png"), auto';
-// });
-
-// // slider.addEventListener('mouseleave', () => {
-// //   slider.style.cursor = 'default';
-// // });
-// slider.addEventListener('mouseup', () => {
-//   slider.style.cursor = 'url("../img/icons/grab-icon.png"), auto';
-// });
-
-// window.addEventListener('mouseup', () => {
-//   pressed = false;
-// });
-
-// slider.addEventListener('mousemove', (e) => {
-//   if (!pressed) return;
-//   e.preventDefault();
-//   x = e.offsetX;
-
-//   innerSlider.style.left = `${x - startx}px`;
-//   checkBoundary();
-// });
-
-// function checkBoundary() {
-//   const outer = slider.getBoundingClientRect();
-//   const inner = innerSlider.getBoundingClientRect();
-//   const imgWidth = sliderImage.getBoundingClientRect().width;
-//   const marginPosible = (outer.width - imgWidth) / 2;
-
-//   if (parseInt(innerSlider.style.left) > marginPosible) {
-//     innerSlider.style.left = `${marginPosible}px`;
-//   } else if (inner.right < outer.right - marginPosible) {
-//     innerSlider.style.left = `-${inner.width - outer.width + marginPosible}px`;
-//   }
-// }
+// current year
+document.getElementById('current-year').innerText = new Date().getFullYear();
 
 // **********************************
 // **********CANVAS******************
@@ -133,8 +83,10 @@ const imagesContainer = document.getElementById('images-container');
 const mostrarCuadrosRandomBtn = document.getElementById(
   'mostrar-cuadros-random'
 );
+
 //variables
 const imagesRequiredWidth = 400;
+
 //fetch api function
 async function getPaintings() {
   try {
@@ -162,7 +114,6 @@ function getImagesQuantity() {
 //main function
 async function showGalleryPreview() {
   const imagesNeeded = getImagesQuantity();
-  console.log(imagesNeeded);
   const cuadros = await getPaintings();
   const filtered = cuadros.filter((cuadro) => {
     return cuadro.calidad === 'buena';
@@ -172,7 +123,7 @@ async function showGalleryPreview() {
   for (let i = 0; i < imagesNeeded; i++) {
     const randomNum = Math.floor(Math.random() * filtered.length);
     const individualImage = `
- 
+
     <img src="${filtered[randomNum].img.md}" alt="Cuadro del pintor argentino Alejandro Gavriloff" />
 
     `;

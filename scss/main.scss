@@ -1,20 +1,21 @@
-@use "custom";
+@use 'custom';
 
 //IMPORT THE COMPONENTS
 
-@use "components/animations";
-@use "components/buttons";
-@use "components/mixins";
-@use "components/typography";
+@use 'components/general-setup';
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';
 
 //IMPORT THE SECTIONS
-@use "sections/hero-header";
-@use "sections/quote";
-@use "sections/footer";
-@use "sections/bio";
-@use "sections/periodos";
-@use "sections/carousel";
-@use "sections/canvas";
-@use "sections/gallery-preview";
-@use "sections/navigation";
-@use "sections/contact-form";
+@use 'sections/hero-header';
+@use 'sections/quote';
+@use 'sections/footer';
+@use 'sections/bio';
+@use 'sections/periodos';
+@use 'sections/carousel';
+@use 'sections/canvas';
+@use 'sections/gallery-preview';
+@use 'sections/navigation';
+@use 'sections/contact-form';
