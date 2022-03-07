@@ -1470,5 +1470,282 @@
         "xs": "img/galeria/temperas/91-xs.jpg"
       }
     }
+
+,
+    {
+      "id": "99",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/murales/01-lg.jpg",
+        "md": "img/galeria/murales/01-md.jpg",
+        "sm": "img/galeria/murales/01-sm.jpg",
+        "xs": "img/galeria/murales/01-xs.jpg"
+      }
+    },
+    {
+      "id": "100",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/02-lg.jpg",
+        "md": "img/galeria/murales/02-md.jpg",
+        "sm": "img/galeria/murales/02-sm.jpg",
+        "xs": "img/galeria/murales/02-xs.jpg"
+      }
+    },
+    {
+      "id": "101",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/murales/03-lg.jpg",
+        "md": "img/galeria/murales/03-md.jpg",
+        "sm": "img/galeria/murales/03-sm.jpg",
+        "xs": "img/galeria/murales/03-xs.jpg"
+      }
+    },
+    {
+      "id": "102",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/04-lg.jpg",
+        "md": "img/galeria/murales/04-md.jpg",
+        "sm": "img/galeria/murales/04-sm.jpg",
+        "xs": "img/galeria/murales/04-xs.jpg"
+      }
+    },
+    {
+      "id": "103",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/05-lg.jpg",
+        "md": "img/galeria/murales/05-md.jpg",
+        "sm": "img/galeria/murales/05-sm.jpg",
+        "xs": "img/galeria/murales/05-xs.jpg"
+      }
+    },
+    {
+      "id": "104",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/06-lg.jpg",
+        "md": "img/galeria/murales/06-md.jpg",
+        "sm": "img/galeria/murales/06-sm.jpg",
+        "xs": "img/galeria/murales/06-xs.jpg"
+      }
+    },
+    {
+      "id": "105",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/07-lg.jpg",
+        "md": "img/galeria/murales/07-md.jpg",
+        "sm": "img/galeria/murales/07-sm.jpg",
+        "xs": "img/galeria/murales/07-xs.jpg"
+      }
+    },
+    {
+      "id": "106",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/murales/08-lg.jpg",
+        "md": "img/galeria/murales/08-md.jpg",
+        "sm": "img/galeria/murales/08-sm.jpg",
+        "xs": "img/galeria/murales/08-xs.jpg"
+      }
+    },
+    {
+      "id": "107",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/murales/09-lg.jpg",
+        "md": "img/galeria/murales/09-md.jpg",
+        "sm": "img/galeria/murales/09-sm.jpg",
+        "xs": "img/galeria/murales/09-xs.jpg"
+      }
+    },
+    {
+      "id": "108",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/murales/10-lg.jpg",
+        "md": "img/galeria/murales/10-md.jpg",
+        "sm": "img/galeria/murales/10-sm.jpg",
+        "xs": "img/galeria/murales/10-xs.jpg"
+      }
+    },
+    {
+      "id": "109",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/murales/11-lg.jpg",
+        "md": "img/galeria/murales/11-md.jpg",
+        "sm": "img/galeria/murales/11-sm.jpg",
+        "xs": "img/galeria/murales/11-xs.jpg"
+      }
+    },
+    {
+      "id": "110",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/12-lg.jpg",
+        "md": "img/galeria/murales/12-md.jpg",
+        "sm": "img/galeria/murales/12-sm.jpg",
+        "xs": "img/galeria/murales/12-xs.jpg"
+      }
+    },
+    {
+      "id": "111",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/13-lg.jpg",
+        "md": "img/galeria/murales/13-md.jpg",
+        "sm": "img/galeria/murales/13-sm.jpg",
+        "xs": "img/galeria/murales/13-xs.jpg"
+      }
+    },
+    {
+      "id": "112",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/14-lg.jpg",
+        "md": "img/galeria/murales/14-md.jpg",
+        "sm": "img/galeria/murales/14-sm.jpg",
+        "xs": "img/galeria/murales/14-xs.jpg"
+      }
+    },
+    {
+      "id": "113",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/15-lg.jpg",
+        "md": "img/galeria/murales/15-md.jpg",
+        "sm": "img/galeria/murales/15-sm.jpg",
+        "xs": "img/galeria/murales/15-xs.jpg"
+      }
+    },
+    {
+      "id": "114",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/16-lg.jpg",
+        "md": "img/galeria/murales/16-md.jpg",
+        "sm": "img/galeria/murales/16-sm.jpg",
+        "xs": "img/galeria/murales/16-xs.jpg"
+      }
+    },
+    {
+      "id": "115",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/murales/17-lg.jpg",
+        "md": "img/galeria/murales/17-md.jpg",
+        "sm": "img/galeria/murales/17-sm.jpg",
+        "xs": "img/galeria/murales/17-xs.jpg"
+      }
+    },
+    {
+      "id": "116",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "mural",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/murales/18-lg.jpg",
+        "md": "img/galeria/murales/18-md.jpg",
+        "sm": "img/galeria/murales/18-sm.jpg",
+        "xs": "img/galeria/murales/18-xs.jpg"
+      }
+    }
+
+
+
+
+
   ]
 }

@@ -9,9 +9,10 @@ section#gallery-preview {
       border: solid 1px #000;
       object-fit: cover;
       position: relative;
+      cursor: pointer;
 
       ::before {
-        content: 'hola';
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -20,7 +21,9 @@ section#gallery-preview {
         background-color: red;
         backdrop-filter: blur(1rem);
         z-index: 10;
+
       }
+
     }
   }
 }

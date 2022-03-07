@@ -11283,9 +11283,10 @@ section#gallery-preview #images-container img {
   border: solid 1px #000;
   object-fit: cover;
   position: relative;
+  cursor: pointer;
 }
 section#gallery-preview #images-container img ::before {
-  content: "hola";
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

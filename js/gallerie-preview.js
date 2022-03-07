@@ -14,7 +14,7 @@ const modalContent = document.getElementById('modal-content');
 
 
 //variables
-const imagesRequiredWidth = 280;
+const imagesRequiredWidth = 400; //400 default
 
 //functions
 const closeModal = () => {

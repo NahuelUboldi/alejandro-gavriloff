@@ -31,8 +31,11 @@ const clearCanvas = async () => {
 };
 const getRandomPicture = async () => {
   const cuadros = await getPaintings()
-  let randomNumber = Math.floor(Math.random() * cuadros.length)
-  canvasImgContainer.style.backgroundImage = `url("${cuadros[randomNumber].img.lg}")` 
+  const filtered = cuadros.filter((cuadro) => {
+    return cuadro.calidad === 'buena' && !cuadro.tags.includes('religion');
+  });
+  let randomNumber = Math.floor(Math.random() * filtered.length)
+  canvasImgContainer.style.backgroundImage = `url("${filtered[randomNumber].img.lg}")` 
 }
 const main = async () => {
   await getRandomPicture()
