@@ -6,6 +6,7 @@
       "title": "",
       "periodo": "1",
       "category": "acuarela",
+      "tags": [""],
       "calidad": "buena",
       "img": {
         "lg": "img/galeria/acuarelas/01-lg.jpg",
@@ -20,6 +21,7 @@
       "title": "",
       "periodo": "1",
       "category": "acuarela",
+      "tags": [""],
       "calidad": "buena",
       "img": {
         "lg": "img/galeria/acuarelas/02-lg.jpg",
@@ -34,6 +36,7 @@
       "title": "",
       "periodo": "1",
       "category": "acuarela",
+      "tags": [""],
       "calidad": "buena",
       "img": {
         "lg": "img/galeria/acuarelas/03-lg.jpg",
@@ -48,6 +51,7 @@
       "title": "",
       "periodo": "1",
       "category": "acuarela",
+      "tags": [""],
       "calidad": "buena",
       "img": {
         "lg": "img/galeria/acuarelas/04-lg.jpg",
@@ -62,6 +66,7 @@
       "title": "",
       "periodo": "2",
       "category": "acuarela",
+      "tags": [""],
       "calidad": "buena",
       "img": {
         "lg": "img/galeria/acuarelas/05-lg.jpg",
@@ -76,6 +81,7 @@
       "title": "",
       "periodo": "2",
       "category": "acuarela",
+      "tags": [""],
       "calidad": "buena",
       "img": {
         "lg": "img/galeria/acuarelas/06-lg.jpg",
@@ -90,6 +96,7 @@
       "title": "",
       "periodo": "2",
       "category": "acuarela",
+      "tags": [""],
       "calidad": "buena",
       "img": {
         "lg": "img/galeria/acuarelas/07-lg.jpg",
@@ -876,6 +883,591 @@
         "md": "img/galeria/acuarelas/59-md.jpg",
         "sm": "img/galeria/acuarelas/59-sm.jpg",
         "xs": "img/galeria/acuarelas/59-xs.jpg"
+      }
+    },
+    {
+      "id": "60",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/01-lg.jpg",
+        "md": "img/galeria/temperas/01-md.jpg",
+        "sm": "img/galeria/temperas/01-sm.jpg",
+        "xs": "img/galeria/temperas/01-xs.jpg"
+      }
+    },
+    {
+      "id": "61",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/02-lg.jpg",
+        "md": "img/galeria/temperas/02-md.jpg",
+        "sm": "img/galeria/temperas/02-sm.jpg",
+        "xs": "img/galeria/temperas/02-xs.jpg"
+      }
+    },
+    {
+      "id": "62",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/03-lg.jpg",
+        "md": "img/galeria/temperas/03-md.jpg",
+        "sm": "img/galeria/temperas/03-sm.jpg",
+        "xs": "img/galeria/temperas/03-xs.jpg"
+      }
+    },
+    {
+      "id": "63",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/04-lg.jpg",
+        "md": "img/galeria/temperas/04-md.jpg",
+        "sm": "img/galeria/temperas/04-sm.jpg",
+        "xs": "img/galeria/temperas/04-xs.jpg"
+      }
+    },
+    {
+      "id": "64",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/05-lg.jpg",
+        "md": "img/galeria/temperas/05-md.jpg",
+        "sm": "img/galeria/temperas/05-sm.jpg",
+        "xs": "img/galeria/temperas/05-xs.jpg"
+      }
+    },
+    {
+      "id": "65",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/06-lg.jpg",
+        "md": "img/galeria/temperas/06-md.jpg",
+        "sm": "img/galeria/temperas/06-sm.jpg",
+        "xs": "img/galeria/temperas/06-xs.jpg"
+      }
+    },
+    {
+      "id": "66",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/07-lg.jpg",
+        "md": "img/galeria/temperas/07-md.jpg",
+        "sm": "img/galeria/temperas/07-sm.jpg",
+        "xs": "img/galeria/temperas/07-xs.jpg"
+      }
+    },
+    {
+      "id": "67",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/08-lg.jpg",
+        "md": "img/galeria/temperas/08-md.jpg",
+        "sm": "img/galeria/temperas/08-sm.jpg",
+        "xs": "img/galeria/temperas/08-xs.jpg"
+      }
+    },
+    {
+      "id": "68",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/09-lg.jpg",
+        "md": "img/galeria/temperas/09-md.jpg",
+        "sm": "img/galeria/temperas/09-sm.jpg",
+        "xs": "img/galeria/temperas/09-xs.jpg"
+      }
+    },
+    {
+      "id": "69",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/10-lg.jpg",
+        "md": "img/galeria/temperas/10-md.jpg",
+        "sm": "img/galeria/temperas/10-sm.jpg",
+        "xs": "img/galeria/temperas/10-xs.jpg"
+      }
+    },
+    {
+      "id": "70",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/11-lg.jpg",
+        "md": "img/galeria/temperas/11-md.jpg",
+        "sm": "img/galeria/temperas/11-sm.jpg",
+        "xs": "img/galeria/temperas/11-xs.jpg"
+      }
+    },
+    {
+      "id": "71",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/12-lg.jpg",
+        "md": "img/galeria/temperas/12-md.jpg",
+        "sm": "img/galeria/temperas/12-sm.jpg",
+        "xs": "img/galeria/temperas/12-xs.jpg"
+      }
+    },
+    {
+      "id": "72",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/13-lg.jpg",
+        "md": "img/galeria/temperas/13-md.jpg",
+        "sm": "img/galeria/temperas/13-sm.jpg",
+        "xs": "img/galeria/temperas/13-xs.jpg"
+      }
+    },
+    {
+      "id": "73",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/14-lg.jpg",
+        "md": "img/galeria/temperas/14-md.jpg",
+        "sm": "img/galeria/temperas/14-sm.jpg",
+        "xs": "img/galeria/temperas/14-xs.jpg"
+      }
+    },
+    {
+      "id": "74",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/15-lg.jpg",
+        "md": "img/galeria/temperas/15-md.jpg",
+        "sm": "img/galeria/temperas/15-sm.jpg",
+        "xs": "img/galeria/temperas/15-xs.jpg"
+      }
+    },
+    {
+      "id": "75",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/16-lg.jpg",
+        "md": "img/galeria/temperas/16-md.jpg",
+        "sm": "img/galeria/temperas/16-sm.jpg",
+        "xs": "img/galeria/temperas/16-xs.jpg"
+      }
+    },
+    {
+      "id": "76",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/18-lg.jpg",
+        "md": "img/galeria/temperas/18-md.jpg",
+        "sm": "img/galeria/temperas/18-sm.jpg",
+        "xs": "img/galeria/temperas/18-xs.jpg"
+      }
+    },
+    {
+      "id": "77",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/19-lg.jpg",
+        "md": "img/galeria/temperas/19-md.jpg",
+        "sm": "img/galeria/temperas/19-sm.jpg",
+        "xs": "img/galeria/temperas/19-xs.jpg"
+      }
+    },
+    {
+      "id": "78",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/20-lg.jpg",
+        "md": "img/galeria/temperas/20-md.jpg",
+        "sm": "img/galeria/temperas/20-sm.jpg",
+        "xs": "img/galeria/temperas/20-xs.jpg"
+      }
+    },
+    {
+      "id": "79",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/21-lg.jpg",
+        "md": "img/galeria/temperas/21-md.jpg",
+        "sm": "img/galeria/temperas/21-sm.jpg",
+        "xs": "img/galeria/temperas/21-xs.jpg"
+      }
+    },
+    {
+      "id": "80",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/22-lg.jpg",
+        "md": "img/galeria/temperas/22-md.jpg",
+        "sm": "img/galeria/temperas/22-sm.jpg",
+        "xs": "img/galeria/temperas/22-xs.jpg"
+      }
+    },
+    {
+      "id": "81",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/23-lg.jpg",
+        "md": "img/galeria/temperas/23-md.jpg",
+        "sm": "img/galeria/temperas/23-sm.jpg",
+        "xs": "img/galeria/temperas/23-xs.jpg"
+      }
+    },
+    {
+      "id": "82",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/24-lg.jpg",
+        "md": "img/galeria/temperas/24-md.jpg",
+        "sm": "img/galeria/temperas/24-sm.jpg",
+        "xs": "img/galeria/temperas/24-xs.jpg"
+      }
+    },
+    {
+      "id": "83",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/25-lg.jpg",
+        "md": "img/galeria/temperas/25-md.jpg",
+        "sm": "img/galeria/temperas/25-sm.jpg",
+        "xs": "img/galeria/temperas/25-xs.jpg"
+      }
+    },
+    {
+      "id": "84",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/26-lg.jpg",
+        "md": "img/galeria/temperas/26-md.jpg",
+        "sm": "img/galeria/temperas/26-sm.jpg",
+        "xs": "img/galeria/temperas/26-xs.jpg"
+      }
+    },
+    {
+      "id": "85",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/27-lg.jpg",
+        "md": "img/galeria/temperas/27-md.jpg",
+        "sm": "img/galeria/temperas/27-sm.jpg",
+        "xs": "img/galeria/temperas/27-xs.jpg"
+      }
+    },
+    {
+      "id": "86",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/28-lg.jpg",
+        "md": "img/galeria/temperas/28-md.jpg",
+        "sm": "img/galeria/temperas/28-sm.jpg",
+        "xs": "img/galeria/temperas/28-xs.jpg"
+      }
+    },
+    {
+      "id": "87",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/29-lg.jpg",
+        "md": "img/galeria/temperas/29-md.jpg",
+        "sm": "img/galeria/temperas/29-sm.jpg",
+        "xs": "img/galeria/temperas/29-xs.jpg"
+      }
+    },
+    {
+      "id": "88",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/30-lg.jpg",
+        "md": "img/galeria/temperas/30-md.jpg",
+        "sm": "img/galeria/temperas/30-sm.jpg",
+        "xs": "img/galeria/temperas/30-xs.jpg"
+      }
+    },
+    {
+      "id": "89",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/31-lg.jpg",
+        "md": "img/galeria/temperas/31-md.jpg",
+        "sm": "img/galeria/temperas/31-sm.jpg",
+        "xs": "img/galeria/temperas/31-xs.jpg"
+      }
+    },
+    {
+      "id": "90",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/32-lg.jpg",
+        "md": "img/galeria/temperas/32-md.jpg",
+        "sm": "img/galeria/temperas/32-sm.jpg",
+        "xs": "img/galeria/temperas/32-xs.jpg"
+      }
+    },
+    {
+      "id": "91",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/33-lg.jpg",
+        "md": "img/galeria/temperas/33-md.jpg",
+        "sm": "img/galeria/temperas/33-sm.jpg",
+        "xs": "img/galeria/temperas/33-xs.jpg"
+      }
+    },
+    {
+      "id": "92",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/34-lg.jpg",
+        "md": "img/galeria/temperas/34-md.jpg",
+        "sm": "img/galeria/temperas/34-sm.jpg",
+        "xs": "img/galeria/temperas/34-xs.jpg"
+      }
+    },
+    {
+      "id": "93",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": ["plato"],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/35-lg.jpg",
+        "md": "img/galeria/temperas/35-md.jpg",
+        "sm": "img/galeria/temperas/35-sm.jpg",
+        "xs": "img/galeria/temperas/35-xs.jpg"
+      }
+    },
+    {
+      "id": "94",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/36-lg.jpg",
+        "md": "img/galeria/temperas/36-md.jpg",
+        "sm": "img/galeria/temperas/36-sm.jpg",
+        "xs": "img/galeria/temperas/36-xs.jpg"
+      }
+    },
+    {
+      "id": "95",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/37-lg.jpg",
+        "md": "img/galeria/temperas/37-md.jpg",
+        "sm": "img/galeria/temperas/37-sm.jpg",
+        "xs": "img/galeria/temperas/37-xs.jpg"
+      }
+    },
+    {
+      "id": "96",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "buena",
+      "img": {
+        "lg": "img/galeria/temperas/38-lg.jpg",
+        "md": "img/galeria/temperas/38-md.jpg",
+        "sm": "img/galeria/temperas/38-sm.jpg",
+        "xs": "img/galeria/temperas/38-xs.jpg"
+      }
+    },
+    {
+      "id": "97",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/temperas/90-lg.jpg",
+        "md": "img/galeria/temperas/90-md.jpg",
+        "sm": "img/galeria/temperas/90-sm.jpg",
+        "xs": "img/galeria/temperas/90-xs.jpg"
+      }
+    },
+    {
+      "id": "98",
+      "year": "",
+      "title": "",
+      "periodo": "",
+      "category": "tempera",
+      "tags": [],
+      "calidad": "mala",
+      "img": {
+        "lg": "img/galeria/temperas/91-lg.jpg",
+        "md": "img/galeria/temperas/91-md.jpg",
+        "sm": "img/galeria/temperas/91-sm.jpg",
+        "xs": "img/galeria/temperas/91-xs.jpg"
       }
     }
   ]

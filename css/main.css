@@ -10765,6 +10765,47 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 94;
+}
+#modal .modal-bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+#modal .modal-bg .close-tag {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+#modal .modal-bg .close-tag:hover {
+  color: #555;
+}
+#modal #modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 95;
+}
+#modal #modal-content img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.closed {
+  display: none;
+}
+
 .hero-dibujo {
   min-height: 60vh;
   perspective: 500px;
@@ -10848,19 +10889,24 @@ body {
 @media (min-width: 992px) {
   .contenedor-cuadros {
     transform: scale(0.8);
+    animation-name: rotate-picture;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
   }
-
-  .contenedor-cuadros:hover {
-    transform: rotateY(-15deg) scale(0.8);
+  @keyframes rotate-picture {
+    0% {
+      transform: rotateY(3deg);
+    }
+    100% {
+      transform: rotateY(-12deg);
+    }
   }
 }
 @media (min-width: 1200px) {
   .contenedor-cuadros {
     transform: scale(0.98);
-  }
-
-  .contenedor-cuadros:hover {
-    transform: rotateY(-15deg) scale(0.98);
   }
 
   .cuadro:nth-child(1) {
@@ -11126,7 +11172,7 @@ body {
   }
 }
 #periodos-artisticos article.humanidad .image-bg {
-  background-image: url(../../img/galeria/temperas/04-grande.jpg);
+  background-image: url(../../img/galeria/temperas/04-lg.jpg);
 }
 
 .slider {
@@ -11248,6 +11294,9 @@ section#gallery-preview #images-container img ::before {
   background-color: red;
   backdrop-filter: blur(1rem);
   z-index: 10;
+}
+section#gallery-preview .gal-btn {
+  cursor: pointer;
 }
 
 #navigation {

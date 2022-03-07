@@ -1,5 +1,5 @@
-@use "../components/mixins" as *;
-@use "../custom" as *;
+@use '../components/mixins' as *;
+@use '../custom' as *;
 
 $base-margin-size: 6rem;
 $base-container-height: 300px;
@@ -133,7 +133,7 @@ $base-container-height: 300px;
     }
     &.humanidad {
       .image-bg {
-        background-image: url(../../img/galeria/temperas/04-grande.jpg);
+        background-image: url(../../img/galeria/temperas/04-lg.jpg);
       }
     }
   }

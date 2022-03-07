@@ -1,4 +1,4 @@
-@use "../components/mixins" as *;
+@use '../components/mixins' as *;
 
 .hero-dibujo {
   min-height: 60vh;
@@ -76,18 +76,14 @@
 @media (min-width: 992px) {
   .contenedor-cuadros {
     transform: scale(0.8);
-  }
-  .contenedor-cuadros:hover {
-    transform: rotateY(-15deg) scale(0.8);
+    @include rotatePicture;
   }
 }
 @media (min-width: 1200px) {
   .contenedor-cuadros {
     transform: scale(0.98);
   }
-  .contenedor-cuadros:hover {
-    transform: rotateY(-15deg) scale(0.98);
-  }
+
   .cuadro:nth-child(1) {
     transform: translate3d(-150%, -90%, 70px);
   }

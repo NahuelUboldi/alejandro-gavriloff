@@ -1,4 +1,4 @@
-@use "../components/mixins" as *;
+@use '../components/mixins' as *;
 section#gallery-preview {
   @include backgroundTexture;
 
@@ -22,5 +22,8 @@ section#gallery-preview {
         z-index: 10;
       }
     }
+  }
+  .gal-btn {
+    cursor: pointer;
   }
 }
