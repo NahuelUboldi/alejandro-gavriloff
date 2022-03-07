@@ -31,7 +31,7 @@ const showModal = async (e) => {
 };
 
 //variables
-const imagesRequiredWidth = 400;
+const imagesRequiredWidth = 280;
 
 //fetch api function
 async function getPaintings() {
