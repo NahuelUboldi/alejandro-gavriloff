@@ -1,3 +1,5 @@
+import getPaintings from "./getPaintings.js"
+
 // **********************************
 // **********CANVAS******************
 // **********************************
@@ -6,8 +8,9 @@ const canvas = document.querySelector('#canvas-art');
 const context = canvas.getContext('2d');
 const btnClear = document.getElementById('btn-clear-canvas');
 const paintingCompletedSpan = document.querySelector('.paintings-completed');
+const canvasImgContainer = document.querySelector(".canvas-cont")
+
 //variables
-let painting = false;
 let paintCounter = 0;
 //functions
 const resizeCanvas = () => {
@@ -17,14 +20,23 @@ const resizeCanvas = () => {
   canvas.width = parentWidth;
   canvas.height = parentHeigth;
 };
-const clearCanvas = () => {
+
+
+const clearCanvas = async () => {
   context.clearRect(0, 0, canvas.width, canvas.height);
   paintCounter += 1;
   paintingCompletedSpan.innerHTML = paintCounter;
+  await getRandomPicture()
+ 
 };
-
-window.addEventListener('load', () => {
-  let painting = false;
+const getRandomPicture = async () => {
+  const cuadros = await getPaintings()
+  let randomNumber = Math.floor(Math.random() * cuadros.length)
+  canvasImgContainer.style.backgroundImage = `url("${cuadros[randomNumber].img.lg}")` 
+}
+const main = async () => {
+  await getRandomPicture()
+let painting = false;
   resizeCanvas();
   function startDrawingApp() {
     canvas.style.cursor = 'url("../img/icons/pincel-icon.png"), auto';
@@ -64,7 +76,9 @@ window.addEventListener('load', () => {
   }
 
   canvas.addEventListener('mouseenter', startDrawingApp);
-});
+}
+
 //listeners
+window.addEventListener('load',main);
 window.addEventListener('resize', resizeCanvas);
 btnClear.addEventListener('click', clearCanvas);

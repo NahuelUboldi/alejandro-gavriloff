@@ -11257,7 +11257,7 @@ body {
 .canvas-cont {
   outline: solid 0.5rem black;
   border-radius: 0.5rem;
-  background-image: url("/img/carousel/pic-02.jpg");
+  background-image: none;
   background-size: cover;
   background-position: center;
   font-size: 10px;
@@ -11294,9 +11294,6 @@ section#gallery-preview #images-container img ::before {
   background-color: red;
   backdrop-filter: blur(1rem);
   z-index: 10;
-}
-section#gallery-preview .gal-btn {
-  cursor: pointer;
 }
 
 #navigation {

@@ -1,3 +1,4 @@
+import getPaintings from "./getPaintings.js"
 // **********************************
 // **********GALLERY PREVIEW*********
 // **********************************
@@ -10,6 +11,12 @@ const modal = document.getElementById('modal');
 const modalCloseBtn = document.querySelector('.close-tag');
 const modalContent = document.getElementById('modal-content');
 
+
+
+//variables
+const imagesRequiredWidth = 280;
+
+//functions
 const closeModal = () => {
   modal.classList.add('closed');
 };
@@ -20,7 +27,6 @@ const showModal = async (e) => {
     const filtered = cuadros.filter((cuadro) => {
       return cuadro.id === e.target.id;
     });
-    console.log(filtered[0].img.lg);
     modalContent.innerHTML = `
     <img src='${filtered[0].img.lg}' alt='' />
     `;
@@ -29,22 +35,6 @@ const showModal = async (e) => {
     closeModal();
   }
 };
-
-//variables
-const imagesRequiredWidth = 280;
-
-//fetch api function
-async function getPaintings() {
-  try {
-    const response = await fetch('cuadros.json');
-    const data = await response.json();
-    return data.cuadros;
-  } catch (err) {
-    console.log('hubo un error', err);
-  }
-}
-
-//functions
 function getImagesQuantity() {
   const imagesContainerWidth = imagesContainer.getBoundingClientRect().width;
   const imagesForEachRow = Math.floor(
