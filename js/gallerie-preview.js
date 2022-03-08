@@ -2,15 +2,14 @@ import {
   getPaintings,
   filterPaintingsByQuality,
   filterPaintingsByTags,
+  filterPaintingsByID
 } from './utilities.js';
 // **********************************
 // **********GALLERY PREVIEW*********
 // **********************************
 //selectors
 const imagesContainer = document.getElementById('images-container');
-const mostrarCuadrosRandomBtn = document.getElementById(
-  'mostrar-cuadros-random'
-);
+const mostrarCuadrosRandomBtn = document.getElementById('mostrar-cuadros-random');
 const modal = document.getElementById('modal');
 const modalCloseBtn = document.querySelector('.close-tag');
 const modalContent = document.getElementById('modal-content');
@@ -25,10 +24,8 @@ const closeModal = () => {
 const showModal = async (e) => {
   if (e.target.classList.value === 'galleriePreviewImg') {
     modal.classList.remove('closed');
-    const cuadros = await getPaintings();
-    const filtered = cuadros.filter((cuadro) => {
-      return cuadro.id === e.target.id;
-    });
+    const paintings = await getPaintings();
+    const filtered = filterPaintingsByID(paintings,e.target.id)
     modalContent.innerHTML = `
     <img src='${filtered[0].img.lg}' alt='' />
     `;
@@ -52,9 +49,9 @@ function getImagesQuantity() {
 //main function
 async function showGalleryPreview() {
   const imagesNeeded = getImagesQuantity();
-  const cuadros = await getPaintings();
-  let filtered = filterPaintingsByQuality(cuadros);
-  filtered = filterPaintingsByTags(cuadros, 'religion', false);
+  let paintings = await getPaintings()
+  let filtered = filterPaintingsByQuality(paintings);
+  filtered = filterPaintingsByTags(filtered, 'religion', false);
 
   let imagesArr = [];
   for (let i = 0; i < imagesNeeded; i++) {

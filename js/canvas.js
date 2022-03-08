@@ -30,7 +30,10 @@ const addLastPicturePainted = async () => {
   const paint = filterPaintingsByID(paintings, lastPictureId);
   const img = document.createElement('img');
   img.src = `${paint[0].img.sm}`;
-  picturesPaintedContainer.appendChild(img);
+  img.classList.add("painting-helped");
+  console.log(img);
+  
+  picturesPaintedContainer.prepend(img);
 };
 const clearCanvas = async () => {
   await addLastPicturePainted();
@@ -42,8 +45,7 @@ const clearCanvas = async () => {
 const getRandomPicture = async () => {
   const cuadros = await getPaintings();
   let filtered = filterPaintingsByQuality(cuadros);
-  filtered = filterPaintingsByTags(cuadros, 'religion', false);
-
+  filtered = filterPaintingsByTags(filtered, 'religion', false);
   let randomNumber = Math.floor(Math.random() * filtered.length);
   canvasImgContainer.style.backgroundImage = `url("${filtered[randomNumber].img.lg}")`;
   lastPictureId = filtered[randomNumber].id;

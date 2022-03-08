@@ -4,6 +4,7 @@ $size-value: 100px;
 // }
 .canvas-cont {
   outline: solid 0.5rem black;
+  transform: translateX(0.5rem);
   border-radius: 0.5rem;
   background-image: none;
   background-size: cover;
@@ -19,4 +20,12 @@ canvas {
   position: absolute;
   top: 0px;
   left: 0px;
+}
+#pictures-painted {
+  .painting-helped {
+    &:nth-child(1) {
+      outline: solid 2px black;
+    }
+
+  }
 }
