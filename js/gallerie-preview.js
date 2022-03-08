@@ -1,4 +1,8 @@
-import getPaintings from "./getPaintings.js"
+import {
+  getPaintings,
+  filterPaintingsByQuality,
+  filterPaintingsByTags,
+} from './utilities.js';
 // **********************************
 // **********GALLERY PREVIEW*********
 // **********************************
@@ -10,8 +14,6 @@ const mostrarCuadrosRandomBtn = document.getElementById(
 const modal = document.getElementById('modal');
 const modalCloseBtn = document.querySelector('.close-tag');
 const modalContent = document.getElementById('modal-content');
-
-
 
 //variables
 const imagesRequiredWidth = 400; //400 default
@@ -51,9 +53,8 @@ function getImagesQuantity() {
 async function showGalleryPreview() {
   const imagesNeeded = getImagesQuantity();
   const cuadros = await getPaintings();
-  const filtered = cuadros.filter((cuadro) => {
-    return cuadro.calidad === 'buena' && !cuadro.tags.includes('religion');
-  });
+  let filtered = filterPaintingsByQuality(cuadros);
+  filtered = filterPaintingsByTags(cuadros, 'religion', false);
 
   let imagesArr = [];
   for (let i = 0; i < imagesNeeded; i++) {
