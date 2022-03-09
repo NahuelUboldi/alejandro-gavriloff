@@ -18,6 +18,8 @@ const modalContent = document.getElementById('modal-content');
 const imagesRequiredWidth = 400; //400 default
 
 //functions
+
+
 const closeModal = () => {
   modal.classList.add('closed');
 };

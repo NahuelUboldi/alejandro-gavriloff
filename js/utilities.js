@@ -15,7 +15,7 @@ const getPaintings = async () => {
 
 //filter functions
 const filterPaintingsByCategory = (paintsArr, param) => {
-  if (param == 'all') {
+  if (param == 'todos') {
     return paintsArr;
   }
   if (localStorage[param]) {

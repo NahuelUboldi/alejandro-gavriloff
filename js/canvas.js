@@ -24,20 +24,18 @@ const resizeCanvas = () => {
   canvas.height = parentHeigth;
 };
 
-let paintingsHelped = []
 let lastPictureId;
 const addLastPicturePainted = async () => {
   const paintings = await getPaintings();
   const paint = filterPaintingsByID(paintings, lastPictureId);
-  paintingsHelped.unshift(paint)
-  console.log(paintingsHelped);
+
   const img = document.createElement('img');
   img.src = `${paint[0].img.sm}`;
   img.classList.add("painting-helped");
 
-  
   picturesPaintedContainer.prepend(img);
 };
+
 const clearCanvas = async () => {
   await addLastPicturePainted();
   context.clearRect(0, 0, canvas.width, canvas.height);
@@ -45,6 +43,7 @@ const clearCanvas = async () => {
   paintingCompletedSpan.innerHTML = paintCounter;
   await getRandomPicture();
 };
+
 const getRandomPicture = async () => {
   const cuadros = await getPaintings();
   let filtered = filterPaintingsByQuality(cuadros);

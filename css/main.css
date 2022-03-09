@@ -11302,15 +11302,8 @@ section#gallery-preview #images-container img ::before {
   z-index: 10;
 }
 
-#img-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  justify-content: stretch;
-  grid-gap: auto;
-  outline: solid 1px red;
-}
 #img-container img {
-  width: 300px;
+  width: 250px;
   max-width: 90%;
   object-fit: cover;
 }

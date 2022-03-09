@@ -7,6 +7,7 @@
     <title>Biografía del pintor Alejandro Gavriloff</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <!--start navigation-->
@@ -60,7 +61,7 @@
         <hr />
         <div class="row">
           <div class="col-12 text-center">
-            <div class="btn-group" role="group">
+            <div class="btn-group gallery-btns-container" role="group">
               <button
                 type="button"
                 class="btn btn-outline-primary gallery-filter-btn active"
@@ -84,10 +85,18 @@
         </div>
         <!--row-->
         <main class="row">
-          <div id="img-container" class="col-12"></div>
+          <div id="img-container" class="col-12 d-flex flex-wrap pt-3 gap-3 justify-content-around"></div>
         </main>
       </div>
       <!--container-->
+    <div id="modal" class="closed">
+        <div class="modal-bg">
+        <div class="close-tag h1"><i id="close-modal-btn" class="fa-solid fa-xmark"></i></div>
+      </div>
+      <div id="modal-content">
+       
+      </div>
+    </div>
     </section>
     <!--end bio-->
 

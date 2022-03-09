@@ -1,14 +1,8 @@
 #img-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  justify-content: stretch;
-  // grid-auto-rows: minmax(200px, auto);
-  grid-gap: auto;
-  // justify-content: space-evenly;
-  outline: solid 1px red;
+
 
   img {
-    width: 300px;
+    width: 250px;
     max-width: 90%;
 
     object-fit: cover;
