@@ -7,7 +7,13 @@
     <title>Biografía del pintor Alejandro Gavriloff</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!--start navigation-->
@@ -33,6 +39,9 @@
 
           <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="bio.html">Biografía</a>
               </li>
@@ -85,22 +94,27 @@
         </div>
         <!--row-->
         <main class="row">
-          <div id="img-container" class="col-12 d-flex flex-wrap pt-3 gap-3 justify-content-around"></div>
+          <div
+            id="img-container"
+            class="col-12 d-flex flex-wrap pt-3 gap-3 justify-content-around"
+          ></div>
         </main>
       </div>
       <!--container-->
-    <div id="modal" class="closed">
+      <!--modal-->
+      <div id="modal" class="closed">
         <div class="modal-bg">
-        <div class="close-tag h1"><i id="close-modal-btn" class="fa-solid fa-xmark"></i></div>
-        <div class="arrow-btns">
-          <i class="fa-solid fa-chevron-left fs-1"></i>
-          <i class="fa-solid fa-chevron-right fs-1"></i>
+          <div class="close-tag h1">
+            <i id="close-modal-btn" class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="arrow-btns">
+            <i class="fa-solid fa-chevron-left fs-1"></i>
+            <i class="fa-solid fa-chevron-right fs-1"></i>
+          </div>
         </div>
+        <div id="modal-content"></div>
       </div>
-      <div id="modal-content">
-       
-      </div>
-    </div>
+      <!--end modal-->
     </section>
     <!--end bio-->
 

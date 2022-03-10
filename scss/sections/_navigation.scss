@@ -1,4 +1,4 @@
-@use "../components/mixins" as *;
+@use '../components/mixins' as *;
 #navigation {
   position: relative;
   overflow: hidden;
@@ -24,6 +24,6 @@
     background-color: white;
   }
   .navbar-link.active {
-    font-weight: 900;
+    font-weight: bold;
   }
 }

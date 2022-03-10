@@ -2,14 +2,16 @@ import {
   getPaintings,
   filterPaintingsByQuality,
   filterPaintingsByTags,
-  filterPaintingsByID
+  filterPaintingsByID,
 } from './utilities.js';
 // **********************************
 // **********GALLERY PREVIEW*********
 // **********************************
 //selectors
 const imagesContainer = document.getElementById('images-container');
-const mostrarCuadrosRandomBtn = document.getElementById('mostrar-cuadros-random');
+const mostrarCuadrosRandomBtn = document.getElementById(
+  'mostrar-cuadros-random'
+);
 const modal = document.getElementById('modal');
 const modalCloseBtn = document.querySelector('.close-tag');
 const modalContent = document.getElementById('modal-content');
@@ -19,15 +21,16 @@ const imagesRequiredWidth = 400; //400 default
 
 //functions
 
-
 const closeModal = () => {
   modal.classList.add('closed');
 };
 const showModal = async (e) => {
-  if (e.target.classList.value === 'galleriePreviewImg') {
+  const classNeeded = e.target.classList.value.split(' ').includes('modal-img');
+
+  if (classNeeded) {
     modal.classList.remove('closed');
     const paintings = await getPaintings();
-    const filtered = filterPaintingsByID(paintings,e.target.id)
+    const filtered = filterPaintingsByID(paintings, e.target.id);
     modalContent.innerHTML = `
     <img src='${filtered[0].img.lg}' alt='' />
     `;
@@ -51,7 +54,7 @@ function getImagesQuantity() {
 //main function
 async function showGalleryPreview() {
   const imagesNeeded = getImagesQuantity();
-  let paintings = await getPaintings()
+  let paintings = await getPaintings();
   let filtered = filterPaintingsByQuality(paintings);
   filtered = filterPaintingsByTags(filtered, 'religion', false);
 
@@ -60,7 +63,7 @@ async function showGalleryPreview() {
     const randomNum = Math.floor(Math.random() * filtered.length);
     const individualImage = `
      
-     <img class="galleriePreviewImg" id="${filtered[randomNum].id}" src="${filtered[randomNum].img.md}"  alt="Cuadro del pintor argentino Alejandro Gavriloff" />
+     <img class="modal-img" id="${filtered[randomNum].id}" src="${filtered[randomNum].img.md}"  alt="Cuadro del pintor argentino Alejandro Gavriloff" />
      
      `;
     imagesArr.push(individualImage);

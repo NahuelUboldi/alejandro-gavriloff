@@ -7,7 +7,13 @@
     <title>Alejandro Gavriloff | pintor</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!--start navigation-->
@@ -33,6 +39,9 @@
 
           <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Inicio</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="bio.html">Biografía</a>
               </li>
@@ -310,7 +319,9 @@
     </section>
     <div id="modal" class="closed">
       <div class="modal-bg">
-        <div class="close-tag display-1">X</div>
+        <div class="close-tag display-3">
+          <i id="close-modal-btn" class="fa-solid fa-xmark"></i>
+        </div>
       </div>
       <div id="modal-content">
         <img src="/img/galeria/acuarelas/01-lg.jpg" alt="" />
@@ -344,10 +355,11 @@
             </button>
           </div>
         </div>
-        <div class="row py-4 ">
-          <div class="col-12 d-flex flex-wrap gap-3 justify-content-center" id="pictures-painted">
-
-          </div>
+        <div class="row py-4">
+          <div
+            class="col-12 d-flex flex-wrap gap-3 justify-content-center"
+            id="pictures-painted"
+          ></div>
         </div>
       </div>
     </section>

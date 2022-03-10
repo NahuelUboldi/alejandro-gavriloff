@@ -31,7 +31,9 @@ const addLastPicturePainted = async () => {
 
   const img = document.createElement('img');
   img.src = `${paint[0].img.sm}`;
-  img.classList.add("painting-helped");
+  img.classList.add('painting-helped');
+  img.classList.add('modal-img');
+  img.setAttribute('id', paint[0].id);
 
   picturesPaintedContainer.prepend(img);
 };
@@ -51,7 +53,6 @@ const getRandomPicture = async () => {
   let randomNumber = Math.floor(Math.random() * filtered.length);
   canvasImgContainer.style.backgroundImage = `url("${filtered[randomNumber].img.lg}")`;
   lastPictureId = filtered[randomNumber].id;
-  console.log(lastPictureId);
 };
 const main = async () => {
   await getRandomPicture();
