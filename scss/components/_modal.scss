@@ -23,6 +23,23 @@
       color: #555;
     }
   }
+  .arrow-btns {
+    i {
+      @include transitionProperty;
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      cursor: pointer;
+      transform: translate(-50%, 0%);
+      &:hover {
+      opacity: 0.5;
+     }
+    }
+    
+    i.fa-chevron-right {
+      left: 95%;
+    }
+  }
   #modal-content {
     @include absoluteCenter;
     z-index: 95;

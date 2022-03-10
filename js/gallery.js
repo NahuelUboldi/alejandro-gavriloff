@@ -3,8 +3,8 @@ import { showModal,closeModal } from './modal.js';
 //selectors
 const filterBtnsContainer = document.querySelector(".gallery-btns-container")
 const galleryContainer = document.getElementById('img-container');
-const modalContent = document.getElementById("modal-content")
 const modal = document.getElementById('modal');
+
 
 //global vars
 const CATEGORY_ALL = "todos"
@@ -57,7 +57,7 @@ const handleImgClick = (e) => {
   if(e.target.id === "gallery-img") {
     const paintings = filterPaintingsByCategory(state.paintings,state.categoryActive)
     const paintingID = e.target.attributes.key.value
-    showModal(modal,modalContent,paintings,paintingID)
+    showModal(modal,paintings,paintingID)
   }
   if(e.target.id === "close-modal-btn" || e.target.classList.value === "modal-bg" ) {
     closeModal()

@@ -10790,6 +10790,20 @@ body {
 #modal .modal-bg .close-tag:hover {
   color: #555;
 }
+#modal .arrow-btns i {
+  transition: all ease 700ms;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  cursor: pointer;
+  transform: translate(-50%, 0%);
+}
+#modal .arrow-btns i:hover {
+  opacity: 0.5;
+}
+#modal .arrow-btns i.fa-chevron-right {
+  left: 95%;
+}
 #modal #modal-content {
   position: absolute;
   top: 50%;
