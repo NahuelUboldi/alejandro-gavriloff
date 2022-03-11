@@ -37,14 +37,14 @@ const filterPaintingsByPeriod = (paintsArr) => {
   if (localStorage['period']) {
     return JSON.parse(localStorage.getItem('period'));
   }
-  const firstPeriod = paintsArr.filter((paint) =>paint.period === '1');
+  const firstPeriod = paintsArr.filter((paint) => paint.period === '1');
   const secondPeriod = paintsArr.filter((paint) => paint.period === '2');
   const thirdPeriod = paintsArr.filter((paint) => paint.period === '3');
   const response = {
-    firstPeriod : [...firstPeriod],
-    secondPeriod : [...secondPeriod],
-    thirdPeriod : [...thirdPeriod]
-  }
+    firstPeriod: [...firstPeriod],
+    secondPeriod: [...secondPeriod],
+    thirdPeriod: [...thirdPeriod],
+  };
   localStorage.setItem('period', JSON.stringify(response));
   return response;
 };
@@ -58,11 +58,24 @@ const filterPaintingsByID = (paintsArr, id) => {
   return paintsArr.filter((paint) => paint.id === id);
 };
 
+const shuffleArray = (array) => {
+  console.log('original: ', array);
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+    console.log('shuffled: ', array);
+  }
+  return array;
+};
+
 export {
   getPaintings,
   filterPaintingsByCategory,
   filterPaintingsByQuality,
   filterPaintingsByTags,
   filterPaintingsByID,
-  filterPaintingsByPeriod
+  filterPaintingsByPeriod,
+  shuffleArray,
 };

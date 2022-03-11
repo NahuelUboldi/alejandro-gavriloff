@@ -1484,9 +1484,8 @@
         "sm": "img/galeria/temperas/91-sm.jpg",
         "xs": "img/galeria/temperas/91-xs.jpg"
       }
-    }
+    },
 
-,
     {
       "id": "100",
       "year": "",
@@ -1756,11 +1755,397 @@
         "sm": "img/galeria/murales/18-sm.jpg",
         "xs": "img/galeria/murales/18-xs.jpg"
       }
+    },
+
+    {
+      "id": "118",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "",
+      "img": {
+        "lg": "img/galeria/oleos/01-lg.jpg",
+        "md": "img/galeria/oleos/01-md.jpg",
+        "sm": "img/galeria/oleos/01-sm.jpg",
+        "xs": "img/galeria/oleos/01-xs.jpg"
+      }
+    },
+    {
+      "id": "119",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "",
+      "img": {
+        "lg": "img/galeria/oleos/02-lg.jpg",
+        "md": "img/galeria/oleos/02-md.jpg",
+        "sm": "img/galeria/oleos/02-sm.jpg",
+        "xs": "img/galeria/oleos/02-xs.jpg"
+      }
+    },
+    {
+      "id": "120",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "",
+      "img": {
+        "lg": "img/galeria/oleos/03-lg.jpg",
+        "md": "img/galeria/oleos/03-md.jpg",
+        "sm": "img/galeria/oleos/03-sm.jpg",
+        "xs": "img/galeria/oleos/03-xs.jpg"
+      }
+    },
+    {
+      "id": "121",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "",
+      "img": {
+        "lg": "img/galeria/oleos/03-lg.jpg",
+        "md": "img/galeria/oleos/03-md.jpg",
+        "sm": "img/galeria/oleos/03-sm.jpg",
+        "xs": "img/galeria/oleos/03-xs.jpg"
+      }
+    },
+    {
+      "id": "122",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": ["abstracto"],
+      "quality": "",
+      "img": {
+        "lg": "img/galeria/oleos/31-lg.jpg",
+        "md": "img/galeria/oleos/31-md.jpg",
+        "sm": "img/galeria/oleos/31-sm.jpg",
+        "xs": "img/galeria/oleos/31-xs.jpg"
+      }
+    },
+    {
+      "id": "123",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": ["abstracto"],
+      "quality": "",
+      "img": {
+        "lg": "img/galeria/oleos/32-lg.jpg",
+        "md": "img/galeria/oleos/32-md.jpg",
+        "sm": "img/galeria/oleos/32-sm.jpg",
+        "xs": "img/galeria/oleos/32-xs.jpg"
+      }
+    },
+    {
+      "id": "124",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": ["abstracto"],
+      "quality": "",
+      "img": {
+        "lg": "img/galeria/oleos/33-lg.jpg",
+        "md": "img/galeria/oleos/33-md.jpg",
+        "sm": "img/galeria/oleos/33-sm.jpg",
+        "xs": "img/galeria/oleos/33-xs.jpg"
+      }
+    },
+    {
+      "id": "125",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/oleos/82-lg.jpg",
+        "md": "img/galeria/oleos/82-md.jpg",
+        "sm": "img/galeria/oleos/82-sm.jpg",
+        "xs": "img/galeria/oleos/82-xs.jpg"
+      }
+    },
+    {
+      "id": "126",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/oleos/83-lg.jpg",
+        "md": "img/galeria/oleos/83-md.jpg",
+        "sm": "img/galeria/oleos/83-sm.jpg",
+        "xs": "img/galeria/oleos/83-xs.jpg"
+      }
+    },
+    {
+      "id": "127",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/oleos/84-lg.jpg",
+        "md": "img/galeria/oleos/84-md.jpg",
+        "sm": "img/galeria/oleos/84-sm.jpg",
+        "xs": "img/galeria/oleos/84-xs.jpg"
+      }
+    },
+    {
+      "id": "128",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/oleos/85-lg.jpg",
+        "md": "img/galeria/oleos/85-md.jpg",
+        "sm": "img/galeria/oleos/85-sm.jpg",
+        "xs": "img/galeria/oleos/85-xs.jpg"
+      }
+    },
+    {
+      "id": "129",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/oleos/86-lg.jpg",
+        "md": "img/galeria/oleos/86-md.jpg",
+        "sm": "img/galeria/oleos/86-sm.jpg",
+        "xs": "img/galeria/oleos/86-xs.jpg"
+      }
+    },
+    {
+      "id": "130",
+      "year": "",
+      "title": "",
+      "period": "2",
+      "category": "oleo",
+      "tags": [],
+      "quality": "",
+      "img": {
+        "lg": "img/galeria/oleos/87-lg.jpg",
+        "md": "img/galeria/oleos/87-md.jpg",
+        "sm": "img/galeria/oleos/87-sm.jpg",
+        "xs": "img/galeria/oleos/87-xs.jpg"
+      }
+    },
+    {
+      "id": "131",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/oleos/88-lg.jpg",
+        "md": "img/galeria/oleos/88-md.jpg",
+        "sm": "img/galeria/oleos/88-sm.jpg",
+        "xs": "img/galeria/oleos/88-xs.jpg"
+      }
+    },
+    {
+      "id": "132",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/oleos/89-lg.jpg",
+        "md": "img/galeria/oleos/89-md.jpg",
+        "sm": "img/galeria/oleos/89-sm.jpg",
+        "xs": "img/galeria/oleos/89-xs.jpg"
+      }
+    },
+    {
+      "id": "133",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "oleo",
+      "tags": [],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/oleos/90-lg.jpg",
+        "md": "img/galeria/oleos/90-md.jpg",
+        "sm": "img/galeria/oleos/90-sm.jpg",
+        "xs": "img/galeria/oleos/90-xs.jpg"
+      }
+    },
+    {
+      "id": "134",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/desnudos/01-lg.jpg",
+        "md": "img/galeria/desnudos/01-md.jpg",
+        "sm": "img/galeria/desnudos/01-sm.jpg",
+        "xs": "img/galeria/desnudos/01-xs.jpg"
+      }
+    },
+    {
+      "id": "135",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "",
+      "img": {
+        "lg": "img/galeria/desnudos/02-lg.jpg",
+        "md": "img/galeria/desnudos/02-md.jpg",
+        "sm": "img/galeria/desnudos/02-sm.jpg",
+        "xs": "img/galeria/desnudos/02-xs.jpg"
+      }
+    },
+    {
+      "id": "136",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/desnudos/03-lg.jpg",
+        "md": "img/galeria/desnudos/03-md.jpg",
+        "sm": "img/galeria/desnudos/03-sm.jpg",
+        "xs": "img/galeria/desnudos/03-xs.jpg"
+      }
+    },
+    {
+      "id": "137",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/desnudos/04-lg.jpg",
+        "md": "img/galeria/desnudos/04-md.jpg",
+        "sm": "img/galeria/desnudos/04-sm.jpg",
+        "xs": "img/galeria/desnudos/04-xs.jpg"
+      }
+    },
+    {
+      "id": "138",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/desnudos/05-lg.jpg",
+        "md": "img/galeria/desnudos/05-md.jpg",
+        "sm": "img/galeria/desnudos/05-sm.jpg",
+        "xs": "img/galeria/desnudos/05-xs.jpg"
+      }
+    },
+    {
+      "id": "139",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/desnudos/06-lg.jpg",
+        "md": "img/galeria/desnudos/06-md.jpg",
+        "sm": "img/galeria/desnudos/06-sm.jpg",
+        "xs": "img/galeria/desnudos/06-xs.jpg"
+      }
+    },
+    {
+      "id": "140",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/desnudos/07-lg.jpg",
+        "md": "img/galeria/desnudos/07-md.jpg",
+        "sm": "img/galeria/desnudos/07-sm.jpg",
+        "xs": "img/galeria/desnudos/07-xs.jpg"
+      }
+    },
+    {
+      "id": "141",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/desnudos/08-lg.jpg",
+        "md": "img/galeria/desnudos/08-md.jpg",
+        "sm": "img/galeria/desnudos/08-sm.jpg",
+        "xs": "img/galeria/desnudos/08-xs.jpg"
+      }
+    },
+    {
+      "id": "142",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/desnudos/09-lg.jpg",
+        "md": "img/galeria/desnudos/09-md.jpg",
+        "sm": "img/galeria/desnudos/09-sm.jpg",
+        "xs": "img/galeria/desnudos/09-xs.jpg"
+      }
+    },
+    {
+      "id": "143",
+      "year": "",
+      "title": "",
+      "period": "",
+      "category": "desnudo",
+      "tags": ["desnudo"],
+      "quality": "mala",
+      "img": {
+        "lg": "img/galeria/desnudos/10-lg.jpg",
+        "md": "img/galeria/desnudos/10-md.jpg",
+        "sm": "img/galeria/desnudos/10-sm.jpg",
+        "xs": "img/galeria/desnudos/10-xs.jpg"
+      }
     }
-
-
-
-
-
   ]
 }
