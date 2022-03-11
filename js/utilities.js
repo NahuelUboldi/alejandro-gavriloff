@@ -29,8 +29,23 @@ const filterPaintingsByQuality = (paintsArr) => {
   if (localStorage['buena']) {
     return JSON.parse(localStorage.getItem('buena'));
   }
-  const response = paintsArr.filter((paint) => paint.calidad === 'buena');
+  const response = paintsArr.filter((paint) => paint.quality === 'buena');
   localStorage.setItem('buena', JSON.stringify(response));
+  return response;
+};
+const filterPaintingsByPeriod = (paintsArr) => {
+  if (localStorage['period']) {
+    return JSON.parse(localStorage.getItem('period'));
+  }
+  const firstPeriod = paintsArr.filter((paint) =>paint.period === '1');
+  const secondPeriod = paintsArr.filter((paint) => paint.period === '2');
+  const thirdPeriod = paintsArr.filter((paint) => paint.period === '3');
+  const response = {
+    firstPeriod : [...firstPeriod],
+    secondPeriod : [...secondPeriod],
+    thirdPeriod : [...thirdPeriod]
+  }
+  localStorage.setItem('period', JSON.stringify(response));
   return response;
 };
 const filterPaintingsByTags = (paintsArr, param, bool) => {
@@ -49,4 +64,5 @@ export {
   filterPaintingsByQuality,
   filterPaintingsByTags,
   filterPaintingsByID,
+  filterPaintingsByPeriod
 };
