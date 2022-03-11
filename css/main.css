@@ -11347,8 +11347,8 @@ section#gallery-preview #images-container img ::before {
   z-index: 99;
   background-color: white;
 }
-#navigation .navbar-link.active {
-  font-weight: 900;
+#navigation a.active {
+  font-weight: bold;
 }
 
 #contact-form {
