@@ -10820,6 +10820,40 @@ body {
   display: none;
 }
 
+.glider-contain .btn-container {
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+.glider-contain .btn-container button {
+  margin: 0rem 4rem;
+  opacity: 0.5;
+  border: none;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  transition: all ease 700ms;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  /* Remove excess padding and border in Firefox 4+ */
+}
+.glider-contain .btn-container button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.glider-contain .btn-container button:hover {
+  opacity: 1;
+}
+
 .hero-dibujo {
   min-height: 60vh;
   perspective: 500px;

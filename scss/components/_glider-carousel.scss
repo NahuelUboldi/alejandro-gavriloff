@@ -1,0 +1,42 @@
+@use '../components/mixins' as *;
+.glider-contain {
+ .btn-container {
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  button {
+   margin: 0rem 4rem;
+   opacity: 0.5;
+    border: none;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    @include transitionProperty;
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+
+
+  /* Remove excess padding and border in Firefox 4+ */
+   &::-moz-focus-inner {
+       border: 0;
+       padding: 0;
+   }
+   &:hover {
+    opacity: 1;
+   }
+  }
+ }
+}

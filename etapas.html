@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biografía del pintor Alejandro Gavriloff</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
     <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <!--start navigation-->
@@ -107,7 +108,27 @@
                 retrato vivo de escenas humanas típicas y pintorescas de un
                 Buenos Aires que se muestra en sus fibras más íntimas.
               </p>
-              <div id="period-gallery" class="fs-1">Agregar galería de cuadros!!!</div>
+              <!-- start glider carousel -->
+              <div class="period-gallery first-period-carousel">
+                <div class="glider-contain">
+                  <div class="glider first-period-glider">
+                    <div>your content here</div>
+
+                  </div>
+
+                  <div class="btn-container">
+                    <button aria-label="Previous" class="fp-glider-prev prev-btn">
+                      <i class="fa-solid fa-chevron-left fs-1"></i>
+                    </button>
+                    <button aria-label="Next" class="fp-glider-next next-btn">
+                      <i class="fa-solid fa-chevron-right fs-1"></i>
+                    </button>
+                  </div>
+                  <div role="tablist" class="fp-dots dots"></div>
+                </div>
+              </div>
+              <!-- end glider carousel -->
+
             </div>
             <hr />
             <!--end period-->
@@ -157,7 +178,25 @@
                 creativo y sus posibilidades de manifestación.
               </p>
 
-              <div class="fs-1">Agregar galería de cuadros!!!</div>
+              <!-- start glider carousel -->
+              <div class="period-gallery second-period-carousel">
+                <div class="glider-contain">
+                  <div class="glider second-period-glider">
+                    <div>your content here</div>
+
+                  </div>
+                  <div class="btn-container">
+                    <button aria-label="Previous" class="sp-glider-prev prev-btn">
+                      <i class="fa-solid fa-chevron-left fs-1"></i>
+                    </button>
+                    <button aria-label="Next" class="sp-glider-next next-btn">
+                      <i class="fa-solid fa-chevron-right fs-1"></i>
+                    </button>
+                  </div>
+                  <div role="tablist" class="sp-dots dots"></div>
+                </div>
+              </div>
+              <!-- end glider carousel -->
             </div>
             <hr />
             <!--end period-->
@@ -242,7 +281,27 @@
                 sufrimiento .
               </p>
 
-              <div class="fs-1">Agregar galería de cuadros!!!</div>
+                            <!-- start glider carousel -->
+              <div class="period-gallery third-period-carousel">
+                <div class="glider-contain">
+                  <div class="glider third-period-glider">
+                    <div>your content here</div>
+
+                  </div>
+            
+                  <div class="btn-container">
+                    <button aria-label="Previous" class="tp-glider-prev prev-btn">
+                      <i class="fa-solid fa-chevron-left fs-1"></i>
+                    </button>
+                    <button aria-label="Next" class="tp-glider-next next-btn">
+                      <i class="fa-solid fa-chevron-right fs-1"></i>
+                    </button>
+                  </div>
+            
+                  <div role="tablist" class="tp-dots dots"></div>
+                </div>
+              </div>
+              <!-- end glider carousel -->
             </div>
             <!--end period-->
           </div>
@@ -251,6 +310,20 @@
         </main>
       </div>
       <!--end container-->
+            <!--modal-->
+      <div id="modal" class="closed">
+        <div class="modal-bg">
+          <div class="close-tag h1">
+            <i id="close-modal-btn" class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="arrow-btns">
+            <i class="fa-solid fa-chevron-left fs-1"></i>
+            <i class="fa-solid fa-chevron-right fs-1"></i>
+          </div>
+        </div>
+        <div id="modal-content"></div>
+      </div>
+      <!--end modal-->
     </section>
     <!--end etapas-->
 
@@ -307,7 +380,8 @@
 
     <!-- javascript -->
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script type="module" src="js/app.js"></script>
-    <script type="module" src="js/etapas.js"></script>
+    <script type="module" src="js/periods.js"></script>
   </body>
 </html>

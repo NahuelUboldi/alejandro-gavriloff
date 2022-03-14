@@ -8,13 +8,14 @@
 @use 'components/mixins';
 @use 'components/typography';
 @use 'components/modal';
+@use "components/glider-carousel";
 
 //IMPORT THE SECTIONS
 @use 'sections/hero-header';
 @use 'sections/quote';
 @use 'sections/footer';
 @use 'sections/bio';
-@use 'sections/periods';
+@use 'sections/periodos';
 @use 'sections/carousel';
 @use 'sections/canvas';
 @use 'sections/gallery-preview';

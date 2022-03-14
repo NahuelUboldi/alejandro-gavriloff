@@ -9,16 +9,15 @@ const filterBtnsContainer = document.querySelector('.gallery-btns-container');
 const galleryContainer = document.getElementById('img-container');
 const modal = document.getElementById('modal');
 
-//global vars
-const CATEGORY_ALL = 'todos';
 
 //state
 const state = {
   categoryActive: 'todos',
   paintings: [],
+  paintingsShufled: []
 };
 //btns
-const getPaintingsCateogies = (paintings) => {
+const getPaintingsCategories = (paintings) => {
   let categoryArr = ['todos'];
   paintings.map((paint) => {
     if (!categoryArr.includes(paint.category)) {
@@ -43,18 +42,18 @@ const getFilterBtns = (categories) => {
   return btns;
 };
 const loadFilterBtns = () => {
-  const categories = getPaintingsCateogies(state.paintings);
+  const categories = getPaintingsCategories(state.paintings);
   const filterBtns = getFilterBtns(categories);
   filterBtnsContainer.innerHTML = filterBtns;
 };
 //images
 const getPaintingsToShow = (paintings) => {
-  let pantingsArr = paintings;
+  let pantingsDeepCopy = JSON.parse(JSON.stringify(paintings));
   if (state.categoryActive === 'todos') {
-    console.log(state.categoryActive, 'shuffle');
-    pantingsArr = shuffleArray(pantingsArr);
+    pantingsDeepCopy = shuffleArray(pantingsDeepCopy);
   }
-  return pantingsArr.reduce((acc, paint) => {
+  state.paintingsShufled = pantingsDeepCopy
+  return pantingsDeepCopy.reduce((acc, paint) => {
     return (
       acc +
       `<img src=${paint.img.sm} alt="pintura del artista Alex Gavriloff" id="gallery-img" key=${paint.id} />`
@@ -63,11 +62,7 @@ const getPaintingsToShow = (paintings) => {
 };
 
 const loadImages = () => {
-  let paintings = filterPaintingsByCategory(
-    state.paintings,
-    state.categoryActive
-  );
-
+  const paintings = filterPaintingsByCategory(state.paintings,state.categoryActive);
   const paintingsToShow = getPaintingsToShow(paintings);
   galleryContainer.innerHTML = paintingsToShow;
 };
@@ -75,17 +70,11 @@ const loadImages = () => {
 //handlers
 const handleImgClick = (e) => {
   if (e.target.id === 'gallery-img') {
-    const paintings = filterPaintingsByCategory(
-      state.paintings,
-      state.categoryActive
-    );
+    const paintings = filterPaintingsByCategory(state.paintingsShufled,state.categoryActive);
     const paintingID = e.target.attributes.key.value;
     showModal(modal, paintings, paintingID);
   }
-  if (
-    e.target.id === 'close-modal-btn' ||
-    e.target.classList.value === 'modal-bg'
-  ) {
+  if (e.target.id === 'close-modal-btn' || e.target.classList.value === 'modal-bg') {
     closeModal();
   }
 };
