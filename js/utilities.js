@@ -59,13 +59,11 @@ const filterPaintingsByID = (paintsArr, id) => {
 };
 
 const shuffleArray = (array) => {
-  console.log('original: ', array);
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     const temp = array[i];
     array[i] = array[j];
     array[j] = temp;
-    console.log('shuffled: ', array);
   }
   return array;
 };

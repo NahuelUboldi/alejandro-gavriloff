@@ -51,7 +51,8 @@ const loadFilterBtns = () => {
 const getPaintingsToShow = (paintings) => {
   let pantingsArr = paintings;
   if (state.categoryActive === 'todos') {
-    pantingsArr = shuffleArray(paintings);
+    console.log(state.categoryActive, 'shuffle');
+    pantingsArr = shuffleArray(pantingsArr);
   }
   return pantingsArr.reduce((acc, paint) => {
     return (
