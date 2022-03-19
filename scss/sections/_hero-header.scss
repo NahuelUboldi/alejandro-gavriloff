@@ -34,7 +34,6 @@
   background-color: red;
   @include shadowDrop;
 }
-
 .cuadro:nth-child(1) {
   background-image: url('../img/hero/cuadro-01.jpg');
   transform: translate3d(-135%, -85%, 70px);

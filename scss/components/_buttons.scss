@@ -1,51 +1,53 @@
-@use "../custom" as *;
-@use "../components/mixins" as *;
+@use '../custom' as *;
+@use '../components/mixins' as *;
 
+// experiment btn - delete if dont use
 .btn-textured {
- background-image: url("../../img/galeria/temperas/01-md.jpg");
- background-size: 1000%;
-background-position: top left;
+  background-image: url('../../img/galeria/temperas/01-md.jpg');
+  background-size: 1000%;
+  background-position: top left;
 
-backdrop-filter: invert(70%);
-font-weight: bold;
-border: none;
-animation: wave 205s linear infinite;
+  backdrop-filter: invert(70%);
+  font-weight: bold;
+  border: none;
+  animation: wave 205s linear infinite;
 }
 .btn-textured a {
- text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px black;
 }
 .btn-textured:hover {
- animation: wave 100s linear infinite;
+  animation: wave 100s linear infinite;
 }
+// end of experiment btn
 
 @keyframes wave {
- 0% {
-background-position: top left;
- }
- 12% {
-background-position: center left;
- }
- 24% {
-background-position: center center;
- }
- 36% {
-background-position: top center;
- }
- 50% {
-background-position: top right;
- }
- 62% {
-background-position: center right;
- }
- 74% {
-background-position: center center;
- }
- 86% {
-background-position: top center;
- }
+  0% {
+    background-position: top left;
+  }
+  12% {
+    background-position: center left;
+  }
+  24% {
+    background-position: center center;
+  }
+  36% {
+    background-position: top center;
+  }
+  50% {
+    background-position: top right;
+  }
+  62% {
+    background-position: center right;
+  }
+  74% {
+    background-position: center center;
+  }
+  86% {
+    background-position: top center;
+  }
 }
 
 // -webkit-text-fill-color: transparent;
 // -webkit-background-clip: text;
 // -moz-background-clip:text;
-// background-clip:text; 
+// background-clip:text;
