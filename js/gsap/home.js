@@ -9,7 +9,7 @@ tlNav
   .from('.rect-bg', { opacity: 0, x: 10, y: -10 }, '-=0.8')
   .from('.nav-item', { opacity: 0, x: 2, y: -2, stagger: 0.3 }, '-=0.8');
 
-const tlHero = gsap.timeline({ defaults: { duration: 1.5 } });
+const tlHero = gsap.timeline({ defaults: { duration: 1.2 } });
 tlHero
   .from('.hero-text', {
     opacity: 0,
@@ -32,7 +32,7 @@ tlHero
       opacity: 0,
       stagger: { from: 'random', amount: 0.8 },
     },
-    '-=0.8'
+    '-=1.1'
   );
 
 gsap.from('#quote', { opacity: 0, x: -50, y: 50, duration: 1.5 });
