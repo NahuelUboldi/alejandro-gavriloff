@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 // HEADER
 const tlNav = gsap.timeline({ defaults: { duration: 1 } });
 tlNav
@@ -35,4 +36,17 @@ tlHero
     '-=1.1'
   );
 
+// QUOTE
 gsap.from('#quote', { opacity: 0, x: -50, y: 50, duration: 1.5 });
+gsap.from('#quote > .container', {
+  scrollTrigger: {
+    trigger: '#quote > .container',
+    start: 'top 70%', //trigger element, screen position
+    toggleActions: 'play none none none',
+    markers: true,
+  },
+  duration: 2,
+  x: 50,
+  y: 20,
+  opacity: 0,
+});
