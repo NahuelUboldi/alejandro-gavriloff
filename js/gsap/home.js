@@ -1,4 +1,15 @@
 gsap.registerPlugin(ScrollTrigger);
+// GENERIC ANIMATIONS
+const animations = {
+  animOpacity : {opacity: 0},
+  animScale : {opacity: 0,scale: 1.5},
+  animAppearLeft : {opacity: 0,x:-20},
+  animAppearFullLeft : {opacity: 0,x:"-100%"},
+  animAppearRight : {opacity: 0,x:20},
+  animAppearFullRight : {opacity: 0,x:"100%"},
+
+}
+
 // HEADER
 const tlNav = gsap.timeline({ defaults: { duration: 1 } });
 tlNav
@@ -64,7 +75,6 @@ tlQuote
   );
 
 // BIO
-const bioAnimations = { opacity: 0 };
 const tlBio = gsap.timeline({
   defaults: { duration: 3 },
   scrollTrigger: {
@@ -77,12 +87,12 @@ const tlBio = gsap.timeline({
   },
 });
 tlBio
-  .from('#bio > .container > .display-3', { ...bioAnimations, scale: 1.5 })
-  .from('#bio > .container > hr', { ...bioAnimations, x: '-100%' }, '-=2.5')
+  .from('#bio > .container > .display-3', { ...animations.animScale })
+  .from('#bio > .container > hr', { ...animations.animAppearFullLeft }, '-=2.5')
   .from(
     '#bio > .container > .row > div > p',
     {
-      ...bioAnimations,
+      ...animations.animOpacity,
       stagger: 0.5,
       x: -100,
     },
@@ -91,7 +101,7 @@ tlBio
   .from(
     '#bio > .container > .row > div > div > button',
     {
-      ...bioAnimations,
+      ...animations.animOpacity,
       x: -100,
     },
     '-=2.5'
@@ -99,12 +109,131 @@ tlBio
   .from(
     '#bio > .container > .row .columna-3d',
     {
-      ...bioAnimations,
-      scale: 1.5,
+      ...animations.animScale,
       x: -40,
       y: 10,
     },
     '-=2.5'
   );
 
-//PERIODS-ARTISTICOS
+//artistic-periods
+const tlArtisticPeriodsHeader = gsap.timeline({
+  defaults: { duration: 3 },
+  scrollTrigger: {
+    trigger: '#artistic-periods > .container',
+    start: 'top 80%', //trigger element, screen position
+    end: 'bottom 20%',
+    toggleActions: 'play none none none',
+    // scrub: true,
+    // markers: true,
+  },
+});
+tlArtisticPeriodsHeader
+  .from("#artistic-periods > .container > .display-3", {...animations.animScale},
+    '-=2.5')
+  .from("#artistic-periods > .container > hr", {...animations.animAppearFullLeft},
+    '-=2.5')
+  .from("#artistic-periods > .container > .lead", {...animations.animAppearLeft},
+    '-=2.5')
+
+// images
+const periodsImagesProps = {
+  scrollTrigger : {
+    start: '10% 60%', //trigger element, screen position
+    end: '90% 40%',
+    ease:"power4",
+    // toggleActions: 'play none none none',
+    scrub: 5,
+    // markers: true,
+  },
+  from : {
+      backgroundPosition: "00%",
+    backgroundSize: "auto 100%"
+  },
+  to : {
+    backgroundPosition:"80%",
+    backgroundSize: "auto 110%"
+  }
+}
+const tlFirstPeriodImage = gsap.timeline({
+  scrollTrigger: {
+    ...periodsImagesProps.scrollTrigger,
+    trigger: '#artistic-periods > .bsas',
+  },
+})
+tlFirstPeriodImage.fromTo(".bsas .image-bg",{
+    ...periodsImagesProps.from
+    }, {
+    ...periodsImagesProps.to
+  })
+const tlSecondPeriodImage = gsap.timeline({
+  scrollTrigger: {
+    ...periodsImagesProps.scrollTrigger,
+    trigger: '#artistic-periods > .america',
+  },
+})
+tlSecondPeriodImage.fromTo(".america .image-bg",{
+    ...periodsImagesProps.from
+    }, {
+    ...periodsImagesProps.to
+  })
+const tlThirdPeriodImage = gsap.timeline({
+  scrollTrigger: {
+    ...periodsImagesProps.scrollTrigger,
+    trigger: '#artistic-periods > .humanidad',
+  },
+})
+tlThirdPeriodImage.fromTo(".humanidad .image-bg",{
+    ...periodsImagesProps.from
+    }, {
+    ...periodsImagesProps.to
+  })
+
+  //content
+  const tlFirstPeriod = gsap.timeline({
+    defaults: { duration: 3 },
+    scrollTrigger: {
+      trigger: '#artistic-periods > .bsas',
+      start: 'top 80%', //trigger element, screen position
+      end: 'bottom 20%',
+      toggleActions: 'play none none none',
+      // scrub: true,
+      // markers: true,
+    },
+  })
+  tlFirstPeriod
+    .from('.bsas .period-article-content h3',{...animations.animScale},"-=2.5")
+    .from('.bsas .period-article-content hr',{...animations.animAppearFullRight},"-=2.5")
+    .from('.bsas .period-article-content p',{...animations.animAppearRight,stagger:0.5},"-=2.5")
+
+const tlSecondPeriod = gsap.timeline({
+    defaults: { duration: 3 },
+    scrollTrigger: {
+      trigger: '#artistic-periods > .america',
+      start: 'top 80%', //trigger element, screen position
+      end: 'bottom 20%',
+      toggleActions: 'play none none none',
+      // scrub: true,
+      // markers: true,
+    },
+  })
+  tlSecondPeriod
+    .from('.america .period-article-content h3',{...animations.animScale},"-=2.5")
+    .from('.america .period-article-content hr',{...animations.animAppearFullLeft},"-=2.5")
+    .from('.america .period-article-content p',{...animations.animAppearLeft,stagger:0.5},"-=2.5")
+
+  const tlThirdPeriod = gsap.timeline({
+    defaults: { duration: 3 },
+    scrollTrigger: {
+      trigger: '#artistic-periods > .humanidad',
+      start: 'top 80%', //trigger element, screen position
+      end: 'bottom 20%',
+      toggleActions: 'play none none none',
+      // scrub: true,
+      // markers: true,
+    },
+  })
+  tlThirdPeriod
+    .from('.humanidad .period-article-content h3',{...animations.animScale},"-=2.5")
+    .from('.humanidad .period-article-content hr',{...animations.animAppearFullRight},"-=2.5")
+    .from('.humanidad .period-article-content p',{...animations.animAppearRight,stagger:0.5},"-=2.5")

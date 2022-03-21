@@ -4,7 +4,7 @@
 $base-margin-size: 6rem;
 $base-container-height: 300px;
 
-#periods-artisticos {
+#artistic-periods {
   //general styles
   isolation: isolate;
   @include media-breakpoint-up(md) {
@@ -25,12 +25,13 @@ $base-container-height: 300px;
       height: auto;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
       @include media-breakpoint-up(md) {
         flex-direction: row;
       }
       z-index: -80;
       .image-bg {
-        background-size: cover;
+        background-size: auto 100%;
         background-position: center;
         z-index: 25;
         width: 100%;

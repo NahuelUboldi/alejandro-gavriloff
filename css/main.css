@@ -11107,22 +11107,22 @@ body {
   transform: scale(1.1) translateX(-50px);
 }
 
-#periods-artisticos {
+#artistic-periods {
   isolation: isolate;
 }
 @media (min-width: 768px) {
-  #periods-artisticos {
+  #artistic-periods {
     background-color: none;
   }
 }
-#periods-artisticos article {
+#artistic-periods article {
   overflow: hidden;
   height: auto;
   position: relative;
   margin-top: 5rem;
   margin-bottom: 0rem;
 }
-#periods-artisticos article .article-bg {
+#artistic-periods article .article-bg {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -11130,140 +11130,141 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   z-index: -80;
 }
 @media (min-width: 768px) {
-  #periods-artisticos article .article-bg {
+  #artistic-periods article .article-bg {
     flex-direction: row;
   }
 }
-#periods-artisticos article .article-bg .image-bg {
-  background-size: cover;
+#artistic-periods article .article-bg .image-bg {
+  background-size: auto 100%;
   background-position: center;
   z-index: 25;
   width: 100%;
 }
 @media (min-width: 768px) {
-  #periods-artisticos article .article-bg .image-bg {
+  #artistic-periods article .article-bg .image-bg {
     width: 50%;
   }
 }
-#periods-artisticos article .article-bg .plain-bg {
+#artistic-periods article .article-bg .plain-bg {
   background-color: #dee2e6;
   width: 100%;
 }
 @media (min-width: 768px) {
-  #periods-artisticos article .article-bg .plain-bg {
+  #artistic-periods article .article-bg .plain-bg {
     width: 50%;
   }
 }
-#periods-artisticos article .article-bg .image-bg,
-#periods-artisticos article .article-bg .plain-bg {
+#artistic-periods article .article-bg .image-bg,
+#artistic-periods article .article-bg .plain-bg {
   height: 300px;
 }
 @media (min-width: 576px) {
-  #periods-artisticos article .article-bg .image-bg,
-#periods-artisticos article .article-bg .plain-bg {
+  #artistic-periods article .article-bg .image-bg,
+#artistic-periods article .article-bg .plain-bg {
     height: 400px;
   }
 }
 @media (min-width: 768px) {
-  #periods-artisticos article .article-bg .image-bg,
-#periods-artisticos article .article-bg .plain-bg {
+  #artistic-periods article .article-bg .image-bg,
+#artistic-periods article .article-bg .plain-bg {
     height: 500px;
   }
 }
 @media (min-width: 992px) {
-  #periods-artisticos article .article-bg .image-bg,
-#periods-artisticos article .article-bg .plain-bg {
+  #artistic-periods article .article-bg .image-bg,
+#artistic-periods article .article-bg .plain-bg {
     height: 600px;
   }
 }
 @media (min-width: 1200px) {
-  #periods-artisticos article .article-bg .image-bg,
-#periods-artisticos article .article-bg .plain-bg {
+  #artistic-periods article .article-bg .image-bg,
+#artistic-periods article .article-bg .plain-bg {
     height: 700px;
   }
 }
 @media (min-width: 1400px) {
-  #periods-artisticos article .article-bg .image-bg,
-#periods-artisticos article .article-bg .plain-bg {
+  #artistic-periods article .article-bg .image-bg,
+#artistic-periods article .article-bg .plain-bg {
     height: 800px;
   }
 }
-#periods-artisticos article .article-content div.col-12 {
+#artistic-periods article .article-content div.col-12 {
   height: auto;
   padding: 1rem;
   z-index: 24;
   min-height: 300px;
 }
 @media (min-width: 576px) {
-  #periods-artisticos article .article-content div.col-12 {
+  #artistic-periods article .article-content div.col-12 {
     min-height: 400px;
   }
 }
 @media (min-width: 768px) {
-  #periods-artisticos article .article-content div.col-12 {
+  #artistic-periods article .article-content div.col-12 {
     min-height: 500px;
   }
 }
 @media (min-width: 992px) {
-  #periods-artisticos article .article-content div.col-12 {
+  #artistic-periods article .article-content div.col-12 {
     min-height: 600px;
   }
 }
 @media (min-width: 1200px) {
-  #periods-artisticos article .article-content div.col-12 {
+  #artistic-periods article .article-content div.col-12 {
     min-height: 700px;
   }
 }
 @media (min-width: 1400px) {
-  #periods-artisticos article .article-content div.col-12 {
+  #artistic-periods article .article-content div.col-12 {
     min-height: 800px;
   }
 }
-#periods-artisticos article .article-content div.col-12:nth-child(2) {
+#artistic-periods article .article-content div.col-12:nth-child(2) {
   background-color: #dee2e6;
 }
-#periods-artisticos article.bsas .image-bg {
+#artistic-periods article.bsas .image-bg {
   background-image: url(../../img/galeria/acuarelas/24-lg.jpg);
 }
-#periods-artisticos article.america .article-bg div:nth-child(1) {
+#artistic-periods article.america .article-bg div:nth-child(1) {
   order: 1;
 }
 @media (min-width: 768px) {
-  #periods-artisticos article.america .article-bg div:nth-child(1) {
+  #artistic-periods article.america .article-bg div:nth-child(1) {
     order: 2;
   }
 }
-#periods-artisticos article.america .article-bg div:nth-child(2) {
+#artistic-periods article.america .article-bg div:nth-child(2) {
   order: 2;
 }
 @media (min-width: 768px) {
-  #periods-artisticos article.america .article-bg div:nth-child(2) {
+  #artistic-periods article.america .article-bg div:nth-child(2) {
     order: 1;
   }
 }
-#periods-artisticos article.america .article-bg .image-bg {
+#artistic-periods article.america .article-bg .image-bg {
   background-image: url(../../img/galeria/acuarelas/51-lg.jpg);
 }
-#periods-artisticos article.america .article-content div:nth-child(1) {
+#artistic-periods article.america .article-content div:nth-child(1) {
   order: 1;
 }
 @media (min-width: 768px) {
-  #periods-artisticos article.america .article-content div:nth-child(1) {
+  #artistic-periods article.america .article-content div:nth-child(1) {
     order: 2;
   }
 }
-#periods-artisticos article.america .article-content div:nth-child(2) {
+#artistic-periods article.america .article-content div:nth-child(2) {
   order: 2;
 }
 @media (min-width: 768px) {
-  #periods-artisticos article.america .article-content div:nth-child(2) {
+  #artistic-periods article.america .article-content div:nth-child(2) {
     order: 1;
   }
 }
-#periods-artisticos article.humanidad .image-bg {
+#artistic-periods article.humanidad .image-bg {
   background-image: url(../../img/galeria/temperas/04-lg.jpg);
 }
 
