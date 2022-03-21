@@ -38,15 +38,73 @@ tlHero
 
 // QUOTE
 gsap.from('#quote', { opacity: 0, x: -50, y: 50, duration: 1.5 });
-gsap.from('#quote > .container', {
+
+const quoteAnimations = { x: 50, y: 20, opacity: 0 };
+const tlQuote = gsap.timeline({
+  defaults: { duration: 3 },
   scrollTrigger: {
     trigger: '#quote > .container',
-    start: 'top 70%', //trigger element, screen position
+    start: 'top 80%', //trigger element, screen position
+    end: 'bottom 20%',
     toggleActions: 'play none none none',
-    markers: true,
+    // scrub: true,
+    // markers: true,
   },
-  duration: 2,
-  x: 50,
-  y: 20,
-  opacity: 0,
 });
+tlQuote
+  .from('#quote > .container > h2', { ...quoteAnimations, x: 30, scale: 1.5 })
+  .from('#quote > .container > blockquote > p', { ...quoteAnimations }, '-=2.5')
+  .from(
+    '#quote > .container > blockquote > figcaption',
+    {
+      ...quoteAnimations,
+      x: 90,
+    },
+    '-=2.5'
+  );
+
+// BIO
+const bioAnimations = { opacity: 0 };
+const tlBio = gsap.timeline({
+  defaults: { duration: 3 },
+  scrollTrigger: {
+    trigger: '#bio > .container',
+    start: 'top 80%', //trigger element, screen position
+    end: 'bottom 20%',
+    toggleActions: 'play none none none',
+    // scrub: true,
+    // markers: true,
+  },
+});
+tlBio
+  .from('#bio > .container > .display-3', { ...bioAnimations, scale: 1.5 })
+  .from('#bio > .container > hr', { ...bioAnimations, x: '-100%' }, '-=2.5')
+  .from(
+    '#bio > .container > .row > div > p',
+    {
+      ...bioAnimations,
+      stagger: 0.5,
+      x: -100,
+    },
+    '-=2.5'
+  )
+  .from(
+    '#bio > .container > .row > div > div > button',
+    {
+      ...bioAnimations,
+      x: -100,
+    },
+    '-=2.5'
+  )
+  .from(
+    '#bio > .container > .row .columna-3d',
+    {
+      ...bioAnimations,
+      scale: 1.5,
+      x: -40,
+      y: 10,
+    },
+    '-=2.5'
+  );
+
+//PERIODS-ARTISTICOS
