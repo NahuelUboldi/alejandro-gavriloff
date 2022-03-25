@@ -10761,6 +10761,10 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 .btn-textured {
   background-image: url("../../img/galeria/temperas/01-md.jpg");
   background-size: 1000%;

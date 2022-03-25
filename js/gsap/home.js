@@ -1,5 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
+import gsapEffects from './effects.js';
+
 // GENERIC ANIMATIONS
+//register gsap effects
+gsapEffects.map((ef) => {
+  gsap.registerEffect({ ...ef });
+});
+
 const animations = {
   animOpacity: { opacity: 0 },
   animScale: { opacity: 0, scale: 1.5 },
@@ -11,44 +18,42 @@ const animations = {
 };
 
 // HEADER
-const tlNav = gsap.timeline({ defaults: { duration: 1 } });
+const tlNav = gsap.timeline();
 tlNav
-  .from('.navbar-brand', { ...animations.animScale }, '-=0.5')
-  .from('.rect-bg', { opacity: 0, x: 10, y: -10 }, '-=0.8')
-  .from('.nav-item', { opacity: 0, x: 2, y: -2, stagger: 0.3 }, '-=0.8');
+  .efScaleDown('.navbar-brand', {}, '-=0.5')
+  .efAppearTopRight('.rect-bg', {}, '-=0.8')
+  .efAppearTopRight('.nav-item', { x: 2, y: -2, stagger: 0.3 }, '-=0.8');
 
 const tlHero = gsap.timeline({ defaults: { duration: 1.2 } });
 tlHero
-  .from('.hero-text', {
-    opacity: 0,
+  .efAppearLeft('.hero-text', {
     duration: 1,
     x: -10,
     stagger: 0.5,
     delay: 1.5,
   })
-  .from(
+  .efAppearLeft(
     '.hero-highlight',
-    { opacity: 0, duration: 1, x: -10, stagger: 0.1 },
+    { duration: 1, x: -10, stagger: 0.1 },
     '-=0.9'
   )
-  .from('.hero-btn', { opacity: 0, scale: 0.9 }, '-=0.7')
-  .from(
+  .efScaleDown('.hero-btn', { scale: 0.9 }, '-=0.7')
+  .efScaleDown(
     '.cuadro',
     {
-      duration: 3,
+      duration: 1,
       scale: 0.8,
-      opacity: 0,
       stagger: { from: 'random', amount: 0.8 },
     },
     '-=1.1'
   );
 
 // QUOTE
-gsap.from('#quote', { opacity: 0, x: -50, y: 50, duration: 1.5 });
+gsap.effects.efAppearBottomLeft('#quote');
 
 const quoteAnimations = { x: 50, y: 20, opacity: 0 };
 const tlQuote = gsap.timeline({
-  defaults: { duration: 3 },
+  defaults: {},
   scrollTrigger: {
     trigger: '#quote > .container',
     start: 'top 70%', //trigger element, screen position
@@ -59,20 +64,17 @@ const tlQuote = gsap.timeline({
   },
 });
 tlQuote
-  .from('#quote > .container > h2', { ...quoteAnimations, x: 30, scale: 1.5 })
-  .from('#quote > .container > blockquote > p', { ...quoteAnimations }, '-=2.5')
-  .from(
+  .efScaleDown('#quote > .container > h2', {})
+  .efAppearBottomRight('#quote > .container > blockquote > p', {}, '-=2.5')
+  .efAppearBottomRight(
     '#quote > .container > blockquote > figcaption',
-    {
-      ...quoteAnimations,
-      x: 90,
-    },
+    { x: 90 },
     '-=2.5'
   );
 
 // BIO
 const tlBio = gsap.timeline({
-  defaults: { duration: 3 },
+  defaults: {},
   scrollTrigger: {
     trigger: '#bio > .container',
     start: 'top 70%', //trigger element, screen position
@@ -83,34 +85,24 @@ const tlBio = gsap.timeline({
   },
 });
 tlBio
-  .from('#bio > .container > .display-3', { ...animations.animScale })
-  .from('#bio > .container > hr', { ...animations.animAppearFullLeft }, '-=2.5')
-  .from(
+  .efScaleDown('#bio > .container > .display-3', {})
+  .efAppearLeft('#bio > .container > hr', { x: '-100%' }, '-=2.5')
+  .efAppearLeft(
     '#bio > .container > .row > div > p',
     {
-      ...animations.animOpacity,
-      stagger: 0.5,
       x: -100,
+      stagger: 0.5,
     },
     '-=2.5'
   )
-  .from(
+  .efAppearLeft(
     '#bio > .container > .row > div > div > button',
     {
-      ...animations.animOpacity,
       x: -100,
     },
     '-=2.5'
   )
-  .from(
-    '#bio > .container > .row .columna-3d',
-    {
-      ...animations.animScale,
-      x: -40,
-      y: 10,
-    },
-    '-=2.5'
-  );
+  .efScaleDown('#bio > .container > .row .columna-3d', {}, '-=2.5');
 
 //artistic-periods
 const tlArtisticPeriodsHeader = gsap.timeline({
@@ -322,3 +314,5 @@ tlGalleryPreview
     },
     '-=2.5'
   );
+
+console.log(gsap.effects);
