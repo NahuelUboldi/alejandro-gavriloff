@@ -26,7 +26,7 @@ const gsapEffects = [
     defaults: {
       duration,
       opacity,
-      scale: 1.5,
+      scale: 1.2,
       stagger: false,
       delay: 0,
     },

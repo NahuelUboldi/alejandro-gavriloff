@@ -4,13 +4,7 @@ import {
   filterPaintingsByTags,
   filterPaintingsByID,
 } from './utilities.js';
-import gsapEffects from './gsap/effects.js';
-
-// GENERIC ANIMATIONS
-//register gsap effects
-gsapEffects.map((ef) => {
-  gsap.registerEffect({ ...ef });
-});
+gsap.registerPlugin(ScrollTrigger);
 // **********************************
 // **********GALLERY PREVIEW*********
 // **********************************
@@ -27,12 +21,19 @@ const modalContent = document.getElementById('modal-content');
 const imagesRequiredWidth = 400; //400 default
 
 //functions
+//gsap modal animation
+// const runAnimation = () => {
+//   const tlModal = gsap.timeline();
+//   tlModal.from('#modal', { opacity: 0, duration: 1 });
+//   tlModal.from('#modal-content > img', { opacity: 0, duration: 1 }, '-=0.5');
+// };
 
 const closeModal = () => {
   modal.classList.add('closed');
 };
 const showModal = async (e) => {
   const classNeeded = e.target.classList.value.split(' ').includes('modal-img');
+  // runAnimation();
 
   if (classNeeded) {
     modal.classList.remove('closed');
@@ -78,15 +79,19 @@ async function showGalleryPreview() {
 
   let imagesToShow = imagesArr.join('');
   imagesContainer.innerHTML = imagesToShow;
-
-  gsap.effects.efOpacity('.modal-img', {
+  gsap.from('.modal-img', {
     scrollTrigger: '.modal-img',
     duration: 1,
-    stagger: 0.4,
-    delay: 2,
+    opacity: 0,
+    scale: 0.9,
+    stagger: {
+      from: 'random',
+      amount: 0.6,
+    },
+    delay: 0,
   });
-  console.log(gsap.effects);
 }
+
 //listeners
 window.addEventListener('load', showGalleryPreview);
 window.addEventListener('resize', showGalleryPreview);

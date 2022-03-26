@@ -9,7 +9,7 @@
   .modal-bg {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.6);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -32,10 +32,10 @@
       cursor: pointer;
       transform: translate(-50%, 0%);
       &:hover {
-      opacity: 0.5;
-     }
+        opacity: 0.5;
+      }
     }
-    
+
     i.fa-chevron-right {
       left: 95%;
     }
@@ -51,4 +51,6 @@
 }
 .closed {
   display: none;
+  // scale: 0%;
+  transition: all 1s ease;
 }

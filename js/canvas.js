@@ -4,7 +4,6 @@ import {
   filterPaintingsByTags,
   filterPaintingsByID,
 } from './utilities.js';
-
 //selectors
 const canvas = document.querySelector('#canvas-art');
 const context = canvas.getContext('2d');

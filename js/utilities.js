@@ -67,6 +67,17 @@ const shuffleArray = (array) => {
   }
   return array;
 };
+//https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/#:~:text=Use%20the%20getBoundingClientRect()%20method%20to%20get%20the%20size%20of,in%20the%20viewport%20or%20not.
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
 export {
   getPaintings,
@@ -76,4 +87,5 @@ export {
   filterPaintingsByID,
   filterPaintingsByPeriod,
   shuffleArray,
+  isInViewport,
 };

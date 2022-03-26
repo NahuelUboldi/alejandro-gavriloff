@@ -1,6 +1,9 @@
 gsap.registerPlugin(ScrollTrigger);
 import gsapEffects from './effects.js';
 
+//selectors
+const contactForm = document.querySelector('#contact-form > .container');
+
 // GENERIC ANIMATIONS
 //register gsap effects
 gsapEffects.map((ef) => {
@@ -63,9 +66,9 @@ const tlQuote = gsap.timeline({
   },
 });
 tlQuote
-  .efScaleDown('#quote > .container > h2', {})
-  .efAppearBottomRight('#quote > .container > blockquote > p', {}, '-=2.5')
-  .efAppearBottomRight(
+  .efAppearRight('#quote > .container > h2', { x: 30 })
+  .efAppearRight('#quote > .container > blockquote > p', { x: 50 }, '-=2.5')
+  .efAppearRight(
     '#quote > .container > blockquote > figcaption',
     { x: 90 },
     '-=2.5'
@@ -313,5 +316,50 @@ tlGalleryPreview
     },
     '-=2.5'
   );
+setTimeout(() => {
+  // CANVAS
+  const tlCanvas = gsap.timeline({
+    defaults: { duration: 3 },
+    scrollTrigger: {
+      trigger: '.canvas-shadow',
+      start: '0% 70%', //trigger element, screen position
+      end: 'bottom 30%',
+      toggleActions: 'play none none none',
+      // scrub: true,
+      // markers: true,
+    },
+  });
+  tlCanvas
+    .efAppearLeft('.canvas-shadow', { x: -50 })
+    .efAppearRight('.canvas-text .h1', {}, '-=2.5')
+    .efAppearRight('.canvas-text .lead', {}, '-=2.3')
+    .efAppearRight('.canvas-text .btn', {}, '-=2.1');
 
-console.log(gsap.effects);
+  setContactFormGsapAnim();
+}, 1000);
+
+const setContactFormGsapAnim = () => {
+  const tlContact = gsap.timeline({
+    defaults: { duration: 3 },
+    scrollTrigger: {
+      trigger: '#contact-form > .container',
+      start: '10% 70%', //trigger element, screen position
+      end: 'bottom 30%',
+      toggleActions: 'play none none none',
+      // scrub: true,
+      // markers: true,
+    },
+  });
+  tlContact
+    .efAppearLeft('#contact-form .display-4')
+    .efAppearLeft('#contact-form hr', { x: '-100%' }, '-=2.5')
+    .efAppearLeft(
+      '#contact-form form .form-group',
+      {
+        x: -50,
+        stagger: 0.5,
+      },
+      '-=2.5'
+    )
+    .efAppearLeft('#contact-form form button', {}, '-=2.5');
+};
