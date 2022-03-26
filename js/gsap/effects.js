@@ -1,11 +1,13 @@
 const duration = 3;
 const opacity = 0;
+const scrollTrigger = false;
 const gsapEffects = [
   {
     name: 'efOpacity',
     defaults: {
       duration,
       opacity,
+      scrollTrigger: {},
       stagger: false,
       delay: 0,
     },

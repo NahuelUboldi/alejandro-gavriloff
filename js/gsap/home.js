@@ -51,7 +51,6 @@ tlHero
 // QUOTE
 gsap.effects.efAppearBottomLeft('#quote');
 
-const quoteAnimations = { x: 50, y: 20, opacity: 0 };
 const tlQuote = gsap.timeline({
   defaults: {},
   scrollTrigger: {
@@ -307,7 +306,7 @@ tlGalleryPreview
     '-=2.5'
   )
   .from(
-    '#gallery-preview img',
+    '.modal-img',
     {
       ...animations.animAppearLeft,
       stagger: 0.5,

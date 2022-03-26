@@ -4,6 +4,13 @@ import {
   filterPaintingsByTags,
   filterPaintingsByID,
 } from './utilities.js';
+import gsapEffects from './gsap/effects.js';
+
+// GENERIC ANIMATIONS
+//register gsap effects
+gsapEffects.map((ef) => {
+  gsap.registerEffect({ ...ef });
+});
 // **********************************
 // **********GALLERY PREVIEW*********
 // **********************************
@@ -71,6 +78,14 @@ async function showGalleryPreview() {
 
   let imagesToShow = imagesArr.join('');
   imagesContainer.innerHTML = imagesToShow;
+
+  gsap.effects.efOpacity('.modal-img', {
+    scrollTrigger: '.modal-img',
+    duration: 1,
+    stagger: 0.4,
+    delay: 2,
+  });
+  console.log(gsap.effects);
 }
 //listeners
 window.addEventListener('load', showGalleryPreview);
