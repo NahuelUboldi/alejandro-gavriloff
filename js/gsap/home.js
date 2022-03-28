@@ -23,32 +23,32 @@ const animations = {
 // HEADER
 const tlNav = gsap.timeline();
 tlNav
-  .efScaleDown('.navbar-brand', {}, '-=0.5')
-  .efAppearTopRight('.rect-bg', {}, '-=0.8')
-  .efAppearTopRight('.nav-item', { x: 2, y: -2, stagger: 0.3 }, '-=0.8');
+  .efScaleDown('.navbar-brand', {})
+  .efAppearTopRight('.rect-bg', {}, '-=2')
+  .efAppearTopRight('.nav-item', { x: 2, y: -2, stagger: 0.3 }, '-=2');
 
-const tlHero = gsap.timeline({ defaults: { duration: 1.2 } });
+const tlHero = gsap.timeline();
 tlHero
   .efAppearLeft('.hero-text', {
-    duration: 1,
+    duration: 1.5,
     x: -10,
     stagger: 0.5,
-    delay: 1.5,
+    delay: 1.4,
   })
   .efAppearLeft(
     '.hero-highlight',
-    { duration: 1, x: -10, stagger: 0.1 },
+    { duration: 2, x: -10, stagger: 0.1 },
     '-=0.9'
   )
-  .efScaleDown('.hero-btn', { scale: 0.9 }, '-=0.7')
+  .efScaleDown('.hero-btn', { scale: 0.9 }, '-=1')
   .efScaleDown(
     '.cuadro',
     {
-      duration: 1,
+      duration: 3,
       scale: 0.8,
       stagger: { from: 'random', amount: 0.8 },
     },
-    '-=1.1'
+    '-=3.2'
   );
 
 // QUOTE
@@ -58,11 +58,11 @@ const tlQuote = gsap.timeline({
   defaults: {},
   scrollTrigger: {
     trigger: '#quote > .container',
-    start: 'top 70%', //trigger element, screen position
-    end: 'bottom 20%',
+    start: 'top 95%', //trigger element, screen position
+    end: 'bottom 50%',
     toggleActions: 'play none none none',
-    // scrub: true,
-    // markers: true,
+    scrub: true,
+    markers: true,
   },
 });
 tlQuote
@@ -81,14 +81,14 @@ const tlBio = gsap.timeline({
     trigger: '#bio > .container',
     start: 'top 70%', //trigger element, screen position
     end: 'bottom 20%',
-    toggleActions: 'play none none none',
+    toggleActions: 'play stop resume none',
     // scrub: true,
     // markers: true,
   },
 });
 tlBio
-  .efScaleDown('#bio > .container > .display-3', {})
-  .efAppearLeft('#bio > .container > hr', { x: '-100%' }, '-=2.5')
+  .efBlur('#bio > .container > .display-3', {})
+  .efBlur('#bio > .container > hr', { x: '-100%' }, '-=2.5')
   .efAppearLeft(
     '#bio > .container > .row > div > p',
     {
@@ -119,19 +119,19 @@ const tlArtisticPeriodsHeader = gsap.timeline({
   },
 });
 tlArtisticPeriodsHeader
-  .from(
+  .efScaleDown(
     '#artistic-periods > .container > .display-3',
-    { ...animations.animScale },
+    {},
     '-=2.5'
   )
-  .from(
+  .efAppearLeft(
     '#artistic-periods > .container > hr',
-    { ...animations.animAppearFullLeft },
+    { x:"-100%" },
     '-=2.5'
   )
-  .from(
+  .efAppearLeft(
     '#artistic-periods > .container > .lead',
-    { ...animations.animAppearLeft },
+    { },
     '-=2.5'
   );
 
@@ -213,19 +213,19 @@ const tlFirstPeriod = gsap.timeline({
   },
 });
 tlFirstPeriod
-  .from(
+  .efScaleDown(
     '.bsas .period-article-content h3',
-    { ...animations.animScale },
+    { },
     '-=2.5'
   )
-  .from(
+  .efAppearRight(
     '.bsas .period-article-content hr',
-    { ...animations.animAppearFullRight },
+    { x:"100%" },
     '-=2.5'
   )
-  .from(
+  .efAppearRight(
     '.bsas .period-article-content p',
-    { ...animations.animAppearRight, stagger: 0.5 },
+    { stagger: 0.5 },
     '-=2.5'
   );
 
@@ -241,19 +241,19 @@ const tlSecondPeriod = gsap.timeline({
   },
 });
 tlSecondPeriod
-  .from(
+  .efScaleDown(
     '.america .period-article-content h3',
-    { ...animations.animScale },
+    { },
     '-=2.5'
   )
-  .from(
+  .efAppearLeft(
     '.america .period-article-content hr',
-    { ...animations.animAppearFullLeft },
+    { x:"-100%"},
     '-=2.5'
   )
-  .from(
+  .efAppearLeft(
     '.america .period-article-content p',
-    { ...animations.animAppearLeft, stagger: 0.5 },
+    { stagger: 0.5 },
     '-=2.5'
   );
 
@@ -269,19 +269,19 @@ const tlThirdPeriod = gsap.timeline({
   },
 });
 tlThirdPeriod
-  .from(
+  .efScaleDown(
     '.humanidad .period-article-content h3',
-    { ...animations.animScale },
+    {  },
     '-=2.5'
   )
-  .from(
+  .efAppearRight(
     '.humanidad .period-article-content hr',
-    { ...animations.animAppearFullRight },
+    { x:"100%" },
     '-=2.5'
   )
-  .from(
+  .efAppearRight(
     '.humanidad .period-article-content p',
-    { ...animations.animAppearRight, stagger: 0.5 },
+    { stagger: 0.5 },
     '-=2.5'
   );
 
@@ -298,20 +298,18 @@ const tlGalleryPreview = gsap.timeline({
   },
 });
 tlGalleryPreview
-  .from('#gallery-preview', { ...animations.animOpacity })
-  .from('#gallery-preview .display-4', { ...animations.animScale }, '-=2.5')
-  .from(
+  .efOpacity('#gallery-preview', { })
+  .efScaleDown('#gallery-preview .display-4', {  }, '-=2.5')
+  .efOpacity(
     '#gallery-preview button',
     {
-      ...animations.animOpacity,
       stagger: 0.5,
     },
     '-=2.5'
   )
-  .from(
+  .efAppearLeft(
     '.modal-img',
     {
-      ...animations.animAppearLeft,
       stagger: 0.5,
     },
     '-=2.5'

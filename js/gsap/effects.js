@@ -1,20 +1,23 @@
-const duration = 3;
+const duration = 2.5;
 const opacity = 0;
-const scrollTrigger = false;
+const ease = "power3";
 const gsapEffects = [
   {
     name: 'efOpacity',
     defaults: {
+      ease,
       duration,
       opacity,
-      scrollTrigger: {},
+      
       stagger: false,
       delay: 0,
     },
     extendTimeline: true,
     effect: (targets, config) => {
       return gsap.from(targets, {
+        ease: config.ease,
         duration: config.duration,
+        
         stagger: config.stagger,
         opacity: config.opacity,
         delay: config.delay,
@@ -24,16 +27,20 @@ const gsapEffects = [
   {
     name: 'efScaleDown',
     defaults: {
+      ease,
       duration,
       opacity,
-      scale: 1.2,
+      
+      scale: 1.1,
       stagger: false,
       delay: 0,
     },
     extendTimeline: true,
     effect: (targets, config) => {
       return gsap.from(targets, {
+        ease: config.ease,
         duration: config.duration,
+        
         stagger: config.stagger,
         opacity: config.opacity,
         delay: config.delay,
@@ -44,8 +51,10 @@ const gsapEffects = [
   {
     name: 'efAppearTop',
     defaults: {
+      ease,
       duration,
       opacity,
+      
       y: -20,
       stagger: false,
       delay: 0,
@@ -53,7 +62,9 @@ const gsapEffects = [
     extendTimeline: true,
     effect: (targets, config) => {
       return gsap.from(targets, {
+        ease: config.ease,
         duration: config.duration,
+        
         stagger: config.stagger,
         opacity: config.opacity,
         delay: config.delay,
@@ -64,8 +75,10 @@ const gsapEffects = [
   {
     name: 'efAppearLeft',
     defaults: {
+      ease,
       duration,
       opacity,
+      
       x: -20,
       stagger: false,
       delay: 0,
@@ -73,7 +86,9 @@ const gsapEffects = [
     extendTimeline: true,
     effect: (targets, config) => {
       return gsap.from(targets, {
+        ease: config.ease,
         duration: config.duration,
+        
         stagger: config.stagger,
         opacity: config.opacity,
         delay: config.delay,
@@ -84,8 +99,10 @@ const gsapEffects = [
   {
     name: 'efAppearRight',
     defaults: {
+      ease,
       duration,
       opacity,
+      
       x: 20,
       stagger: false,
       delay: 0,
@@ -93,7 +110,9 @@ const gsapEffects = [
     extendTimeline: true,
     effect: (targets, config) => {
       return gsap.from(targets, {
+        ease: config.ease,
         duration: config.duration,
+        
         stagger: config.stagger,
         opacity: config.opacity,
         delay: config.delay,
@@ -104,8 +123,10 @@ const gsapEffects = [
   {
     name: 'efAppearTopRight',
     defaults: {
+      ease,
       duration,
       opacity,
+      
       x: 10,
       y: -10,
       stagger: false,
@@ -114,7 +135,9 @@ const gsapEffects = [
     extendTimeline: true,
     effect: (targets, config) => {
       return gsap.from(targets, {
+        ease: config.ease,
         duration: config.duration,
+        
         stagger: config.stagger,
         opacity: config.opacity,
         delay: config.delay,
@@ -126,8 +149,10 @@ const gsapEffects = [
   {
     name: 'efAppearBottomLeft',
     defaults: {
+      ease,
       duration,
       opacity,
+      
       x: -50,
       y: 50,
       stagger: false,
@@ -136,7 +161,9 @@ const gsapEffects = [
     extendTimeline: true,
     effect: (targets, config) => {
       return gsap.from(targets, {
+        ease: config.ease,
         duration: config.duration,
+        
         stagger: config.stagger,
         opacity: config.opacity,
         delay: config.delay,
@@ -148,8 +175,10 @@ const gsapEffects = [
   {
     name: 'efAppearBottomRight',
     defaults: {
+      ease,
       duration,
       opacity,
+      
       x: 50,
       y: 20,
       stagger: false,
@@ -158,12 +187,37 @@ const gsapEffects = [
     extendTimeline: true,
     effect: (targets, config) => {
       return gsap.from(targets, {
+        ease: config.ease,
         duration: config.duration,
+        
         stagger: config.stagger,
         opacity: config.opacity,
         delay: config.delay,
         x: config.x,
         y: config.y,
+      });
+    },
+  },
+    {
+    name: 'efBlur',
+    defaults: {
+      ease,
+      duration,
+      opacity,
+      filter: "blur(10px)",
+
+      stagger: false,
+      delay: 0,
+    },
+    extendTimeline: true,
+    effect: (targets, config) => {
+      return gsap.from(targets, {
+        ease: config.ease,
+        duration: config.duration,
+        filter: config.filter,
+        stagger: config.stagger,
+        opacity: config.opacity,
+        delay: config.delay,
       });
     },
   },
