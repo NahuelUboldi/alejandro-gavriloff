@@ -61,8 +61,8 @@ const tlQuote = gsap.timeline({
     start: 'top 95%', //trigger element, screen position
     end: 'bottom 50%',
     toggleActions: 'play none none none',
-    scrub: true,
-    markers: true,
+    // scrub: true,
+    // markers: true,
   },
 });
 tlQuote
@@ -79,7 +79,7 @@ const tlBio = gsap.timeline({
   defaults: {},
   scrollTrigger: {
     trigger: '#bio > .container',
-    start: 'top 70%', //trigger element, screen position
+    start: 'top 60%', //trigger element, screen position
     end: 'bottom 20%',
     toggleActions: 'play stop resume none',
     // scrub: true,
@@ -87,8 +87,8 @@ const tlBio = gsap.timeline({
   },
 });
 tlBio
-  .efBlur('#bio > .container > .display-3', {})
-  .efBlur('#bio > .container > hr', { x: '-100%' }, '-=2.5')
+  .efScaleDown('#bio > .container > .display-3', {})
+  .efAppearLeft('#bio > .container > hr', { x: '-100%' }, '-=2.5')
   .efAppearLeft(
     '#bio > .container > .row > div > p',
     {
@@ -111,7 +111,7 @@ const tlArtisticPeriodsHeader = gsap.timeline({
   defaults: { duration: 3 },
   scrollTrigger: {
     trigger: '#artistic-periods > .container',
-    start: 'top 70%', //trigger element, screen position
+    start: 'top 60%', //trigger element, screen position
     end: 'bottom 20%',
     toggleActions: 'play none none none',
     // scrub: true,
@@ -119,21 +119,9 @@ const tlArtisticPeriodsHeader = gsap.timeline({
   },
 });
 tlArtisticPeriodsHeader
-  .efScaleDown(
-    '#artistic-periods > .container > .display-3',
-    {},
-    '-=2.5'
-  )
-  .efAppearLeft(
-    '#artistic-periods > .container > hr',
-    { x:"-100%" },
-    '-=2.5'
-  )
-  .efAppearLeft(
-    '#artistic-periods > .container > .lead',
-    { },
-    '-=2.5'
-  );
+  .efScaleDown('#artistic-periods > .container > .display-3', {}, '-=2.5')
+  .efAppearLeft('#artistic-periods > .container > hr', { x: '-100%' }, '-=2.5')
+  .efAppearLeft('#artistic-periods > .container > .lead', {}, '-=2.5');
 
 // images
 const periodsImagesProps = {
@@ -205,7 +193,7 @@ const tlFirstPeriod = gsap.timeline({
   defaults: { duration: 3 },
   scrollTrigger: {
     trigger: '#artistic-periods > .bsas',
-    start: 'top 70%', //trigger element, screen position
+    start: 'top 60%', //trigger element, screen position
     end: 'bottom 20%',
     toggleActions: 'play none none none',
     // scrub: true,
@@ -213,27 +201,15 @@ const tlFirstPeriod = gsap.timeline({
   },
 });
 tlFirstPeriod
-  .efScaleDown(
-    '.bsas .period-article-content h3',
-    { },
-    '-=2.5'
-  )
-  .efAppearRight(
-    '.bsas .period-article-content hr',
-    { x:"100%" },
-    '-=2.5'
-  )
-  .efAppearRight(
-    '.bsas .period-article-content p',
-    { stagger: 0.5 },
-    '-=2.5'
-  );
+  .efScaleDown('.bsas .period-article-content h3', {}, '-=2.5')
+  .efAppearRight('.bsas .period-article-content hr', { x: '100%' }, '-=2.5')
+  .efAppearRight('.bsas .period-article-content p', { stagger: 0.5 }, '-=2.5');
 
 const tlSecondPeriod = gsap.timeline({
   defaults: { duration: 3 },
   scrollTrigger: {
     trigger: '#artistic-periods > .america',
-    start: 'top 80%', //trigger element, screen position
+    start: 'top 60%', //trigger element, screen position
     end: 'bottom 20%',
     toggleActions: 'play none none none',
     // scrub: true,
@@ -241,16 +217,8 @@ const tlSecondPeriod = gsap.timeline({
   },
 });
 tlSecondPeriod
-  .efScaleDown(
-    '.america .period-article-content h3',
-    { },
-    '-=2.5'
-  )
-  .efAppearLeft(
-    '.america .period-article-content hr',
-    { x:"-100%"},
-    '-=2.5'
-  )
+  .efScaleDown('.america .period-article-content h3', {}, '-=2.5')
+  .efAppearLeft('.america .period-article-content hr', { x: '-100%' }, '-=2.5')
   .efAppearLeft(
     '.america .period-article-content p',
     { stagger: 0.5 },
@@ -261,7 +229,7 @@ const tlThirdPeriod = gsap.timeline({
   defaults: { duration: 3 },
   scrollTrigger: {
     trigger: '#artistic-periods > .humanidad',
-    start: 'top 80%', //trigger element, screen position
+    start: 'top 60%', //trigger element, screen position
     end: 'bottom 20%',
     toggleActions: 'play none none none',
     // scrub: true,
@@ -269,14 +237,10 @@ const tlThirdPeriod = gsap.timeline({
   },
 });
 tlThirdPeriod
-  .efScaleDown(
-    '.humanidad .period-article-content h3',
-    {  },
-    '-=2.5'
-  )
+  .efScaleDown('.humanidad .period-article-content h3', {}, '-=2.5')
   .efAppearRight(
     '.humanidad .period-article-content hr',
-    { x:"100%" },
+    { x: '100%' },
     '-=2.5'
   )
   .efAppearRight(
@@ -290,7 +254,7 @@ const tlGalleryPreview = gsap.timeline({
   defaults: { duration: 3 },
   scrollTrigger: {
     trigger: '#gallery-preview > .container-fluid',
-    start: 'top 80%', //trigger element, screen position
+    start: 'top 60%', //trigger element, screen position
     end: 'bottom 20%',
     toggleActions: 'play none none none',
     // scrub: true,
@@ -298,8 +262,8 @@ const tlGalleryPreview = gsap.timeline({
   },
 });
 tlGalleryPreview
-  .efOpacity('#gallery-preview', { })
-  .efScaleDown('#gallery-preview .display-4', {  }, '-=2.5')
+  .efOpacity('#gallery-preview', {})
+  .efScaleDown('#gallery-preview .display-4', {}, '-=2.5')
   .efOpacity(
     '#gallery-preview button',
     {
@@ -320,7 +284,7 @@ setTimeout(() => {
     defaults: { duration: 3 },
     scrollTrigger: {
       trigger: '.canvas-shadow',
-      start: '0% 70%', //trigger element, screen position
+      start: '0% 60%', //trigger element, screen position
       end: 'bottom 30%',
       toggleActions: 'play none none none',
       // scrub: true,
@@ -341,7 +305,7 @@ const setContactFormGsapAnim = () => {
     defaults: { duration: 3 },
     scrollTrigger: {
       trigger: '#contact-form > .container',
-      start: '10% 70%', //trigger element, screen position
+      start: '10% 60%', //trigger element, screen position
       end: 'bottom 30%',
       toggleActions: 'play none none none',
       // scrub: true,

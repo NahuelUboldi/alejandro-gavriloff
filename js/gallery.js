@@ -4,18 +4,38 @@ import {
   shuffleArray,
 } from './utilities.js';
 import { showModal, closeModal } from './modal.js';
+gsap.registerPlugin(ScrollTrigger);
 //selectors
 const filterBtnsContainer = document.querySelector('.gallery-btns-container');
 const galleryContainer = document.getElementById('img-container');
 const modal = document.getElementById('modal');
 
-
 //state
 const state = {
   categoryActive: 'todos',
   paintings: [],
-  paintingsShufled: []
+  paintingsShufled: [],
 };
+// gsap animations
+const runGsapAnimationImg = () => {
+  gsapAnimation('.gallery-img', 'random');
+};
+const runGsapAnimationBtn = () => {
+  gsapAnimation('.gallery-filter-btn', 0);
+};
+const gsapAnimation = (element, staggerFrom) => {
+  gsap.from(element, {
+    duration: 2,
+    opacity: 0,
+    scale: 0.9,
+    stagger: {
+      from: staggerFrom,
+      amount: 1,
+    },
+    delay: 0.3,
+  });
+};
+
 //btns
 const getPaintingsCategories = (paintings) => {
   let categoryArr = ['todos'];
@@ -45,6 +65,7 @@ const loadFilterBtns = () => {
   const categories = getPaintingsCategories(state.paintings);
   const filterBtns = getFilterBtns(categories);
   filterBtnsContainer.innerHTML = filterBtns;
+  runGsapAnimationBtn();
 };
 //images
 const getPaintingsToShow = (paintings) => {
@@ -52,17 +73,20 @@ const getPaintingsToShow = (paintings) => {
   if (state.categoryActive === 'todos') {
     pantingsDeepCopy = shuffleArray(pantingsDeepCopy);
   }
-  state.paintingsShufled = pantingsDeepCopy
+  state.paintingsShufled = pantingsDeepCopy;
   return pantingsDeepCopy.reduce((acc, paint) => {
     return (
       acc +
-      `<img src=${paint.img.sm} alt="pintura del artista Alex Gavriloff" id="gallery-img" key=${paint.id} />`
+      `<img src=${paint.img.sm} alt="pintura del artista Alex Gavriloff" class="gallery-img" key=${paint.id} />`
     );
   }, '');
 };
 
 const loadImages = () => {
-  const paintings = filterPaintingsByCategory(state.paintings,state.categoryActive);
+  const paintings = filterPaintingsByCategory(
+    state.paintings,
+    state.categoryActive
+  );
   const paintingsToShow = getPaintingsToShow(paintings);
   galleryContainer.innerHTML = paintingsToShow;
 };
@@ -70,11 +94,17 @@ const loadImages = () => {
 //handlers
 const handleImgClick = (e) => {
   if (e.target.id === 'gallery-img') {
-    const paintings = filterPaintingsByCategory(state.paintingsShufled,state.categoryActive);
+    const paintings = filterPaintingsByCategory(
+      state.paintingsShufled,
+      state.categoryActive
+    );
     const paintingID = e.target.attributes.key.value;
     showModal(modal, paintings, paintingID);
   }
-  if (e.target.id === 'close-modal-btn' || e.target.classList.value === 'modal-bg') {
+  if (
+    e.target.id === 'close-modal-btn' ||
+    e.target.classList.value === 'modal-bg'
+  ) {
     closeModal();
   }
 };
@@ -83,6 +113,7 @@ const handleBtnClick = (e) => {
     state.categoryActive = e.target.innerText;
     loadFilterBtns(state.paintings);
     loadImages();
+    runGsapAnimationImg();
   }
 };
 //main
@@ -90,7 +121,9 @@ const startGallery = async () => {
   let paintings = await getPaintings();
   state.paintings = paintings;
   loadFilterBtns();
+
   loadImages();
+  runGsapAnimationImg();
 };
 window.addEventListener('load', startGallery);
 filterBtnsContainer.addEventListener('click', handleBtnClick);
