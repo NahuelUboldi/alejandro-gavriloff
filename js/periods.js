@@ -1,5 +1,6 @@
 import {getPaintings,filterPaintingsByPeriod,shuffleArray} from "./utilities.js"
 import {showModal,closeModal} from "./modal.js"
+import {runGsapEtapasAnimation} from "./gsap/periods"
 
 //selectors
 const periodGalleryCarousel = document.querySelectorAll(".period-gallery")
@@ -92,6 +93,7 @@ loadPictures(paintingsByPeriod)
 startGlider(firstPeriodGlider,"fp-")
 startGlider(secondPeriodGlider,"sp-")
 startGlider(thirdPeriodGlider,"tp-")
+runGsapEtapasAnimation()
 }
 
 window.addEventListener("load",main)
