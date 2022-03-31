@@ -1,4 +1,5 @@
-@use '../components/mixins' as *;
+@use "../components/mixins" as *;
+@use "../custom" as *;
 #navigation {
   position: relative;
   overflow: hidden;
@@ -23,7 +24,14 @@
     z-index: 99;
     background-color: white;
   }
+  a {
+    @include transitionProperty
+  }
+  a:hover {
+    color:$black
+  }
   a.active {
-    font-weight: bold;
+    color:$black;
+    font-weight: 500;
   }
 }

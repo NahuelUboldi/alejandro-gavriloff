@@ -11390,6 +11390,10 @@ section#gallery-preview #images-container img {
   cursor: pointer;
 }
 
+#galery .container {
+  min-height: 100vh;
+}
+
 #img-container img {
   width: 250px;
   max-width: 90%;
@@ -11421,8 +11425,15 @@ section#gallery-preview #images-container img {
   z-index: 99;
   background-color: white;
 }
+#navigation a {
+  transition: all ease 700ms;
+}
+#navigation a:hover {
+  color: #000;
+}
 #navigation a.active {
-  font-weight: bold;
+  color: #000;
+  font-weight: 500;
 }
 
 #contact-form {

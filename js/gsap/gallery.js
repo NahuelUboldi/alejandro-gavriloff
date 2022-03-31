@@ -17,5 +17,5 @@ tlNav
 //TITLE
 const tlTitle = gsap.timeline();
 tlTitle
-  .efScaleDown('.gallery-title', {})
+  .efScaleDown('.gallery-title', {delay:1})
   .efAppearLeft('.gallery-separator', { x: '-100%' }, '-=2.5');

@@ -32,7 +32,7 @@ const runPeriodTextAnim = (period) => {
      end: 'bottom 50%',
      toggleActions: 'play none none none',
      // scrub: true,
-     markers: true,
+    //  markers: true,
    },
  });
  tl[period]
@@ -53,7 +53,7 @@ const runPeriodGliderCarouselAnim = (period) => {
      end: 'bottom 50%',
      toggleActions: 'play none none none',
      // scrub: true,
-     markers: true,
+    //  markers: true,
    },
   });
   console.log(tlGlider);

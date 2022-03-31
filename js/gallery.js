@@ -17,12 +17,6 @@ const state = {
   paintingsShufled: [],
 };
 // gsap animations
-const runGsapAnimationImg = () => {
-  gsapAnimation('.gallery-img', 'random');
-};
-const runGsapAnimationBtn = () => {
-  gsapAnimation('.gallery-filter-btn', 0);
-};
 const gsapAnimation = (element, staggerFrom) => {
   gsap.from(element, {
     duration: 2,
@@ -32,8 +26,14 @@ const gsapAnimation = (element, staggerFrom) => {
       from: staggerFrom,
       amount: 1,
     },
-    delay: 0.3,
+    delay: 0.4,
   });
+};
+const runGsapAnimationImg = () => {
+  gsapAnimation('.gallery-img', 'random');
+};
+const runGsapAnimationBtn = () => {
+  gsapAnimation('.gallery-filter-btn', 0);
 };
 
 //btns
@@ -120,10 +120,12 @@ const handleBtnClick = (e) => {
 const startGallery = async () => {
   let paintings = await getPaintings();
   state.paintings = paintings;
-  loadFilterBtns();
-
-  loadImages();
-  runGsapAnimationImg();
+  setTimeout(() => {
+    loadFilterBtns();
+    loadImages();
+    runGsapAnimationImg();
+  }, 2500);
+    
 };
 window.addEventListener('load', startGallery);
 filterBtnsContainer.addEventListener('click', handleBtnClick);
