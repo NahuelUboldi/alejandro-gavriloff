@@ -4,7 +4,6 @@ import {
   shuffleArray,
 } from './utilities.js';
 import { showModal, closeModal } from './modal.js';
-import { runGsapEtapasAnimation } from './gsap/periods';
 
 //selectors
 const periodGalleryCarousel = document.querySelectorAll('.period-gallery');
@@ -101,7 +100,7 @@ const startGlider = (glider, identificator) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     scrollLock: true,
-    dots: `.${identificator}dots`,
+    // dots: `.${identificator}dots`,
     arrows: {
       prev: `.${identificator}glider-prev`,
       next: `.${identificator}glider-next`,
@@ -139,7 +138,7 @@ const main = async () => {
   startGlider(firstPeriodGlider, 'fp-');
   startGlider(secondPeriodGlider, 'sp-');
   startGlider(thirdPeriodGlider, 'tp-');
-  runGsapEtapasAnimation();
+
 };
 
 window.addEventListener('load', main);

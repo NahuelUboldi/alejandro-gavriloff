@@ -2,7 +2,7 @@
 @use "../custom" as *;
 
 #contact-form {
-  background-color: $gray-300;
+  // background-color: $gray-300;
   padding-top: 20rem;
   padding-bottom: 20rem;
   .form-group {
@@ -13,6 +13,30 @@
       border: none;
       border-bottom: solid 1px $gray-500;
     }
+  }
+  .submit-btn {
+    position: relative;
+    padding: 0px;
+    @include transitionProperty;
+  }
+  .submit-btn:hover {
+    font-weight: 500;
+  }
+  .submit-btn::after {
+    @include transitionProperty;
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: $black;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  .submit-btn:hover::after {
+    transform: scaleX(1);
   }
 }
 

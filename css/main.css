@@ -10765,6 +10765,10 @@ a {
   overflow: hidden;
 }
 
+.bg-gray-300 {
+  background-color: #dee2e6;
+}
+
 .btn-textured {
   background-image: url("../../img/galeria/temperas/01-md.jpg");
   background-size: 1000%;
@@ -11422,7 +11426,6 @@ section#gallery-preview #images-container img {
 }
 
 #contact-form {
-  background-color: #dee2e6;
   padding-top: 20rem;
   padding-bottom: 20rem;
 }
@@ -11432,6 +11435,30 @@ section#gallery-preview #images-container img {
   border-radius: 0;
   border: none;
   border-bottom: solid 1px #adb5bd;
+}
+#contact-form .submit-btn {
+  position: relative;
+  padding: 0px;
+  transition: all ease 700ms;
+}
+#contact-form .submit-btn:hover {
+  font-weight: 500;
+}
+#contact-form .submit-btn::after {
+  transition: all ease 700ms;
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #000;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+#contact-form .submit-btn:hover::after {
+  transform: scaleX(1);
 }
 
 /*# sourceMappingURL=main.css.map */

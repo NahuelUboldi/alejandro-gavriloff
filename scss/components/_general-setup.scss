@@ -1,6 +1,11 @@
+@use "../components/mixins" as *;
+@use "../custom" as *;
 a {
   text-decoration: none;
 }
 .wrapper {
   overflow: hidden;
+}
+.bg-gray-300 {
+  background-color: $gray-300;
 }
