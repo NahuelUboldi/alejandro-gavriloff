@@ -11228,9 +11228,6 @@ body {
     min-height: 800px;
   }
 }
-#artistic-periods article .article-content div.col-12:nth-child(2) {
-  background-color: #dee2e6;
-}
 #artistic-periods article.bsas .image-bg {
   background-image: url(../../img/galeria/acuarelas/24-lg.jpg);
 }

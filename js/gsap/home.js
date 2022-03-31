@@ -10,16 +10,6 @@ gsapEffects.map((ef) => {
   gsap.registerEffect({ ...ef });
 });
 
-const animations = {
-  animOpacity: { opacity: 0 },
-  animScale: { opacity: 0, scale: 1.5 },
-  animAppearTop: { opacity: 0, y: -20 },
-  animAppearLeft: { opacity: 0, x: -20 },
-  animAppearFullLeft: { opacity: 0, x: '-100%' },
-  animAppearRight: { opacity: 0, x: 20 },
-  animAppearFullRight: { opacity: 0, x: '100%' },
-};
-
 // HEADER
 const tlNav = gsap.timeline();
 tlNav
@@ -193,7 +183,7 @@ const tlFirstPeriod = gsap.timeline({
   defaults: { duration: 3 },
   scrollTrigger: {
     trigger: '#artistic-periods > .bsas',
-    start: 'top 60%', //trigger element, screen position
+    start: '50% 70%', //trigger element, screen position
     end: 'bottom 20%',
     toggleActions: 'play none none none',
     // scrub: true,
@@ -201,7 +191,8 @@ const tlFirstPeriod = gsap.timeline({
   },
 });
 tlFirstPeriod
-  .efScaleDown('.bsas .period-article-content h3', {}, '-=2.5')
+  .efBlur('.bsas .article-bg', { duration: 3 })
+  .efScaleDown('.bsas .period-article-content h3', {}, '-=2')
   .efAppearRight('.bsas .period-article-content hr', { x: '100%' }, '-=2.5')
   .efAppearRight('.bsas .period-article-content p', { stagger: 0.5 }, '-=2.5');
 
@@ -209,7 +200,7 @@ const tlSecondPeriod = gsap.timeline({
   defaults: { duration: 3 },
   scrollTrigger: {
     trigger: '#artistic-periods > .america',
-    start: 'top 60%', //trigger element, screen position
+    start: '50% 70%', //trigger element, screen position
     end: 'bottom 20%',
     toggleActions: 'play none none none',
     // scrub: true,
@@ -217,7 +208,8 @@ const tlSecondPeriod = gsap.timeline({
   },
 });
 tlSecondPeriod
-  .efScaleDown('.america .period-article-content h3', {}, '-=2.5')
+  .efBlur('.america .article-bg', { duration: 3 })
+  .efScaleDown('.america .period-article-content h3', {}, '-=2')
   .efAppearLeft('.america .period-article-content hr', { x: '-100%' }, '-=2.5')
   .efAppearLeft(
     '.america .period-article-content p',
@@ -229,7 +221,7 @@ const tlThirdPeriod = gsap.timeline({
   defaults: { duration: 3 },
   scrollTrigger: {
     trigger: '#artistic-periods > .humanidad',
-    start: 'top 60%', //trigger element, screen position
+    start: '50% 70%', //trigger element, screen position
     end: 'bottom 20%',
     toggleActions: 'play none none none',
     // scrub: true,
@@ -237,7 +229,8 @@ const tlThirdPeriod = gsap.timeline({
   },
 });
 tlThirdPeriod
-  .efScaleDown('.humanidad .period-article-content h3', {}, '-=2.5')
+  .efBlur('.humanidad .article-bg', { duration: 3 })
+  .efScaleDown('.humanidad .period-article-content h3', {}, '-=2')
   .efAppearRight(
     '.humanidad .period-article-content hr',
     { x: '100%' },
