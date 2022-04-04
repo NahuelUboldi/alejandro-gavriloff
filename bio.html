@@ -7,17 +7,17 @@
     <title>Biografía del pintor Alejandro Gavriloff</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <!--start navigation-->
-    <section id="navigation">
+    <div id="navigation">
       <div class="rect-bg"></div>
       <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container">
@@ -58,11 +58,11 @@
           </div>
         </div>
       </nav>
-    </section>
+    </div>
     <!--end navigation-->
 
     <!--start bio-->
-    <section id="bio" class="my-5">
+    <div id="bio" class="my-5">
       <div class="container py-5">
         <h2 class="display-3">El artista y su vida</h2>
         <hr />
@@ -77,7 +77,7 @@
           <!--col-->
         </header>
         <!--row-->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-2"></div>
           <div class="col-md-9 fs-5">
             <p>
@@ -286,17 +286,51 @@
             </ul>
           </div>
           <div class="col-md-1"></div>
-        </div>
+        </div> -->
+        <!--row-->
       </div>
       <!--container-->
-    </section>
+      <main>
+        <section class="bio-fase">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-md-6 bio-fase__img">
+                <div
+                  class="bio-fase__img--first"
+                  style="--aspect-ratio: 4/3"
+                ></div>
+                <div
+                  class="bio-fase__img--second"
+                  style="--aspect-ratio: 4/3"
+                ></div>
+              </div>
+              <div
+                class="col-12 col-md-6 bio-fase__text d-flex justify-content-center justify-content-md-start"
+              >
+                <div class="align-self-md-center fs-3">
+                  <p>
+                    Nace en Tallin, capital de Estonia, perteneciente a Rusia,
+                    el 7 de Enero de 1914.
+                  </p>
+                  <p>
+                    Su infancia transcurre entre Estonia y Rusia. Recibe fuerte
+                    influencia de la cultura Rusa- Europea a través de su
+                    familia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <!--end bio-->
 
     <!--start section-->
     <!--end section-->
 
     <!--start footer-->
-    <section id="footer">
+    <div id="footer">
       <svg
         xmlns:dc="http://purl.org/dc/elements/1.1/"
         xmlns:cc="http://creativecommons.org/ns#"
@@ -340,7 +374,7 @@
           </p>
         </div>
       </footer>
-    </section>
+    </div>
     <!--end footer-->
 
     <!-- javascript -->

@@ -10769,6 +10769,32 @@ a {
   background-color: #dee2e6;
 }
 
+[style*="--aspect-ratio"] > :first-child {
+  width: 100%;
+}
+
+[style*="--aspect-ratio"] > img {
+  height: auto;
+}
+
+@supports (--custom: property) {
+  [style*="--aspect-ratio"] {
+    position: relative;
+  }
+
+  [style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+
+  [style*="--aspect-ratio"] > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
 .btn-textured {
   background-image: url("../../img/galeria/temperas/01-md.jpg");
   background-size: 1000%;
@@ -11470,6 +11496,30 @@ section#gallery-preview #images-container img {
 }
 #contact-form .submit-btn:hover::after {
   transform: scaleX(1);
+}
+
+.bio-fase__img--first {
+  background-color: lightcoral;
+  width: 90%;
+  height: auto;
+  transform: translate3d(0, 10%, 0) rotate(-3deg);
+  background-image: url("/img/bio/page/alex-nino-01.jpg");
+  background-size: cover;
+}
+.bio-fase__img--second {
+  background-color: lightblue;
+  width: 80%;
+  height: auto;
+  transform: translate3d(20%, -20%, 0) rotate(5deg);
+  background-image: url("/img/bio/page/alex-nino-02.jpg");
+  background-size: cover;
+}
+.bio-fase__text {
+  outline: solid 1px red;
+}
+.bio-fase__text div {
+  outline: solid 1px red;
+  max-width: 400px;
 }
 
 /*# sourceMappingURL=main.css.map */

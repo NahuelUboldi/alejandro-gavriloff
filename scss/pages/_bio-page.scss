@@ -1,0 +1,28 @@
+.bio-fase {
+  &__img {
+    &--first {
+      background-color: lightcoral;
+      width: 90%;
+      height: auto;
+      transform: translate3d(0, 10%, 0) rotate(-3deg);
+      background-image: url('/img/bio/page/alex-nino-01.jpg');
+      background-size: cover;
+    }
+    &--second {
+      background-color: lightblue;
+      width: 80%;
+      height: auto;
+      transform: translate3d(20%, -20%, 0) rotate(5deg);
+
+      background-image: url('/img/bio/page/alex-nino-02.jpg');
+      background-size: cover;
+    }
+  }
+  &__text {
+    outline: solid 1px red;
+  }
+  &__text div {
+    outline: solid 1px red;
+    max-width: 400px;
+  }
+}

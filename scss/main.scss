@@ -8,7 +8,7 @@
 @use 'components/mixins';
 @use 'components/typography';
 @use 'components/modal';
-@use "components/glider-carousel";
+@use 'components/glider-carousel';
 
 //IMPORT THE SECTIONS
 @use 'sections/hero-header';
@@ -22,3 +22,6 @@
 @use 'sections/gallery';
 @use 'sections/navigation';
 @use 'sections/contact-form';
+
+//IMPORT THE PAGES
+@use 'pages/bio-page';
