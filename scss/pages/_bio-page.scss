@@ -9,7 +9,8 @@
     background-position: right;
     background-repeat: no-repeat;
     width: 100%;
-    height: 8rem;
+    height: 10rem;
+    top: 10%;
     z-index: -1;
     opacity: 0.5;
   }
@@ -19,7 +20,7 @@
       background-color: lightcoral;
       width: 90%;
       height: auto;
-      transform: translate3d(0, 10%, 0) rotate(-3deg);
+      transform: translate3d(0, 10%, 0) rotate(1deg);
       background-image: url('/img/bio/page/alex-nino-01.jpg');
       background-size: cover;
     }
@@ -27,7 +28,7 @@
       background-color: lightblue;
       width: 80%;
       height: auto;
-      transform: translate3d(20%, -20%, 0) rotate(5deg);
+      transform: translate3d(20%, -20%, 0) rotate(-1deg);
 
       background-image: url('/img/bio/page/alex-nino-02.jpg');
       background-size: cover;

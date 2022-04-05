@@ -18,48 +18,48 @@ tlNav
 const tlTitle = gsap.timeline();
 tlTitle
   .efScaleDown('.bio-title', { delay: 1 })
-  .efAppearRight('.bio-separator', { x: '-100%' }, '-=2.5');
+  .efAppearRight('.bio-separator', { x: '-100%' }, '-=2.5')
+  .efAppearLeft('.bio-name', {}, '-=1.5')
+  .efAppearLeft('.bio-lead', {}, '-=1.5');
 
-const triggerSectionAnimation = (id) => {
+const triggerSectionAnimationRight = (id) => {
   const tl = gsap.timeline({
     defaults: {},
     scrollTrigger: {
       trigger: `#${id}`,
-      start: '20% 80%', //trigger element, screen position
-      end: 'bottom 10%',
+      start: '0% 70%', //trigger element, screen position
+      end: '70% 10%',
       toggleActions: 'play none none none',
-      scrub: true,
-      // markers: true,
+      scrub: 1,
+      markers: true,
     },
   });
-  tl
-    // .efAppearRight(`#${id} .timeline`, { x: 30 })
-    .from(`#${id} .bio-fase__img--first`, {
+  tl.from(`#${id} .bio-fase__img--first`, {
+    opacity: 0,
+    y: 50,
+    rotation: -10,
+    scrollTrigger: { scrub: 2 },
+  })
+    .from(`#${id} .bio-fase__img--second`, {
       opacity: 0,
-      scrollTrigger: {
-        start: 'bottom 80%', //trigger element, screen position
-        end: '50% 20%',
-        scrub: 2,
-        markers: true,
-      },
+      y: 100,
+      rotation: 10,
+      scrollTrigger: { scrub: 2 },
     })
-    // .from(`#${id} .bio-fase__img--first`, {
-    //   rotation: -10,
-    //   scrollTrigger: { scrub: 3 },
-    // })
-    .efAppearRight(`#${id} .bio-fase__img--second`, { x: 90 }, '-=2.5')
-    .efAppearRight(
+
+    .from(
       `#${id} .bio-fase__text div p`,
-      { x: 90, stagger: 1 },
+      { opacity: 0, x: 90, stagger: 1 },
       '-=2.5'
     )
     .from(`#${id} .timeline`, {
       opacity: 0,
+      y: -100,
       x: '-100%',
       scrollTrigger: { scrub: 3 },
     });
 };
 
 window.onload = () => {
-  triggerSectionAnimation('estonia');
+  triggerSectionAnimationRight('estonia');
 };
