@@ -10769,6 +10769,10 @@ a {
   background-color: #dee2e6;
 }
 
+.text-gray-300 {
+  color: #dee2e6;
+}
+
 [style*="--aspect-ratio"] > :first-child {
   width: 100%;
 }
@@ -11498,6 +11502,20 @@ section#gallery-preview #images-container img {
   transform: scaleX(1);
 }
 
+.bio-fase .timeline {
+  position: absolute;
+  background-image: url("/img/bio/page/text/estonia-1914-02.svg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 8rem;
+  z-index: -1;
+  opacity: 0.5;
+}
+.bio-fase__img {
+  z-index: -2;
+}
 .bio-fase__img--first {
   background-color: lightcoral;
   width: 90%;
@@ -11513,13 +11531,6 @@ section#gallery-preview #images-container img {
   transform: translate3d(20%, -20%, 0) rotate(5deg);
   background-image: url("/img/bio/page/alex-nino-02.jpg");
   background-size: cover;
-}
-.bio-fase__text {
-  outline: solid 1px red;
-}
-.bio-fase__text div {
-  outline: solid 1px red;
-  max-width: 400px;
 }
 
 /*# sourceMappingURL=main.css.map */
