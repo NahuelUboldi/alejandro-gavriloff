@@ -22,13 +22,13 @@ tlTitle
   .efAppearLeft('.bio-name', {}, '-=1.5')
   .efAppearLeft('.bio-lead', {}, '-=1.5');
 
-const triggerSectionAnimationRight = (id) => {
+const runBioFaseAnimation = (id,imgPosition) => {
   const tl = gsap.timeline({
     defaults: {},
     scrollTrigger: {
       trigger: `#${id}`,
-      start: '0% 70%', //trigger element, screen position
-      end: '70% 10%',
+      start: '0% 90%', //trigger element, screen position
+      end: '60% 10%',
       toggleActions: 'play none none none',
       scrub: 1,
       markers: true,
@@ -37,29 +37,31 @@ const triggerSectionAnimationRight = (id) => {
   tl.from(`#${id} .bio-fase__img--first`, {
     opacity: 0,
     y: 50,
-    rotation: -10,
+    rotation: () => imgPosition === "img-left" ? -10 : 10 ,
     scrollTrigger: { scrub: 2 },
   })
     .from(`#${id} .bio-fase__img--second`, {
       opacity: 0,
       y: 100,
-      rotation: 10,
+      rotation: () => imgPosition === "img-left" ? 10 : -10,
       scrollTrigger: { scrub: 2 },
     })
 
     .from(
       `#${id} .bio-fase__text div p`,
-      { opacity: 0, x: 90, stagger: 1 },
-      '-=2.5'
+      { opacity: 0, x: () => imgPosition === "img-left" ? 90 : -90, stagger: 0.5 }
     )
     .from(`#${id} .timeline`, {
       opacity: 0,
       y: -100,
-      x: '-100%',
+      x: () => imgPosition === "img-left" ? "-100%" : "100%",
       scrollTrigger: { scrub: 3 },
     });
 };
 
+
 window.onload = () => {
-  triggerSectionAnimationRight('estonia');
+  runBioFaseAnimation('estonia', "img-left");
+  runBioFaseAnimation('estonia2', "img-right");
+
 };

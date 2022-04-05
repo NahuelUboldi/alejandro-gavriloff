@@ -11502,11 +11502,13 @@ section#gallery-preview #images-container img {
   transform: scaleX(1);
 }
 
+.bio-fase {
+  outline: solid 1px red;
+}
 .bio-fase .timeline {
   position: absolute;
   background-image: url("/img/bio/page/text/estonia-1914-02.svg");
   background-size: contain;
-  background-position: right;
   background-repeat: no-repeat;
   width: 100%;
   height: 10rem;
@@ -11521,7 +11523,6 @@ section#gallery-preview #images-container img {
   background-color: lightcoral;
   width: 90%;
   height: auto;
-  transform: translate3d(0, 10%, 0) rotate(1deg);
   background-image: url("/img/bio/page/alex-nino-01.jpg");
   background-size: cover;
 }
@@ -11529,9 +11530,27 @@ section#gallery-preview #images-container img {
   background-color: lightblue;
   width: 80%;
   height: auto;
-  transform: translate3d(20%, -20%, 0) rotate(-1deg);
   background-image: url("/img/bio/page/alex-nino-02.jpg");
   background-size: cover;
+}
+.bio-fase-left-img .timeline {
+  background-position: right;
+}
+.bio-fase-left-img .bio-fase__img--first {
+  transform: translate3d(0, 10%, 0) rotate(1deg);
+}
+.bio-fase-left-img .bio-fase__img--second {
+  transform: translate3d(20%, -20%, 0) rotate(-1deg);
+}
+
+.bio-fase-right-img .timeline {
+  background-position: left;
+}
+.bio-fase-right-img .bio-fase__img--first {
+  transform: translate3d(10%, 10%, 0) rotate(-1deg);
+}
+.bio-fase-right-img .bio-fase__img--second {
+  transform: translate3d(0%, -20%, 0) rotate(1deg);
 }
 
 /*# sourceMappingURL=main.css.map */
