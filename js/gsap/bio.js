@@ -23,6 +23,9 @@ tlTitle
   .efAppearLeft('.bio-lead', {}, '-=1.5');
 
 const runBioFaseAnimation = (id, imgPosition) => {
+  // if(tl) {
+  //   tl.clear()
+  // }
   const tl = gsap.timeline({
     defaults: {},
     scrollTrigger: {
@@ -58,21 +61,23 @@ const runBioFaseAnimation = (id, imgPosition) => {
       x: () => (imgPosition === 'img-left' ? '-100%' : '100%'),
       scrollTrigger: { scrub: 3 },
     });
+    console.log(id, tl);
   return tl;
 };
 
 window.onload = () => {
-  let timelines = [];
+
+  // let timelines = [];
+  const masterTl = gsap.timeline()
   const parameters = [
     ['estonia', 'img-left'],
     ['argentina', 'img-right'],
     ['profesor-dibujo', 'img-left'],
     ['buenos-aires', 'img-left'],
   ];
-  parameters.map((param) => {
-    let tl = runBioFaseAnimation(param[0], param[1]);
-    timelines.push(timelines);
+  parameters.forEach((param) => {
+    masterTl.add(runBioFaseAnimation(param[0], param[1])) 
+
   });
-  console.log(timelines);
-  return timelines;
+  return masterTl;
 };
