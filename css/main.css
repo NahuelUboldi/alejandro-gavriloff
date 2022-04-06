@@ -11502,12 +11502,8 @@ section#gallery-preview #images-container img {
   transform: scaleX(1);
 }
 
-.bio-fase {
-  outline: solid 1px red;
-}
 .bio-fase .timeline {
   position: absolute;
-  background-image: url("/img/bio/page/text/estonia-1914-02.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -11520,17 +11516,14 @@ section#gallery-preview #images-container img {
   z-index: -2;
 }
 .bio-fase__img--first {
-  background-color: lightcoral;
   width: 90%;
   height: auto;
-  background-image: url("/img/bio/page/alex-nino-01.jpg");
   background-size: cover;
 }
 .bio-fase__img--second {
   background-color: lightblue;
   width: 80%;
   height: auto;
-  background-image: url("/img/bio/page/alex-nino-02.jpg");
   background-size: cover;
 }
 .bio-fase-left-img .timeline {
@@ -11551,6 +11544,58 @@ section#gallery-preview #images-container img {
 }
 .bio-fase-right-img .bio-fase__img--second {
   transform: translate3d(0%, -20%, 0) rotate(1deg);
+}
+
+#estonia .timeline {
+  background-image: url("/img/bio/page/text/estonia-1914-02.svg");
+}
+#estonia .bio-fase__img {
+  z-index: -2;
+}
+#estonia .bio-fase__img--first {
+  background-image: url("/img/bio/page/alex-nino-01.jpg");
+}
+#estonia .bio-fase__img--second {
+  background-image: url("/img/bio/page/alex-nino-02.jpg");
+}
+
+#argentina .timeline {
+  background-image: url("/img/bio/page/text/argentina-1930.svg");
+}
+#argentina .bio-fase__img {
+  z-index: -2;
+}
+#argentina .bio-fase__img--first {
+  background-image: url("/img/bio/page/alex-llegada-argentina-01.jpg");
+}
+#argentina .bio-fase__img--second {
+  background-image: url("/img/bio/page/alex-llegada-argentina-02.jpg");
+}
+
+#profesor-dibujo .timeline {
+  background-image: url("/img/bio/page/text/buenos-aires-1938.svg");
+}
+#profesor-dibujo .bio-fase__img {
+  z-index: -2;
+}
+#profesor-dibujo .bio-fase__img--first {
+  background-image: url("/img/bio/page/alex-profesor-dibujo-02.jpg");
+}
+#profesor-dibujo .bio-fase__img--second {
+  background-image: url("/img/bio/page/alex-profesor-dibujo-01.jpg");
+}
+
+#buenos-aires .timeline {
+  background-image: url("/img/bio/page/text/buenos-aires-1939.svg");
+}
+#buenos-aires .bio-fase__img {
+  z-index: -2;
+}
+#buenos-aires .bio-fase__img--first {
+  background-image: url("/img/bio/page/alex-buenos-aires-01.jpg");
+}
+#buenos-aires .bio-fase__img--second {
+  background-image: url("/img/bio/page/alex-buenos-aires-02.jpg");
 }
 
 /*# sourceMappingURL=main.css.map */

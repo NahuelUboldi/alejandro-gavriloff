@@ -22,7 +22,7 @@ tlTitle
   .efAppearLeft('.bio-name', {}, '-=1.5')
   .efAppearLeft('.bio-lead', {}, '-=1.5');
 
-const runBioFaseAnimation = (id,imgPosition) => {
+const runBioFaseAnimation = (id, imgPosition) => {
   const tl = gsap.timeline({
     defaults: {},
     scrollTrigger: {
@@ -37,31 +37,42 @@ const runBioFaseAnimation = (id,imgPosition) => {
   tl.from(`#${id} .bio-fase__img--first`, {
     opacity: 0,
     y: 50,
-    rotation: () => imgPosition === "img-left" ? -10 : 10 ,
+    rotation: () => (imgPosition === 'img-left' ? -10 : 10),
     scrollTrigger: { scrub: 2 },
   })
     .from(`#${id} .bio-fase__img--second`, {
       opacity: 0,
       y: 100,
-      rotation: () => imgPosition === "img-left" ? 10 : -10,
+      rotation: () => (imgPosition === 'img-left' ? 10 : -10),
       scrollTrigger: { scrub: 2 },
     })
 
-    .from(
-      `#${id} .bio-fase__text div p`,
-      { opacity: 0, x: () => imgPosition === "img-left" ? 90 : -90, stagger: 0.5 }
-    )
+    .from(`#${id} .bio-fase__text div p`, {
+      opacity: 0,
+      x: () => (imgPosition === 'img-left' ? 90 : -90),
+      stagger: 0.5,
+    })
     .from(`#${id} .timeline`, {
       opacity: 0,
       y: -100,
-      x: () => imgPosition === "img-left" ? "-100%" : "100%",
+      x: () => (imgPosition === 'img-left' ? '-100%' : '100%'),
       scrollTrigger: { scrub: 3 },
     });
+  return tl;
 };
 
-
 window.onload = () => {
-  runBioFaseAnimation('estonia', "img-left");
-  runBioFaseAnimation('estonia2', "img-right");
-
+  let timelines = [];
+  const parameters = [
+    ['estonia', 'img-left'],
+    ['argentina', 'img-right'],
+    ['profesor-dibujo', 'img-left'],
+    ['buenos-aires', 'img-left'],
+  ];
+  parameters.map((param) => {
+    let tl = runBioFaseAnimation(param[0], param[1]);
+    timelines.push(timelines);
+  });
+  console.log(timelines);
+  return timelines;
 };
