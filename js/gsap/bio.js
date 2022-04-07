@@ -23,61 +23,55 @@ tlTitle
   .efAppearLeft('.bio-lead', {}, '-=1.5');
 
 const runBioFaseAnimation = (id, imgPosition) => {
-  // if(tl) {
-  //   tl.clear()
-  // }
+
   const tl = gsap.timeline({
-    defaults: {},
+    defaults: {duration:3},
     scrollTrigger: {
       trigger: `#${id}`,
       start: '0% 90%', //trigger element, screen position
       end: '60% 10%',
-      toggleActions: 'play none none none',
-      scrub: 1,
+      // toggleActions: 'play none none none',
+      scrub: 2,
       markers: true,
     },
   });
-  tl.from(`#${id} .bio-fase__img--first`, {
-    opacity: 0,
-    y: 50,
-    rotation: () => (imgPosition === 'img-left' ? -10 : 10),
-    scrollTrigger: { scrub: 2 },
-  })
+  tl
+    .from(`#${id} .bio-fase__img--first`, {
+      opacity: 0,
+      y: 50,
+      rotation: () => (imgPosition === 'img-left' ? -10 : 10),
+
+    })
     .from(`#${id} .bio-fase__img--second`, {
       opacity: 0,
       y: 100,
       rotation: () => (imgPosition === 'img-left' ? 10 : -10),
-      scrollTrigger: { scrub: 2 },
-    })
-
-    .from(`#${id} .bio-fase__text div p`, {
+  
+    },0).from(`#${id} .bio-fase__text div p`, {
       opacity: 0,
       x: () => (imgPosition === 'img-left' ? 90 : -90),
       stagger: 0.5,
-    })
+    },0)
     .from(`#${id} .timeline`, {
       opacity: 0,
       y: -100,
       x: () => (imgPosition === 'img-left' ? '-100%' : '100%'),
-      scrollTrigger: { scrub: 3 },
-    });
-    console.log(id, tl);
+   
+    },0);
   return tl;
 };
 
 window.onload = () => {
-
-  // let timelines = [];
   const masterTl = gsap.timeline()
   const parameters = [
     ['estonia', 'img-left'],
     ['argentina', 'img-right'],
     ['profesor-dibujo', 'img-left'],
-    ['buenos-aires', 'img-left'],
+    ['buenos-aires', 'img-right'],
   ];
   parameters.forEach((param) => {
+    console.log(param);
     masterTl.add(runBioFaseAnimation(param[0], param[1])) 
-
   });
   return masterTl;
 };
