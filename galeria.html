@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
+  <body data-barba="wrapper">
     <!--start navigation-->
     <section id="navigation">
       <div class="rect-bg"></div>
@@ -63,46 +63,49 @@
     </section>
     <!--end navigation-->
 
-    <!--start gallery-->
-    <section id="galery" class="my-5">
-      <div class="container py-5">
-        <h2 class="display-3 gallery-title">Galería de cuadros</h2>
-        <hr class="gallery-separator" />
-        <div class="row">
-          <div class="col-12 text-center">
-            <div class="btn-group gallery-btns-container" role="group">
-              
+    <!--barba container-->
+    <div data-barba="container" data-barba-namespace="galeria">
+
+      <!--start gallery-->
+      <section id="galery" class="my-5">
+        <div class="container py-5">
+          <h2 class="display-3 gallery-title">Galería de cuadros</h2>
+          <hr class="gallery-separator" />
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="btn-group gallery-btns-container" role="group">
+                
+              </div>
             </div>
           </div>
+          <!--row-->
+          <main class="row">
+            <div
+              id="img-container"
+              class="col-12 d-flex flex-wrap pt-3 gap-3 justify-content-around"
+            ></div>
+          </main>
         </div>
-        <!--row-->
-        <main class="row">
-          <div
-            id="img-container"
-            class="col-12 d-flex flex-wrap pt-3 gap-3 justify-content-around"
-          ></div>
-        </main>
-      </div>
-      <!--container-->
-      <!--modal-->
-      <div id="modal" class="closed">
-        <div class="modal-bg">
-          <div class="close-tag h1">
-            <i id="close-modal-btn" class="fa-solid fa-xmark"></i>
+        <!--container-->
+        <!--modal-->
+        <div id="modal" class="closed">
+          <div class="modal-bg">
+            <div class="close-tag h1">
+              <i id="close-modal-btn" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="arrow-btns">
+              <i class="fa-solid fa-chevron-left fs-1"></i>
+              <i class="fa-solid fa-chevron-right fs-1"></i>
+            </div>
           </div>
-          <div class="arrow-btns">
-            <i class="fa-solid fa-chevron-left fs-1"></i>
-            <i class="fa-solid fa-chevron-right fs-1"></i>
-          </div>
+          <div id="modal-content"></div>
         </div>
-        <div id="modal-content"></div>
-      </div>
-      <!--end modal-->
-    </section>
-    <!--end bio-->
+        <!--end modal-->
+      </section>
+      <!--end bio-->
 
-    <!--start section-->
-    <!--end section-->
+    </div>
+    <!--end barba container-->
 
     <!--start footer-->
     <section id="footer">
@@ -156,11 +159,14 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <!--BARBA JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <!-- BOOTSTRAP -->
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
     <!-- CUSTOM -->
     <script type="module" src="js/gallery.js"></script>
     <script type="module" src="js/gsap/gallery.js"></script>
+    <script type="module" src="js/barba/transition.js"></script>
     <script type="module" src="js/app.js"></script>
   </body>
 </html>
