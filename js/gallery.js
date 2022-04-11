@@ -2,7 +2,7 @@ import {
   getPaintings,
   filterPaintingsByCategory,
   shuffleArray,
-} from './utilities.js';
+} from './utils/utilities.js';
 import { showModal, closeModal } from './modal.js';
 gsap.registerPlugin(ScrollTrigger);
 //selectors

@@ -2,7 +2,7 @@ import {
   getPaintings,
   filterPaintingsByPeriod,
   shuffleArray,
-} from './utilities.js';
+} from './utils/utilities.js';
 import { showModal, closeModal } from './modal.js';
 
 //selectors

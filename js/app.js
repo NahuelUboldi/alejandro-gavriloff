@@ -1,21 +1,24 @@
-// current year
-document.getElementById('current-year').innerText = new Date().getFullYear();
+import handleResize from "./utils/handleResize.js";
+import initCanvas from "./sections/home/canvas.js"
+import initGalleryPreview from "./sections/home/gallerie-preview.js";
 
-//BIO SECOND COLUMN LIMIT
-const divWidthReference_hr = document.querySelector('.bio-separator');
-const divToResize = document.querySelectorAll('.div-to-resize');
-const divToResizeFather = document.querySelector('.bio-fase__text');
+const getPage = function getTheActualPageName() {
+  const path = window.location.pathname;
+  const page = path.split("/").pop();
+  return page
+}
+const init = function initializeTheSiteFunctionality() {
+  document.getElementById('current-year').innerText = new Date().getFullYear();
+  const page = getPage()
+  handleResize(page)
+  initCanvas(page)
+  initGalleryPreview(page)
+}
+window.addEventListener("resize",() => {
+  const page = getPage()
+  handleResize(page)
+  initCanvas(page)
+  initGalleryPreview(page)
 
-const handleResize = () => {
-  const referenceWidth = divWidthReference_hr.getBoundingClientRect().width;
-  let widthNeeded = referenceWidth;
-  if (screen.width >= 766) {
-    console.log('if');
-    widthNeeded = referenceWidth / 2 - 12;
-  }
-
-  [...divToResize].map((div) => (div.style.width = `${widthNeeded}px`));
-};
-
-window.addEventListener('resize', handleResize);
-window.addEventListener('load', handleResize);
+})
+window.addEventListener('load', () =>  init());
