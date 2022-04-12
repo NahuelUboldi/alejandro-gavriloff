@@ -7,6 +7,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage(page) {
+
   if(page !== "index.html") return
  
   const imagesContainer = document.getElementById('images-container');
@@ -17,7 +18,8 @@ const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage(pag
 
   //variables
   const imagesRequiredWidth = 400; //400 default
-
+  
+  //functions
   const closeModal = () => {
     modal.classList.add('closed');
   };
@@ -86,7 +88,5 @@ const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage(pag
   document.addEventListener('click', showModal);
   showGalleryPreview()
 }
-//listeners
-// window.addEventListener('load', showGalleryPreview);
-// window.addEventListener('resize', showGalleryPreview);
+
 export default initGalleryPreview

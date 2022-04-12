@@ -6,7 +6,7 @@ import {
 } from '../../utils/utilities.js';
 
 const initCanvas = function initializeTheCanvasSection(page) {
-if(page !== "index.html");
+if(page !== "index.html") return;
   //selectors
   const canvas = document.querySelector('#canvas-art');
   const context = canvas.getContext('2d');
