@@ -14,8 +14,8 @@ const setCurrentYear = function setTheCurrentYear() {
   return document.getElementById('current-year').innerText = new Date().getFullYear();
 }
 const init = function initializeTheSiteFunctionality() {
-  setCurrentYear()
   const page = getPage()
+  setCurrentYear()
   handleResize(page)
   initCanvas(page)
   initGalleryPreview(page)
