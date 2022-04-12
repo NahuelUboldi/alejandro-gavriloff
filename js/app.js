@@ -1,8 +1,8 @@
 import handleResize from "./utils/handleResize.js";
-import initCanvas from "./sections/home/canvas.js"
-import initGalleryPreview from "./sections/home/gallerie-preview.js";
-import initGallery from "./sections/gallery/gallery.js";
-import initCarousels from "./sections/periods/periods.js";
+import initCanvas from "./pages/home/canvas.js"
+import initGalleryPreview from "./pages/home/gallerie-preview.js";
+import initGallery from "./pages/gallery/index.js";
+import initCarousels from "./pages/periods/index.js";
 
 const getPage = function getTheActualPageName() {
   let path = window.location.pathname;

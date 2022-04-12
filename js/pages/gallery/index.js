@@ -3,7 +3,7 @@ import {
   filterPaintingsByCategory,
   shuffleArray,
 } from '../../utils/utilities.js';
-import { showModal, closeModal } from '../../modal.js';
+import { showModal, closeModal } from '../../utils/modal.js';
 gsap.registerPlugin(ScrollTrigger);
 
 
