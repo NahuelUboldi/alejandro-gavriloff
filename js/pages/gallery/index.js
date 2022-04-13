@@ -2,14 +2,15 @@ import {
   getPaintings,
   filterPaintingsByCategory,
   shuffleArray,
+  getPage
 } from '../../utils/utilities.js';
 import { showModal, closeModal } from '../../utils/modal.js';
 gsap.registerPlugin(ScrollTrigger);
 
 
-const initGallery = function initializeTheImgGallerySection(page) {
-  
-  if(page !== "galeria.html") return;
+const initGallery = function initializeTheImgGallerySection() {
+  const page = getPage()
+  if(page !== "gallery.html") return;
 
   //selectors
   const filterBtnsContainer = document.querySelector('.gallery-btns-container');

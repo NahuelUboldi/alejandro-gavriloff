@@ -3,10 +3,12 @@ import {
   filterPaintingsByQuality,
   filterPaintingsByTags,
   filterPaintingsByID,
+  getPage
 } from '../../utils/utilities.js';
 
-const initCanvas = function initializeTheCanvasSection(page) {
-if(page !== "index.html") return;
+const initCanvas = function initializeTheCanvasSection() {
+  const page = getPage()
+  if(page !== "index.html") return;
   //selectors
   const canvas = document.querySelector('#canvas-art');
   const context = canvas.getContext('2d');

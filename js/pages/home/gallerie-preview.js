@@ -3,11 +3,12 @@ import {
   filterPaintingsByQuality,
   filterPaintingsByTags,
   filterPaintingsByID,
+  getPage
 } from '../../utils/utilities.js';
 gsap.registerPlugin(ScrollTrigger);
 
-const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage(page) {
-
+const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage() {
+  const page = getPage()
   if(page !== "index.html") return
  
   const imagesContainer = document.getElementById('images-container');

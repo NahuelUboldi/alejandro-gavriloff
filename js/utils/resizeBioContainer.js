@@ -1,6 +1,8 @@
+import { getPage } from "./utilities.js";
 
-const handleResize = (page) => {
- if (page !== "bio.html") return 
+const resizeBioContainer = function resizeBioSectionsContainer() {
+  const page = getPage()
+ if (page !== "biography.html") return 
  const divWidthReference_hr = document.querySelector('.bio-separator');
  const divToResize = document.querySelectorAll('.div-to-resize');
  const divToResizeFather = document.querySelector('.bio-fase__text');
@@ -14,4 +16,4 @@ const handleResize = (page) => {
 };
 
 
-export default handleResize
+export default resizeBioContainer

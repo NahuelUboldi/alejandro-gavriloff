@@ -2,12 +2,13 @@ import {
   getPaintings,
   filterPaintingsByPeriod,
   shuffleArray,
+  getPage
 } from '../../utils/utilities.js';
 import { showModal, closeModal } from '../../utils/modal.js';
 
-const initCarousels = function initializeThePeriodsPageGliderCarousel(page) {
-
-  if(page !== "etapas.html") return;
+const initCarousels = function initializeThePeriodsPageGliderCarousel() {
+  const page = getPage()
+  if(page !== "artistic-periods.html") return;
 
   //selectors
   const periodGalleryCarousel = document.querySelectorAll('.period-gallery');

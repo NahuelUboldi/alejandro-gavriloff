@@ -79,6 +79,13 @@ function isInViewport(element) {
   );
 }
 
+const getPage = function getTheActualPageName() {
+  let path = window.location.pathname;
+  if (path === "/") path = "/index.html"
+  const page = path.split("/").pop();
+  return page
+}
+
 export {
   getPaintings,
   filterPaintingsByCategory,
@@ -88,4 +95,5 @@ export {
   filterPaintingsByPeriod,
   shuffleArray,
   isInViewport,
+  getPage
 };
