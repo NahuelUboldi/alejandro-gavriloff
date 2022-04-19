@@ -2,15 +2,14 @@ import {
   getPaintings,
   filterPaintingsByCategory,
   shuffleArray,
-  getPage
+  getPage,
 } from '../../utils/utilities.js';
 import { showModal, closeModal } from '../../utils/modal.js';
 gsap.registerPlugin(ScrollTrigger);
 
-
 const initGallery = function initializeTheImgGallerySection() {
-  const page = getPage()
-  if(page !== "gallery.html") return;
+  const page = getPage();
+  if (page !== 'gallery.html') return;
 
   //selectors
   const filterBtnsContainer = document.querySelector('.gallery-btns-container');
@@ -25,7 +24,7 @@ const initGallery = function initializeTheImgGallerySection() {
   };
   // gsap animations
   const gsapAnimation = (element, staggerFrom) => {
-    gsap.from(element, {
+    return gsap.from(element, {
       duration: 2,
       opacity: 0,
       scale: 0.9,
@@ -37,10 +36,10 @@ const initGallery = function initializeTheImgGallerySection() {
     });
   };
   const runGsapAnimationImg = () => {
-    gsapAnimation('.gallery-img', 'random');
+    return gsapAnimation('.gallery-img', 'random');
   };
   const runGsapAnimationBtn = () => {
-    gsapAnimation('.gallery-filter-btn', 0);
+    return gsapAnimation('.gallery-filter-btn', 0);
   };
 
   //btns
@@ -72,7 +71,7 @@ const initGallery = function initializeTheImgGallerySection() {
     const categories = getPaintingsCategories(state.paintings);
     const filterBtns = getFilterBtns(categories);
     filterBtnsContainer.innerHTML = filterBtns;
-    runGsapAnimationBtn();
+    // runGsapAnimationBtn();
   };
   //images
   const getPaintingsToShow = (paintings) => {
@@ -120,24 +119,23 @@ const initGallery = function initializeTheImgGallerySection() {
       state.categoryActive = e.target.innerText;
       loadFilterBtns(state.paintings);
       loadImages();
-      runGsapAnimationImg();
+      // runGsapAnimationImg();
     }
   };
   //main
   const startGallery = async () => {
     let paintings = await getPaintings();
     state.paintings = paintings;
+    loadFilterBtns();
+    loadImages();
     setTimeout(() => {
-      loadFilterBtns();
-      loadImages();
-      runGsapAnimationImg();
+      // runGsapAnimatioknImg();
     }, 2500);
-      
   };
   filterBtnsContainer.addEventListener('click', handleBtnClick);
   galleryContainer.addEventListener('click', handleImgClick);
-  startGallery()
-}
+  startGallery();
+};
 
 // window.addEventListener('load', startGallery);
-export default initGallery
+export default initGallery;

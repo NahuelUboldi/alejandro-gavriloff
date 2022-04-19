@@ -13,6 +13,12 @@ a {
   color: $gray-300;
 }
 
+//barba hooks
+.is-transitioning {
+  pointer-events: none;
+  cursor: progress;
+}
+
 //aspect-ratio
 //from: https://css-tricks.com/aspect-ratio-boxes/
 [style*='--aspect-ratio'] > :first-child {

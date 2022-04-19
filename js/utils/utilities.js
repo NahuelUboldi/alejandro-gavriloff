@@ -81,11 +81,12 @@ function isInViewport(element) {
 
 const getPage = function getTheActualPageName() {
   let path = window.location.pathname;
-  if (path === "/") path = "/index.html"
-  const page = path.split("/").pop();
-  return page
-}
-
+  if (path === '/') path = '/index.html';
+  const page = path.split('/').pop();
+  return page;
+};
+const select = (element) => document.querySelector(element);
+const selectAll = (element) => document.querySelectorAll(element);
 export {
   getPaintings,
   filterPaintingsByCategory,
@@ -95,5 +96,7 @@ export {
   filterPaintingsByPeriod,
   shuffleArray,
   isInViewport,
-  getPage
+  getPage,
+  select,
+  selectAll,
 };
