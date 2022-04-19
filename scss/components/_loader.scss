@@ -1,22 +1,62 @@
+@use '../components/mixins' as *;
 .loader {
   position: fixed;
-  min-height: 100vh;
+    min-height: 100vh;
   width: 100%;
   background-color: #fff;
   top: 0;
   left: 0;
-  visibility: hidden;
+  // visibility: hidden;
   overflow: hidden;
   z-index: 99;
-  .loader__mask {
+  .loader__container {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
-
     overflow: hidden;
+    .inner {
+      @include absoluteCenter;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 3fr 3fr 1fr;
+      justify-content: center;    
+      gap: 2rem;
+
+      .loader-paint {
+        width: 200px;
+        place-self: center;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1.5rem;
+        background-color: aliceblue;
+        background-size: cover;
+        // @include shadowDrop;
+        &:nth-child(1) {
+          background-image: url('../../img/hero/cuadro-01.jpg');
+        }
+         &:nth-child(2) {
+          background-image: url('../../img/hero/cuadro-02.jpg');
+        }
+         &:nth-child(3) {
+          background-image: url('../../img/hero/cuadro-03.jpg');
+        }
+         &:nth-child(4) {
+          background-image: url('../../img/hero/cuadro-06.jpg');
+        }
+         &:nth-child(5) {
+          background-image: url('../../img/hero/cuadro-07.jpg');
+        }
+        &:nth-child(6) {
+          background-image: url('../../img/hero/cuadro-09.jpg');
+        }
+      }
+      .loader-logo {
+        background: url('../../img/logo-firma.svg') no-repeat center;
+        -webkit-box-shadow: none;
+        box-shadow:none;
+        background-size: contain;
+      }
+    } 
     .logo {
       position: relative;
       background: url('../../img/logo-firma.svg') no-repeat center;
