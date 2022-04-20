@@ -3,7 +3,8 @@ import initCanvas from './pages/home/canvas.js';
 import initGalleryPreview from './pages/home/gallerie-preview.js';
 import initGallery from './pages/gallery/index.js';
 import initCarousels from './pages/periods/index.js';
-import { revealNav, initLoaderAnim } from './animations/index.js';
+import { revealNav, initLoaderAnim,initHeroAnim } from './animations/index.js';
+
 
 const setCurrentYear = function setTheCurrentYear() {
   return (document.getElementById('current-year').innerText =
@@ -56,6 +57,7 @@ const init = function initializeTheSiteFunctionality() {
   initGalleryPreview();
   initGallery();
   initCarousels();
+  initHeroAnim()
 };
 window.addEventListener('resize', () => {
   resizeBioContainer();

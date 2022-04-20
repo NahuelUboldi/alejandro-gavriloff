@@ -10765,6 +10765,13 @@ a {
   overflow: hidden;
 }
 
+.viewport {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 .bg-gray-300 {
   background-color: #dee2e6;
 }
@@ -10946,7 +10953,7 @@ body {
   position: fixed;
   min-height: 100vh;
   width: 100%;
-  background-color: #fff;
+  background-color: #eee;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -10975,35 +10982,26 @@ body {
   border-radius: 1.5rem;
   background-color: aliceblue;
   position: relative;
-  border: solid 1px red;
-}
-.loader .loader__container .inner .loader-paint span {
-  position: absolute;
-  top: -20%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
   background-size: cover;
   background-position: center;
-  opacity: 0.5;
   background-size: cover;
 }
-.loader .loader__container .inner .loader-paint:nth-child(1) span {
+.loader .loader__container .inner .loader-paint:nth-child(1) {
   background-image: url("../../img/hero/cuadro-01.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(2) span {
+.loader .loader__container .inner .loader-paint:nth-child(2) {
   background-image: url("../../img/hero/cuadro-02.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(3) span {
+.loader .loader__container .inner .loader-paint:nth-child(3) {
   background-image: url("../../img/hero/cuadro-03.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(4) span {
+.loader .loader__container .inner .loader-paint:nth-child(4) {
   background-image: url("../../img/hero/cuadro-06.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(5) span {
+.loader .loader__container .inner .loader-paint:nth-child(5) {
   background-image: url("../../img/hero/cuadro-07.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(6) span {
+.loader .loader__container .inner .loader-paint:nth-child(6) {
   background-image: url("../../img/hero/cuadro-09.jpg");
 }
 .loader .loader__container .inner .loader-logo {
@@ -11021,7 +11019,6 @@ body {
   height: 7rem;
 }
 .loader .loader__container .logo span {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -11049,10 +11046,6 @@ body {
   perspective: 500px;
   transform-style: preserve-3d;
   transform: rotateY(-5deg) scale(0.7);
-}
-
-.contenedor-cuadros:hover {
-  transform: rotateY(-15deg) scale(0.7);
 }
 
 .cuadro {
@@ -11112,19 +11105,6 @@ body {
 @media (min-width: 992px) {
   .contenedor-cuadros {
     transform: scale(0.8);
-    animation-name: rotate-picture;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-  }
-  @keyframes rotate-picture {
-    0% {
-      transform: rotateY(3deg);
-    }
-    100% {
-      transform: rotateY(-12deg);
-    }
   }
 }
 @media (min-width: 1200px) {
