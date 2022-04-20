@@ -86,7 +86,7 @@ const getPage = function getTheActualPageName() {
   return page;
 };
 const select = (element) => document.querySelector(element);
-const selectAll = (element) => document.querySelectorAll(element);
+const selectAll = (element) => gsap.utils.toArray(element);
 export {
   getPaintings,
   filterPaintingsByCategory,

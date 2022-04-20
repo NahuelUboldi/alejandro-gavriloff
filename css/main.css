@@ -10972,28 +10972,38 @@ body {
 .loader .loader__container .inner .loader-paint {
   width: 200px;
   place-self: center;
-  background-size: cover;
-  background-position: center;
   border-radius: 1.5rem;
   background-color: aliceblue;
+  position: relative;
+  border: solid 1px red;
+}
+.loader .loader__container .inner .loader-paint span {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
   background-size: cover;
 }
-.loader .loader__container .inner .loader-paint:nth-child(1) {
+.loader .loader__container .inner .loader-paint:nth-child(1) span {
   background-image: url("../../img/hero/cuadro-01.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(2) {
+.loader .loader__container .inner .loader-paint:nth-child(2) span {
   background-image: url("../../img/hero/cuadro-02.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(3) {
+.loader .loader__container .inner .loader-paint:nth-child(3) span {
   background-image: url("../../img/hero/cuadro-03.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(4) {
+.loader .loader__container .inner .loader-paint:nth-child(4) span {
   background-image: url("../../img/hero/cuadro-06.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(5) {
+.loader .loader__container .inner .loader-paint:nth-child(5) span {
   background-image: url("../../img/hero/cuadro-07.jpg");
 }
-.loader .loader__container .inner .loader-paint:nth-child(6) {
+.loader .loader__container .inner .loader-paint:nth-child(6) span {
   background-image: url("../../img/hero/cuadro-09.jpg");
 }
 .loader .loader__container .inner .loader-logo {

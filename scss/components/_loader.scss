@@ -1,7 +1,7 @@
 @use '../components/mixins' as *;
 .loader {
   position: fixed;
-    min-height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #fff;
   top: 0;
@@ -19,44 +19,54 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 3fr 3fr 1fr;
-      justify-content: center;    
+      justify-content: center;
       gap: 2rem;
 
       .loader-paint {
         width: 200px;
         place-self: center;
-        background-size: cover;
-        background-position: center;
         border-radius: 1.5rem;
         background-color: aliceblue;
-        background-size: cover;
+        position: relative;
+        border: solid 1px red;
         // @include shadowDrop;
-        &:nth-child(1) {
+        span {
+          position: absolute;
+          top: -20%;
+          left: -10%;
+          width: 120%;
+          height: 120%;
+          background-size: cover;
+          background-position: center;
+          opacity: 0.5;
+          background-size: cover;
+        }
+        &:nth-child(1) span {
           background-image: url('../../img/hero/cuadro-01.jpg');
         }
-         &:nth-child(2) {
+        &:nth-child(2) span {
           background-image: url('../../img/hero/cuadro-02.jpg');
         }
-         &:nth-child(3) {
+        &:nth-child(3) span {
           background-image: url('../../img/hero/cuadro-03.jpg');
         }
-         &:nth-child(4) {
+        &:nth-child(4) span {
           background-image: url('../../img/hero/cuadro-06.jpg');
         }
-         &:nth-child(5) {
+        &:nth-child(5) span {
           background-image: url('../../img/hero/cuadro-07.jpg');
         }
-        &:nth-child(6) {
+        &:nth-child(6) span {
           background-image: url('../../img/hero/cuadro-09.jpg');
         }
       }
       .loader-logo {
         background: url('../../img/logo-firma.svg') no-repeat center;
         -webkit-box-shadow: none;
-        box-shadow:none;
+        box-shadow: none;
         background-size: contain;
       }
-    } 
+    }
     .logo {
       position: relative;
       background: url('../../img/logo-firma.svg') no-repeat center;
