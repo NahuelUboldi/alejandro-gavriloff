@@ -15,10 +15,13 @@
   width: 10px;
   height: 10px;
   z-index: 99;
-  @include transitionLong;
+  // @include transitionLong;
   perspective: 500px;
   transform-style: preserve-3d;
   transform: rotateY(-5deg) scale(0.7);
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 // .contenedor-cuadros:hover {
