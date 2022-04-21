@@ -1,4 +1,5 @@
-import { select, selectAll } from '../utils/utilities.js';
+import { select } from '../utils/utilities.js';
+import { getPage } from "../utils/utilities.js";
 
 const movePaintings = function moveThePaintingsContainer(
   container,
@@ -28,7 +29,11 @@ const handleMousemove = function handleMouseMovement(e) {
 };
 
 const initHeroAnim = function initializeTheHeroImagesAnimation() {
+  const page = getPage()
+  if (page !== "index.html") return 
+  select('#navigation').addEventListener('mousemove', handleMousemove);
   select('#hero').addEventListener('mousemove', handleMousemove);
+  select('#quote').addEventListener('mousemove', handleMousemove);
 };
 
 export default initHeroAnim;

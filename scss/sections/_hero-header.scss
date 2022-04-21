@@ -1,5 +1,6 @@
 @use '../components/mixins' as *;
 
+
 .hero-dibujo {
   min-height: 60vh;
   perspective: 500px;
@@ -18,7 +19,7 @@
   // @include transitionLong;
   perspective: 500px;
   transform-style: preserve-3d;
-  transform: rotateY(-5deg) scale(0.7);
+  transform: rotateY(-5deg);
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -29,12 +30,13 @@
 // }
 .cuadro {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-position: center;
   border-radius: 1.5rem;
   background-color: red;
+  // transform: scale(0.8)
   @include shadowDrop;
 }
 .cuadro:nth-child(1) {
@@ -77,13 +79,21 @@
 }
 @media (min-width: 992px) {
   .contenedor-cuadros {
-    transform: scale(0.8);
+    // transform: scale(0.8);
     // @include rotatePicture;
+    .cuadro {
+      width: 120px;
+      height: 120px;
+    }
   }
 }
 @media (min-width: 1200px) {
   .contenedor-cuadros {
-    transform: scale(0.98);
+    // transform: scale(0.98);
+     .cuadro {
+      width: 150px;
+      height: 150px;
+    }
   }
 
   .cuadro:nth-child(1) {

@@ -10954,6 +10954,7 @@ body {
   min-height: 100vh;
   width: 100%;
   background-color: #eee;
+  background-image: url("../../img/bg/image-2bufu55o.png");
   top: 0;
   left: 0;
   overflow: hidden;
@@ -11044,7 +11045,7 @@ body {
   z-index: 99;
   perspective: 500px;
   transform-style: preserve-3d;
-  transform: rotateY(-5deg) scale(0.7);
+  transform: rotateY(-5deg);
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -11052,8 +11053,8 @@ body {
 
 .cuadro {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-position: center;
   border-radius: 1.5rem;
@@ -11105,13 +11106,15 @@ body {
 }
 
 @media (min-width: 992px) {
-  .contenedor-cuadros {
-    transform: scale(0.8);
+  .contenedor-cuadros .cuadro {
+    width: 120px;
+    height: 120px;
   }
 }
 @media (min-width: 1200px) {
-  .contenedor-cuadros {
-    transform: scale(0.98);
+  .contenedor-cuadros .cuadro {
+    width: 150px;
+    height: 150px;
   }
 
   .cuadro:nth-child(1) {
