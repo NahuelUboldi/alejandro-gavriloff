@@ -5,6 +5,7 @@ import initGallery from './pages/gallery/index.js';
 import initCarousels from './pages/periods/index.js';
 import { revealNav, initLoaderAnim, initHeroAnim } from './animations/index.js';
 import initArtisticPeriods from './pages/home/artisticPeriods.js';
+import initQuoteAnim from './pages/home/quote.js';
 
 const setCurrentYear = function setTheCurrentYear() {
   return (document.getElementById('current-year').innerText =
@@ -51,6 +52,7 @@ const init = function initializeTheSiteFunctionality() {
   initCarousels();
   initHeroAnim();
   initArtisticPeriods();
+  initQuoteAnim();
 };
 window.addEventListener('resize', () => {
   resizeBioContainer();

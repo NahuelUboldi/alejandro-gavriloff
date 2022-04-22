@@ -14,10 +14,10 @@ const animParallaxText = function animTheTextWithParallaxEffect() {
         scrub: true,
       },
     });
-    tl.fromTo(h3, { y: -110 }, { y: 100 })
-      .fromTo(hr, { y: -90 }, { y: 95 }, 0)
-      .fromTo([...p][0], { y: -70 }, { y: 90 }, 0)
-      .fromTo([...p][1], { y: -50 }, { y: 85 }, 0);
+    tl.fromTo(h3, { y: -150 }, { y: 120 })
+      .fromTo(hr, { y: -130 }, { y: 115 }, 0)
+      .fromTo([...p][0], { y: -110 }, { y: 110 }, 0)
+      .fromTo([...p][1], { y: -90 }, { y: 105 }, 0);
     return tl;
   });
 };
