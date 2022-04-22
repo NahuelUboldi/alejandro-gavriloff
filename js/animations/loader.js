@@ -9,6 +9,7 @@ const initLoaderAnim = function initializeTheLoaderAnimation() {
     defaults: { duration: 1, ease: Back.easeOut.config(0.7) },
   });
   tl
+    // .set(loader,{yPercent:100})
     .set([loaderPaintsContainer, loaderLogo], {y: '100vh',})
     .to([loaderPaintsContainer, loaderLogo], {
       y: '0vh',

@@ -25,7 +25,7 @@ const animParallaxImage = function animTheImageWithParallaxEffect() {
   selectAll('.with-parallax').forEach((section) => {
     const image = section.querySelector('img');
     return gsap.to(image, {
-      yPercent: 20,
+      yPercent: 30,
       ease: 'none',
       scrollTrigger: {
         trigger: section,
