@@ -17,7 +17,7 @@
   </head>
   <body data-barba="wrapper">
     <!--barba container-->
-    <main data-barba="container" data-barba-namespace="home" class="viewport">
+    <div class="viewport">
       <div class="wrapper">
         <!--loader-->
         <div class="loader">
@@ -48,8 +48,13 @@
           </div>
         </div>
         <!--loader-->
+
         <!--page-content-->
-        <div class="page-content">
+        <div
+          class="page-content"
+          data-barba="container"
+          data-barba-namespace="home"
+        >
           <!--start navigation-->
           <section id="navigation">
             <div class="rect-bg"></div>
@@ -121,13 +126,27 @@
                       >Alejandro Gavriloff</span
                     >.
                   </p>
-                  <button
+                  <!-- <button
                     class="hero-btn btn btn-dark btn-lg align-self-start mt-4"
                   >
                     <a href="gallery.html" class="common-link text-white">
                       Ver Cuadros
                     </a>
+                  </button> -->
+
+                  <!--new btn-->
+                  <button
+                    class="btn--reset btn__custom--circle-purple align-self-start mt-4"
+                  >
+                    <a href="gallery.html" class="cta">
+                      <span>Ver Galería de Cuadros</span>
+                      <svg width="13px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
                   </button>
+                  <!--end new btn-->
                 </div>
                 <div
                   class="col-12 col-md-6 d-none d-md-block position-relative hero-dibujo"
@@ -556,7 +575,7 @@
         <!--page-content-->
       </div>
       <!--wrapper-->
-    </main>
+    </div>
     <!--end barba container-->
 
     <!-- javascript -->

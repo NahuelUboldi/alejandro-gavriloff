@@ -1,10 +1,11 @@
 @use '../components/mixins' as *;
 .loader {
+  display: none;
   position: fixed;
   min-height: 100vh;
   width: 100%;
   background-color: #eee;
-  background-image: url("../../img/bg/image-2bufu55o.png");
+  background-image: url('../../img/bg/image-2bufu55o.png');
   top: 0%;
   left: 0;
   // visibility: hidden;
@@ -22,7 +23,7 @@
       grid-template-rows: 3fr 3fr 1fr;
       justify-content: center;
       gap: 2rem;
-
+      max-width: 100%;
       .loader-paint {
         width: 200px;
         place-self: center;
@@ -33,7 +34,7 @@
         background-position: center;
         background-size: cover;
         // @include shadowDrop;
-        
+
         &:nth-child(1) {
           background-image: url('../../img/hero/cuadro-01.jpg');
         }

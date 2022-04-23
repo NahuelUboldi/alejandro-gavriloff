@@ -87,6 +87,10 @@ const getPage = function getTheActualPageName() {
 };
 const select = (element) => document.querySelector(element);
 const selectAll = (element) => gsap.utils.toArray(element);
+const setCurrentYear = function setTheCurrentYear() {
+  return (document.getElementById('current-year').innerText =
+    new Date().getFullYear());
+};
 
 export {
   getPaintings,
@@ -100,4 +104,5 @@ export {
   getPage,
   select,
   selectAll,
+  setCurrentYear,
 };

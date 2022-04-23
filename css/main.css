@@ -10811,50 +10811,85 @@ a {
     height: 100%;
   }
 }
-.btn-textured {
-  background-image: url("../../img/galeria/temperas/01-md.jpg");
-  background-size: 1000%;
-  background-position: top left;
-  backdrop-filter: invert(70%);
-  font-weight: bold;
-  border: none;
-  animation: wave 205s linear infinite;
+.btn--reset {
+  /*Reset's every elements apperance*/
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  border-spacing: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.42rem;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
 }
 
-.btn-textured a {
-  text-shadow: 1px 1px 2px black;
+.btn__custom--circle-purple a {
+  text-decoration: none;
+  color: inherit;
+}
+.btn__custom--circle-purple .cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+}
+.btn__custom--circle-purple .cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: rgba(153, 38, 240, 0.5);
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.btn__custom--circle-purple .cta span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.btn__custom--circle-purple .cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.btn__custom--circle-purple .cta:hover {
+  color: white;
+}
+.btn__custom--circle-purple .cta:hover:before {
+  width: 100%;
+  background: #9926f0;
+}
+.btn__custom--circle-purple .cta:hover svg {
+  stroke: white;
+  transform: translateX(5px) scale(1.2);
+  transform-origin: "left center";
+}
+.btn__custom--circle-purple .cta svg {
+  transform: translateX(0);
+}
+.btn__custom--circle-purple .cta:active {
+  transform: scale(0.96);
 }
 
-.btn-textured:hover {
-  animation: wave 100s linear infinite;
-}
-
-@keyframes wave {
-  0% {
-    background-position: top left;
-  }
-  12% {
-    background-position: center left;
-  }
-  24% {
-    background-position: center center;
-  }
-  36% {
-    background-position: top center;
-  }
-  50% {
-    background-position: top right;
-  }
-  62% {
-    background-position: center right;
-  }
-  74% {
-    background-position: center center;
-  }
-  86% {
-    background-position: top center;
-  }
-}
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -10950,6 +10985,7 @@ body {
 }
 
 .loader {
+  display: none;
   position: fixed;
   min-height: 100vh;
   width: 100%;
@@ -10976,6 +11012,7 @@ body {
   grid-template-rows: 3fr 3fr 1fr;
   justify-content: center;
   gap: 2rem;
+  max-width: 100%;
 }
 .loader .loader__container .inner .loader-paint {
   width: 200px;

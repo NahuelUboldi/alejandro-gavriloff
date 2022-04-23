@@ -17,8 +17,7 @@
   </head>
   <body data-barba="wrapper">
     <!--barba container-->
-    <div data-barba="container" data-barba-namespace="contact" class="viewport">
-
+    <div class="viewport">
       <!--loader-->
       <div class="loader">
         <div class="loader__container">
@@ -49,10 +48,12 @@
       </div>
       <!--loader-->
       <!--page-content-->
-      <div class="page-content">
-
+      <div
+        class="page-content"
+        data-barba="container"
+        data-barba-namespace="contact"
+      >
         <div class="wrapper">
-
           <!--start navigation-->
           <section id="navigation">
             <div class="rect-bg"></div>
@@ -83,13 +84,19 @@
                       <a class="nav-link" href="biography.html">Biografía</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="artistic-periods.html">Etapas artísticas</a>
+                      <a class="nav-link" href="artistic-periods.html"
+                        >Etapas artísticas</a
+                      >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="gallery.html">Galería de cuadros</a>
+                      <a class="nav-link" href="gallery.html"
+                        >Galería de cuadros</a
+                      >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="contact.html">Contacto</a>
+                      <a class="nav-link active" href="contact.html"
+                        >Contacto</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -194,7 +201,6 @@
             </footer>
           </section>
           <!--end footer-->
-
         </div>
         <!--wrapper-->
       </div>
@@ -206,7 +212,7 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-        <!--BARBA JS-->
+    <!--BARBA JS-->
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <!-- BOOTSTRAP -->
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>

@@ -6,8 +6,7 @@ const initQuoteAnim = function initializeTheQuoteAnimation() {
     defaults: { duration: 3 },
     scrollTrigger: {
       trigger: paragraph,
-      markers:true,
-      start:"top 60%"
+      start: 'top 60%',
     },
   });
   tl.from(paragraph, { autoAlpha: 0, x: 50 }).from(

@@ -17,7 +17,7 @@
   </head>
   <body data-barba="wrapper">
     <!--barba container-->
-    <div data-barba="container" data-barba-namespace="gallery" class="viewport">
+    <div class="viewport">
       <!--loader-->
       <div class="loader">
         <div class="loader__container">
@@ -49,8 +49,11 @@
       <!--loader-->
 
       <!--page-content-->
-      <div class="page-content">
-
+      <div
+        class="page-content"
+        data-barba="container"
+        data-barba-namespace="gallery"
+      >
         <!--start navigation-->
         <section id="navigation">
           <div class="rect-bg"></div>
@@ -107,7 +110,10 @@
             <hr class="gallery-separator" />
             <div class="row">
               <div class="col-12 text-center">
-                <div class="btn-group gallery-btns-container" role="group"></div>
+                <div
+                  class="btn-group gallery-btns-container"
+                  role="group"
+                ></div>
               </div>
             </div>
             <!--row-->
@@ -183,7 +189,6 @@
           </footer>
         </section>
         <!--end footer-->
-
       </div>
       <!--end page-content-->
     </div>
