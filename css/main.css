@@ -11049,6 +11049,17 @@ body {
   background-size: contain;
 }
 
+.page-transition-logo {
+  background-color: red;
+  background: url("../../img/logo-firma.svg") no-repeat center;
+  background-size: 20%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
 .hero-dibujo {
   min-height: 60vh;
   perspective: 500px;
