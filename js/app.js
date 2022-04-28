@@ -3,10 +3,15 @@ import initCanvas from './pages/home/canvas.js';
 import initGalleryPreview from './pages/home/gallerie-preview.js';
 import initGallery from './pages/gallery/index.js';
 import initCarousels from './pages/periods/index.js';
-import { initHomePageAnim, initLoaderAnim, initHeroAnim } from './animations/index.js';
+import {
+  initHomePageAnim,
+  initLoaderAnim,
+  initHeroAnim,
+} from './animations/index.js';
 import initArtisticPeriods from './pages/home/artisticPeriods.js';
 import initQuoteAnim from './pages/home/quote.js';
 import { select, setCurrentYear } from './utils/utilities.js';
+import initBioPage from './pages/biography/index.js';
 
 //page transitions
 const loader = select('.loader');
@@ -19,8 +24,9 @@ const pageTransitionLeave = function pageTransitionLeavingTheActualPage({
 }) {
   console.log('leave');
 
-  select(".loader .loader__container").innerHTML = '<div class="page-transition-logo"></div>'
-  const pageTrasitionLogo = select(".page-transition-logo")
+  select('.loader .loader__container').innerHTML =
+    '<div class="page-transition-logo"></div>';
+  const pageTrasitionLogo = select('.page-transition-logo');
 
   const tl = gsap.timeline({
     defaults: {
@@ -29,9 +35,9 @@ const pageTransitionLeave = function pageTransitionLeavingTheActualPage({
     },
   });
   tl.set(loader, { yPercent: -100 })
-  .to(loader, { yPercent: 0 },0)
-  .set(pageTrasitionLogo,{yPercent:15},0)
-  .to(pageTrasitionLogo,{yPercent:0},0)
+    .to(loader, { yPercent: 0 }, 0)
+    .set(pageTrasitionLogo, { yPercent: 15 }, 0)
+    .to(pageTrasitionLogo, { yPercent: 0 }, 0);
 
   return tl;
 };
@@ -39,7 +45,7 @@ const pageTransitionEnter = function pageTransitionLEnteringTheNewPage({
   container,
 }) {
   console.log('enter');
-  const pageTrasitionLogo = select(".page-transition-logo")
+  const pageTrasitionLogo = select('.page-transition-logo');
   const tl = gsap.timeline({
     defaults: {
       duration: 1.2,
@@ -48,8 +54,8 @@ const pageTransitionEnter = function pageTransitionLEnteringTheNewPage({
     onComplete: () => init(),
   });
   tl.to(loader, { yPercent: 100 })
-  .from(container, { y: 20,ease:"none" }, 0)
-  .to(pageTrasitionLogo,{yPercent:-15},0)
+    .from(container, { y: 20, ease: 'none' }, 0)
+    .to(pageTrasitionLogo, { yPercent: -15 }, 0);
   return tl;
 };
 
@@ -99,11 +105,12 @@ const init = function initializeTheSiteFunctionality() {
   initGalleryPreview();
   initGallery();
   initCarousels();
+  initBioPage();
   if (bodyWidth >= 766) {
     initArtisticPeriods();
     initHeroAnim();
     initQuoteAnim();
-    initHomePageAnim()
+    initHomePageAnim();
   }
 };
 window.addEventListener('resize', () => {

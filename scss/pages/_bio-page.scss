@@ -1,74 +1,28 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 .bio-fase {
-  // outline: solid 1px red;
+  outline: solid 1px red;
 
-  .timeline {
-    position: absolute;
-    // background-color: aquamarine;
-    // background-image: url('/img/bio/page/text/estonia-1914-02.svg');
-    background-size: contain;
-    // background-position: right;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 10rem;
-    top: 10%;
-    z-index: -1;
-    opacity: 0.5;
-  }
-  &__img {
-    z-index: -2;
-    &--first {
-      // background-color: lightcoral;
-      width: 90%;
-      height: auto;
-      // transform: translate3d(0, 10%, 0) rotate(1deg);
-      // background-image: url('/img/bio/page/alex-nino-01.jpg');
-      background-size: cover;
+  .img-mask {
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      top: -30%;
+      min-width: 100%;
+      height: 130%;
+      object-fit: cover;
     }
-    &--second {
-      background-color: lightblue;
+    &:nth-child(1) {
       width: 80%;
-      height: auto;
-      // transform: translate3d(20%, -20%, 0) rotate(-1deg);
+    }
+    &:nth-child(2) {
+      width: 80%;
+      left: 20%;
+    }
+  }
+}
 
-      // background-image: url('/img/bio/page/alex-nino-02.jpg');
-      background-size: cover;
-    }
-  }
-  &__text {
-    // outline: solid 1px aliceblue;
-  }
-  &__text div {
-    // outline: solid 1px goldenrod;
-  }
-}
-.bio-fase-left-img {
-  .timeline {
-    background-position: right;
-  }
-  .bio-fase__img {
-    &--first {
-      transform: translate3d(0, 10%, 0) rotate(1deg);
-    }
-    &--second {
-      transform: translate3d(20%, -20%, 0) rotate(-1deg);
-    }
-  }
-}
-.bio-fase-right-img {
-  .timeline {
-    background-position: left;
-  }
-  .bio-fase__img {
-    &--first {
-      transform: translate3d(10%, 10%, 0) rotate(-1deg);
-    }
-    &--second {
-      transform: translate3d(0%, -20%, 0) rotate(1deg);
-    }
-  }
-}
 #estonia {
   .timeline {
     background-image: url('/img/bio/page/text/estonia-1914-02.svg');
