@@ -128,14 +128,13 @@ const initGallery = function initializeTheImgGallerySection() {
     state.paintings = paintings;
     loadFilterBtns();
     loadImages();
-    setTimeout(() => {
-      // runGsapAnimatioknImg();
-    }, 2500);
+    // setTimeout(() => {
+    //   runGsapAnimatioknImg();
+    // }, 2500);
   };
   filterBtnsContainer.addEventListener('click', handleBtnClick);
   galleryContainer.addEventListener('click', handleImgClick);
   startGallery();
 };
 
-// window.addEventListener('load', startGallery);
 export default initGallery;

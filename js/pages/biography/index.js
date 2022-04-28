@@ -1,12 +1,4 @@
 import { select, selectAll, getPage } from '../../utils/utilities.js';
-const createTween = function createGsapTweenAnimation(element, index) {
-  return gsap.fromTo(
-    element,
-    { y: () => -150 + index * 10 },
-    { y: () => 150 - index * 10 },
-    0
-  );
-};
 
 const animParallaxText = function animTheTextWithParallaxEffect() {
   selectAll('.with-parallax').forEach((section) => {
@@ -20,10 +12,8 @@ const animParallaxText = function animTheTextWithParallaxEffect() {
         scrub: true,
       },
     });
-    [...paragraphs].forEach((para, index) => {
-      console.log(para, index);
-      tl.add(createTween(para, index));
-    });
+    tl.fromTo([...paragraphs],{y:-150},{y:150})
+    
 
     return tl;
   });

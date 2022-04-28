@@ -1,7 +1,6 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 .bio-fase {
-  outline: solid 1px red;
 
   .img-mask {
     overflow: hidden;
@@ -19,63 +18,6 @@
     &:nth-child(2) {
       width: 80%;
       left: 20%;
-    }
-  }
-}
-
-#estonia {
-  .timeline {
-    background-image: url('/img/bio/page/text/estonia-1914-02.svg');
-  }
-  .bio-fase__img {
-    z-index: -2;
-    &--first {
-      background-image: url('/img/bio/page/alex-nino-01.jpg');
-    }
-    &--second {
-      background-image: url('/img/bio/page/alex-nino-02.jpg');
-    }
-  }
-}
-#argentina {
-  .timeline {
-    background-image: url('/img/bio/page/text/argentina-1930.svg');
-  }
-  .bio-fase__img {
-    z-index: -2;
-    &--first {
-      background-image: url('/img/bio/page/alex-llegada-argentina-01.jpg');
-    }
-    &--second {
-      background-image: url('/img/bio/page/alex-llegada-argentina-02.jpg');
-    }
-  }
-}
-#profesor-dibujo {
-  .timeline {
-    background-image: url('/img/bio/page/text/buenos-aires-1938.svg');
-  }
-  .bio-fase__img {
-    z-index: -2;
-    &--first {
-      background-image: url('/img/bio/page/alex-profesor-dibujo-02.jpg');
-    }
-    &--second {
-      background-image: url('/img/bio/page/alex-profesor-dibujo-01.jpg');
-    }
-  }
-}
-#buenos-aires {
-  .timeline {
-    background-image: url('/img/bio/page/text/buenos-aires-1939.svg');
-  }
-  .bio-fase__img {
-    z-index: -2;
-    &--first {
-      background-image: url('/img/bio/page/alex-buenos-aires-01.jpg');
-    }
-    &--second {
-      background-image: url('/img/bio/page/alex-buenos-aires-02.jpg');
     }
   }
 }
