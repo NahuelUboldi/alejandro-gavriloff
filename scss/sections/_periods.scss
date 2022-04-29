@@ -10,7 +10,7 @@ $base-container-height: 300px;
   @include media-breakpoint-up(md) {
     background-color: none;
   }
-  article.borrar-art-period {
+  article.art-period {
     // outline: solid 1px red;
     // background-image: url('../../img/bg/image-2bufu55o.png');
     .img-mask {
@@ -18,18 +18,26 @@ $base-container-height: 300px;
       position: relative;
       img {
         position: absolute;
-        top: -30%;
+        top: -20%;
         min-width: 100%;
-        height: 130%;
+        height: 120%;
 
         object-fit: cover;
       }
     }
-    // .article-content {
-    //   outline: solid 1px blue;
-    // }
   }
-
+  article.america {
+    .row > div {
+      @include media-breakpoint-up(md) {
+        &:nth-child(1) {
+          order: 2;
+        }
+        &:nth-child(2) {
+          order: 1;
+        }
+      }
+    }
+  }
   // article {
   //   overflow: hidden;
   //   height: auto;

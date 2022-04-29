@@ -1,11 +1,8 @@
 const initSmoothScrollbar =
   function initializeTheSmoothScrollbarFunctionality() {
-    console.log('smooth scrollbar init');
-
     let bodyScrollBar = Scrollbar.init(document.querySelector('#viewport'));
     bodyScrollBar.track.xAxis.element.remove();
 
-    console.log(document.body);
     // keep scrolltrigger in sync with smooth scrollbar
     ScrollTrigger.scrollerProxy(document.body, {
       scrollTop(value) {

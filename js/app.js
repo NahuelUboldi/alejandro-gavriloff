@@ -13,18 +13,56 @@ import initQuoteAnim from './pages/home/quote.js';
 import { select, setCurrentYear } from './utils/utilities.js';
 import initBioPage from './pages/biography/index.js';
 import initSmoothScrollbar from './utils/smoothScrollbar.js';
+import handleWidthChange from './utils/handleWidthChange.js';
 
-//page transitions
+// js media queries
+const mq = window.matchMedia('(min-width: 766px)');
+console.log(mq.matches);
+
+//page transitions vars
 const loader = select('.loader');
-const bodyWidth = select('body').getBoundingClientRect().width;
-if (bodyWidth >= 766) {
+if (mq.matches) {
   loader.style.display = 'block';
 }
+
+//init functions
+const cleanSmallScreenFunc =
+  function cleanTheFunctionalityNotNeededInSmallScreens() {
+    console.log('clean function in small screens');
+    gsap.killTweensOf('*');
+  };
+const initBigScreenFunc = function initializeTheFunctionalityInBigScreens() {
+  initArtisticPeriods();
+  initHeroAnim();
+  initQuoteAnim();
+  initHomePageAnim();
+};
+
+const handleScreenResize = function handleTheFunctionalityWhenScreenResize() {
+  resizeBioContainer();
+  initCanvas();
+  initGalleryPreview();
+};
+
+const init = function initializeTheSiteFunctionality() {
+  setCurrentYear();
+  resizeBioContainer();
+  initCanvas();
+  initGalleryPreview();
+  initGallery();
+  initCarousels();
+  initBioPage();
+  initSmoothScrollbar();
+  if (mq.matches) {
+    console.log('big screen');
+    initBigScreenFunc();
+  }
+};
+
+//site lifecycle - controled with barba app
 const pageTransitionLeave = function pageTransitionLeavingTheActualPage({
   container,
 }) {
-  console.log('leave');
-
   select('.loader .loader__container').innerHTML =
     '<div class="page-transition-logo"></div>';
   const pageTrasitionLogo = select('.page-transition-logo');
@@ -59,20 +97,15 @@ const pageTransitionEnter = function pageTransitionLEnteringTheNewPage({
     .to(pageTrasitionLogo, { yPercent: -15 }, 0);
   return tl;
 };
-
 const initPageTransitions =
   function initializeThePageTransitionsBarbaAnimations() {
     barba.hooks.before(() => {
-      console.log('hook before');
-
       document.querySelector('html').classList.add('is-transitioning');
     });
     barba.hooks.after(() => {
-      console.log('hook after');
       document.querySelector('html').classList.remove('is-transitioning');
     });
     barba.hooks.enter(() => {
-      console.log('hook enter');
       window.scrollTo(0, 0);
     });
 
@@ -81,7 +114,7 @@ const initPageTransitions =
         {
           once() {
             console.log('once');
-            if (bodyWidth >= 766) {
+            if (mq.matches) {
               initLoaderAnim();
               // loader.style.display = 'none';
             }
@@ -98,27 +131,9 @@ const initPageTransitions =
     });
   };
 
-initPageTransitions();
-const init = function initializeTheSiteFunctionality() {
-  console.log('init');
-  setCurrentYear();
-  resizeBioContainer();
-  initCanvas();
-  initGalleryPreview();
-  initGallery();
-  initCarousels();
-  initBioPage();
-  if (bodyWidth >= 766) {
-    initArtisticPeriods();
-    initHeroAnim();
-    initQuoteAnim();
-    initHomePageAnim();
-  }
-  initSmoothScrollbar();
-};
-window.addEventListener('resize', () => {
-  resizeBioContainer();
-  initCanvas();
-  initGalleryPreview();
-});
-// window.addEventListener('load', () => init());
+// initPageTransitions();
+
+//listeners
+mq.addEventListener('change', cleanSmallScreenFunc);
+window.addEventListener('resize', handleScreenResize);
+window.addEventListener('load', initPageTransitions);
