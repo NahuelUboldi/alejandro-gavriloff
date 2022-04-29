@@ -12,6 +12,7 @@ import initArtisticPeriods from './pages/home/artisticPeriods.js';
 import initQuoteAnim from './pages/home/quote.js';
 import { select, setCurrentYear } from './utils/utilities.js';
 import initBioPage from './pages/biography/index.js';
+import initSmoothScrollbar from './utils/smoothScrollbar.js';
 
 //page transitions
 const loader = select('.loader');
@@ -63,6 +64,7 @@ const initPageTransitions =
   function initializeThePageTransitionsBarbaAnimations() {
     barba.hooks.before(() => {
       console.log('hook before');
+
       document.querySelector('html').classList.add('is-transitioning');
     });
     barba.hooks.after(() => {
@@ -95,8 +97,8 @@ const initPageTransitions =
       ],
     });
   };
-initPageTransitions();
 
+initPageTransitions();
 const init = function initializeTheSiteFunctionality() {
   console.log('init');
   setCurrentYear();
@@ -112,6 +114,7 @@ const init = function initializeTheSiteFunctionality() {
     initQuoteAnim();
     initHomePageAnim();
   }
+  initSmoothScrollbar();
 };
 window.addEventListener('resize', () => {
   resizeBioContainer();

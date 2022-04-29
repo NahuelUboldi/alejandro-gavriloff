@@ -3,23 +3,27 @@
 a {
   text-decoration: none;
 }
-
-.wrapper {
-  overflow: hidden;
-}
-.viewport {
-  // overflow: hidden; use to smooth scroll
-  // position: fixed; use to smooth scroll
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
+//custom classes
 .bg-gray-300 {
   background-color: $gray-300;
 }
 .text-gray-300 {
   color: $gray-300;
+}
+
+//avoid x scrolling
+// .wrapper {
+//   overflow: hidden;
+// }
+
+//smooth scroll
+#viewport {
+  overflow: auto; //use to smooth scroll
+  position: fixed; //use to smooth scroll
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 //barba hooks

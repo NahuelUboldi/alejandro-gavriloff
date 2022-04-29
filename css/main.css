@@ -10761,23 +10761,21 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
-  overflow: hidden;
-}
-
-.viewport {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
 .bg-gray-300 {
   background-color: #dee2e6;
 }
 
 .text-gray-300 {
   color: #dee2e6;
+}
+
+#viewport {
+  overflow: auto;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .is-transitioning {
