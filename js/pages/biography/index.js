@@ -3,7 +3,6 @@ import { select, selectAll, getPage } from '../../utils/utilities.js';
 const animParallaxText = function animTheTextWithParallaxEffect() {
   selectAll('.with-parallax').forEach((section) => {
     const paragraphs = section.querySelectorAll('.bio-content p');
-    console.log(paragraphs);
     const tl = gsap.timeline({
       defaults: { ease: 'none' },
       scrollTrigger: {
@@ -12,8 +11,7 @@ const animParallaxText = function animTheTextWithParallaxEffect() {
         scrub: true,
       },
     });
-    tl.fromTo([...paragraphs],{y:-150},{y:150})
-    
+    tl.fromTo([...paragraphs], { y: -150 }, { y: 150 });
 
     return tl;
   });

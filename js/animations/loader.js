@@ -29,6 +29,7 @@ const initLoaderAnim = function initializeTheLoaderAnimation() {
     )
     .to(loader, { yPercent: -100, ease: Power4.easeIn }, '-=0.5')
     .from(pageContent, { y: 150, duration: 1.4 }, '-=0.4');
+  return tl;
 };
 
 export default initLoaderAnim;

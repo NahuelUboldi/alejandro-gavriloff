@@ -17,7 +17,7 @@
   </head>
   <body data-barba="wrapper">
     <!--barba container-->
-    <div class="viewport">
+    <div id="viewport">
       <!--loader-->
       <div class="loader">
         <div class="loader__container">
@@ -339,7 +339,8 @@
           <!--container-->
           <main>
             <!--section bio-fase img-left-->
-            <section id="estonia"
+            <section
+              id="estonia"
               class="bio-fase bio-fase-left-img my-5 with-parallax"
             >
               <div class="container-fluid px-0">
@@ -388,8 +389,9 @@
             <div class="my-5 py-5"></div>
             <!--end separator-->
 
-           <!--section  bio-fase img-right-->
-            <section id="argentina"
+            <!--section  bio-fase img-right-->
+            <section
+              id="argentina"
               class="bio-fase bio-fase-right-img my-5 with-parallax"
             >
               <div class="container-fluid px-0">
@@ -443,8 +445,9 @@
             <div class="my-5 py-5"></div>
             <!--end separator-->
 
-          <!--section bio-fase img-left-->
-            <section id="profesor-dibujo"
+            <!--section bio-fase img-left-->
+            <section
+              id="profesor-dibujo"
               class="bio-fase bio-fase-left-img my-5 with-parallax"
             >
               <div class="container-fluid px-0">
@@ -494,7 +497,8 @@
             <!--end separator-->
 
             <!--section  bio-fase img-right-->
-            <section id="buenos-aires"
+            <section
+              id="buenos-aires"
               class="bio-fase bio-fase-right-img my-5 with-parallax"
             >
               <div class="container-fluid px-0">
@@ -556,48 +560,24 @@
             <!--separator-->
             <div class="my-5 py-5"></div>
             <!--end separator-->
-
-
           </main>
         </div>
         <!--end bio-->
 
         <!--start footer-->
-        <div id="footer">
+        <section id="footer" class="bg-gray-300">
           <svg
-            xmlns:dc="http://purl.org/dc/elements/1.1/"
-            xmlns:cc="http://creativecommons.org/ns#"
-            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-            xmlns:svg="http://www.w3.org/2000/svg"
+            data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 298.2576 15.806268"
-            version="1.1"
-            id="svg8"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            style="transform: translateY(-2%)"
           >
-            <g id="layer1" transform="rotate(-180,-117.4475,25.829543)">
-              <g
-                id="layer1-2"
-                transform="matrix(0.90909092,0,0,-0.90909092,-199.84635,134.87013)"
-              >
-                <path
-                  style="
-                    opacity: 1;
-                    fill: #fff;
-                    fill-opacity: 1;
-                    stroke: none;
-                    stroke-width: 3;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                    stroke-miterlimit: 4;
-                    stroke-dasharray: none;
-                    stroke-opacity: 1;
-                    paint-order: fill markers stroke;
-                  "
-                  d="M -366.63687,108.91904 -38.553528,91.532146 v 0 H -366.63687 Z"
-                  id="rect812-9"
-                />
-              </g>
-            </g>
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+              style="opacity: 1; fill: #fff; fill-opacity: 1"
+            ></path>
           </svg>
           <footer>
             <div class="container text-white-50 p-3">
@@ -607,7 +587,7 @@
               </p>
             </div>
           </footer>
-        </div>
+        </section>
         <!--end footer-->
       </div>
       <!--end page-content-->
@@ -615,9 +595,12 @@
     <!--end barba container-->
 
     <!-- javascript -->
+    <!--smooth scrollbar-->
+    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
     <!--BARBA JS-->
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <!-- BOOTSTRAP -->

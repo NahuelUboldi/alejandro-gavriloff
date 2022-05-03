@@ -50,9 +50,9 @@ const init = function initializeTheSiteFunctionality() {
   initCanvas();
   initGalleryPreview();
   initGallery();
+  initSmoothScrollbar();
   initCarousels();
   initBioPage();
-  initSmoothScrollbar();
   if (mq.matches) {
     console.log('big screen');
     initBigScreenFunc();
@@ -94,7 +94,8 @@ const pageTransitionEnter = function pageTransitionLEnteringTheNewPage({
   });
   tl.to(loader, { yPercent: 100 })
     .from(container, { y: 20, ease: 'none' }, 0)
-    .to(pageTrasitionLogo, { yPercent: -15 }, 0);
+    .to(pageTrasitionLogo, { yPercent: -15 }, 0)
+    .set(loader, { yPercent: -100 });
   return tl;
 };
 const initPageTransitions =
