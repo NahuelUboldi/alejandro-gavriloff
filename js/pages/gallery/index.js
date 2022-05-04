@@ -83,7 +83,7 @@ const initGallery = function initializeTheImgGallerySection() {
     return pantingsDeepCopy.reduce((acc, paint) => {
       return (
         acc +
-        `<img src=${paint.img.sm} alt="pintura del artista Alex Gavriloff" class="gallery-img" key=${paint.id} />`
+        `<img  loading="lazy" src=${paint.img.sm} alt="pintura del artista Alex Gavriloff" class="gallery-img" key=${paint.id} />`
       );
     }, '');
   };

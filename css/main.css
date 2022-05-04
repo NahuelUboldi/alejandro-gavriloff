@@ -11495,8 +11495,8 @@ section#gallery-preview #images-container img {
   width: 80%;
 }
 .bio-fase .img-mask:nth-child(2) {
-  width: 80%;
-  left: 20%;
+  width: 60%;
+  left: 30%;
 }
 
 /*# sourceMappingURL=main.css.map */

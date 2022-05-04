@@ -1,7 +1,6 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 .bio-fase {
-
   .img-mask {
     overflow: hidden;
     position: relative;
@@ -16,8 +15,8 @@
       width: 80%;
     }
     &:nth-child(2) {
-      width: 80%;
-      left: 20%;
+      width: 60%;
+      left: 30%;
     }
   }
 }
