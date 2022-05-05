@@ -2,9 +2,9 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <title>Alejandro Gavriloff | pintor</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alejandro Gavriloff | pintor</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link
       rel="stylesheet"
@@ -56,12 +56,12 @@
           data-barba-namespace="home"
         >
           <!--start navigation-->
-          <section id="navigation">
+          <!-- <section id="navigation">
             <div class="rect-bg"></div>
             <nav class="navbar navbar-expand-lg navbar-light py-3">
               <div class="container">
                 <a class="navbar-brand" href="index.html">
-                  <img loading="lazy" src="img/logo-01.png" alt="" />
+                  <img loading="eager" src="img/logo-01.png" alt="" />
                   <span class="brand-hidden">Alejandro Gavriloff</span></a
                 >
                 <button
@@ -89,6 +89,16 @@
                         >Etapas artísticas</a
                       >
                     </li>
+                    <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown link
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </li>
                     <li class="nav-item">
                       <a class="nav-link" href="gallery.html"
                         >Galería de cuadros</a
@@ -101,8 +111,75 @@
                 </div>
               </div>
             </nav>
-          </section>
+          </section> -->
           <!--end navigation-->
+
+          <div class="rect-bg"></div>
+
+          <!--start new navigation-->
+          <section id="navigation-new">
+            <nav>
+              <div class="container d-flex justify-content-between">
+
+                <div class="brand">
+                  <a class="navbar-brand" href="index.html">
+                    <img loading="eager" src="img/logo-01.png" alt="" />
+                  <span class="hide-text">Alejandro Gavriloff</span></a
+                >
+                </div>
+
+                <div class="nav-menu-links">
+                  <ul>
+                    <li>
+                      <a class="menu-link active" href="index.html">
+                        Inicio<span></span></a>
+                    </li>
+                    <li>
+                      <a class="menu-link " href="biography.html">
+                        Biografía<span></span></a>
+                    </li>
+                    <li>
+                      <a class="menu-link " href="artistic-periods.html">
+                        Etapas artísticas<span></span>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a class="menu-link " >
+                        Su obra<span></span>
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li>
+                      <a class="menu-link " href="gallery.html">
+                        Galería de cuadros<span></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="menu-link " href="#contact-form">
+                        Contacto<span></span>
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+
+                <div class="toggle-btn"></div>
+              </div>
+
+
+            <div class="responsive-menu">
+
+            </div>
+            
+
+          </nav>
+          </section>
+          <!--end new navigation-->
+
 
           <!--start hero header-->
           <section id="hero" class="mb-5">
@@ -126,13 +203,6 @@
                       >Alejandro Gavriloff</span
                     >.
                   </p>
-                  <!-- <button
-                    class="hero-btn btn btn-dark btn-lg align-self-start mt-4"
-                  >
-                    <a href="gallery.html" class="common-link text-white">
-                      Ver Cuadros
-                    </a>
-                  </button> -->
 
                   <!--new btn-->
                   <button
@@ -565,9 +635,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
     <!--BARBA JS-->
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+      <!-- unpkg -->
+      <script src="https://unpkg.com/@barba/core"></script>
     <!-- BOOTSTRAP -->
-    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- CUSTOM -->
     <script type="module" src="js/app.js"></script>
   </body>

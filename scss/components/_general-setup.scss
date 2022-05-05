@@ -15,6 +15,24 @@ a {
 // .wrapper {
 //   overflow: hidden;
 // }
+.rect-bg {
+  @include backgroundTexture;
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 60rem;
+  height: 2.5rem;
+  transform: rotate(3deg) scale(5);
+  transform-origin: bottom right;
+  z-index: -90;
+}
+
+//hide-text
+.hide-text {
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+}
 
 //smooth scroll
 #viewport {

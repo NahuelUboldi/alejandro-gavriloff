@@ -14,6 +14,7 @@ import { select, setCurrentYear } from './utils/utilities.js';
 import initBioPage from './pages/biography/index.js';
 import initSmoothScrollbar from './utils/smoothScrollbar.js';
 import handleWidthChange from './utils/handleWidthChange.js';
+import initNavigation from './pages/home/navigation.js';
 
 // js media queries
 const mq = window.matchMedia('(min-width: 766px)');
@@ -32,10 +33,11 @@ const cleanSmallScreenFunc =
     gsap.killTweensOf('*');
   };
 const initBigScreenFunc = function initializeTheFunctionalityInBigScreens() {
-  initArtisticPeriods();
+  initNavigation();
   initHeroAnim();
   initQuoteAnim();
-  initHomePageAnim();
+  initArtisticPeriods();
+  // initHomePageAnim();
 };
 
 const handleScreenResize = function handleTheFunctionalityWhenScreenResize() {

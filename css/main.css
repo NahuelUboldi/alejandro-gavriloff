@@ -10769,6 +10769,24 @@ a {
   color: #dee2e6;
 }
 
+.rect-bg {
+  background-image: url("../img/bg/dark-bg.png");
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 60rem;
+  height: 2.5rem;
+  transform: rotate(3deg) scale(5);
+  transform-origin: bottom right;
+  z-index: -90;
+}
+
+.hide-text {
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+}
+
 #viewport {
   overflow: auto;
   position: fixed;
@@ -11410,24 +11428,15 @@ section#gallery-preview #images-container img {
 
 #navigation {
   position: relative;
-  overflow: hidden;
 }
 #navigation nav.navbar {
   background: transparent;
   border: none;
 }
 #navigation .brand-hidden {
-  display: none;
-}
-#navigation .rect-bg {
-  background-image: url("../img/bg/dark-bg.png");
-  position: absolute;
-  right: -15px;
-  top: -24px;
-  width: 800px;
-  height: 37px;
-  transform: rotate(3deg);
-  z-index: -90;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
 }
 #navigation .navbar-toggler {
   z-index: 99;
@@ -11442,6 +11451,52 @@ section#gallery-preview #images-container img {
 #navigation a.active {
   color: #000;
   font-weight: 500;
+}
+
+#navigation-new nav .container {
+  padding: 1rem;
+}
+#navigation-new nav .container .nav-menu-links {
+  display: flex;
+  align-items: center;
+}
+#navigation-new nav .container .nav-menu-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#navigation-new nav .container .nav-menu-links ul li {
+  display: inline;
+  padding: 0;
+  margin: 0 0.5rem;
+}
+#navigation-new nav .container .nav-menu-links ul li a.menu-link {
+  color: black;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  position: relative;
+}
+#navigation-new nav .container .nav-menu-links ul li a.menu-link span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+  background-color: #9926f0;
+  transform: scale(0);
+  transform-origin: top left;
+  z-index: -1;
+}
+#navigation-new nav .container .toggle-btn {
+  position: absolute;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: red;
+}
+#navigation-new nav .responsive-menu {
+  background-color: #eee;
 }
 
 #contact-form {

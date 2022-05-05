@@ -1,37 +1,96 @@
-@use "../components/mixins" as *;
-@use "../custom" as *;
+@use '../components/mixins' as *;
+@use '../custom' as *;
 #navigation {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   nav.navbar {
     background: transparent;
     border: none;
   }
   .brand-hidden {
-    display: none;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
   }
-  .rect-bg {
-    @include backgroundTexture;
-    position: absolute;
-    right: -15px;
-    top: -24px;
-    width: 800px;
-    height: 37px;
-    transform: rotate(3deg);
-    z-index: -90;
-  }
+  // .rect-bg {
+  //   @include backgroundTexture;
+  //   position: absolute;
+  //   right: -15px;
+  //   top: -24px;
+  //   width: 800px;
+  //   height: 37px;
+  //   transform: rotate(3deg);
+  //   z-index: -90;
+  // }
   .navbar-toggler {
     z-index: 99;
     background-color: white;
   }
   a {
-    @include transitionProperty
+    @include transitionProperty;
   }
   a:hover {
-    color:$black
+    color: $black;
   }
   a.active {
-    color:$black;
+    color: $black;
     font-weight: 500;
+  }
+}
+#navigation-new {
+  nav {
+    .container {
+      padding: 1rem;
+      .brand {
+      }
+      .nav-menu-links {
+        display: flex;
+        align-items: center;
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li {
+            display: inline;
+            padding: 0;
+            margin: 0 0.5rem;
+            a.menu-link {
+              color: black;
+              text-decoration: none;
+              padding: 0.2rem 0.5rem;
+              position: relative;
+              span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0.2rem;
+                background-color: $primary;
+                transform: scale(0);
+                transform-origin: top left;
+                z-index: -1;
+                // @include transitionProperty;
+              }
+            }
+            // a:hover {
+            //   span {
+            //     transform: scale(1);
+            //   }
+            // }
+          }
+        }
+      }
+      .toggle-btn {
+        position: absolute;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: red;
+      }
+    }
+    .responsive-menu {
+      background-color: #eee;
+    }
   }
 }
