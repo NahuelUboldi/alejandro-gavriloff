@@ -11457,8 +11457,13 @@ section#gallery-preview #images-container img {
   padding: 1rem;
 }
 #navigation-new nav .container .nav-menu-links {
-  display: flex;
+  display: none;
   align-items: center;
+}
+@media (min-width: 992px) {
+  #navigation-new nav .container .nav-menu-links {
+    display: flex;
+  }
 }
 #navigation-new nav .container .nav-menu-links ul {
   list-style: none;
@@ -11471,32 +11476,70 @@ section#gallery-preview #images-container img {
   margin: 0 0.5rem;
 }
 #navigation-new nav .container .nav-menu-links ul li a.menu-link {
-  color: black;
+  color: #000;
   text-decoration: none;
-  padding: 0.2rem 0.5rem;
+  padding: 0;
   position: relative;
 }
 #navigation-new nav .container .nav-menu-links ul li a.menu-link span {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  border-radius: 0.2rem;
-  background-color: #9926f0;
-  transform: scale(0);
-  transform-origin: top left;
+  height: 0.1rem;
+  border-radius: 0.1rem;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: left;
   z-index: -1;
-}
-#navigation-new nav .container .toggle-btn {
-  position: absolute;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
-  background-color: red;
 }
 #navigation-new nav .responsive-menu {
   background-color: #eee;
+}
+
+.toggle-menu-btn {
+  transition: all ease 700ms;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  z-index: 10;
+  background-color: #bb6ef5;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .toggle-menu-btn {
+    transform: translateY(-4rem);
+  }
+}
+.toggle-menu-btn .shapes {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.toggle-menu-btn .shapes div {
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 0.1rem;
+  background-color: #fff;
+}
+.toggle-menu-btn .shapes div:nth-child(1) {
+  top: 0%;
+}
+.toggle-menu-btn .shapes div:nth-child(2) {
+  top: 50%;
+}
+.toggle-menu-btn .shapes div:nth-child(3) {
+  top: 100%;
 }
 
 #contact-form {

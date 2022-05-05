@@ -1,3 +1,4 @@
+
 import resizeBioContainer from './utils/resizeBioContainer.js';
 import initCanvas from './pages/home/canvas.js';
 import initGalleryPreview from './pages/home/gallerie-preview.js';
@@ -14,7 +15,7 @@ import { select, setCurrentYear } from './utils/utilities.js';
 import initBioPage from './pages/biography/index.js';
 import initSmoothScrollbar from './utils/smoothScrollbar.js';
 import handleWidthChange from './utils/handleWidthChange.js';
-import initNavigation from './pages/home/navigation.js';
+import initNavigation from './pages/all/navigation.js';
 
 // js media queries
 const mq = window.matchMedia('(min-width: 766px)');
@@ -85,7 +86,6 @@ const pageTransitionLeave = function pageTransitionLeavingTheActualPage({
 const pageTransitionEnter = function pageTransitionLEnteringTheNewPage({
   container,
 }) {
-  console.log('enter');
   const pageTrasitionLogo = select('.page-transition-logo');
   const tl = gsap.timeline({
     defaults: {
@@ -116,7 +116,6 @@ const initPageTransitions =
       transitions: [
         {
           once() {
-            console.log('once');
             if (mq.matches) {
               initLoaderAnim();
               // loader.style.display = 'none';

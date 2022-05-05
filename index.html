@@ -16,104 +16,58 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body data-barba="wrapper">
-    <!--barba container-->
-    <div id="viewport">
-      <div class="wrapper">
-        <!--loader-->
-        <div class="loader">
-          <div class="loader__container">
-            <div class="inner">
-              <div class="loader-paint" style="--aspect-ratio: 1/1">
-                <span></span>
-              </div>
-              <div class="loader-paint" style="--aspect-ratio: 1/1">
-                <span></span>
-              </div>
-              <div class="loader-paint" style="--aspect-ratio: 1/1">
-                <span></span>
-              </div>
-              <div class="loader-paint" style="--aspect-ratio: 1/1">
-                <span></span>
-              </div>
-              <div class="loader-paint" style="--aspect-ratio: 1/1">
-                <span></span>
-              </div>
-              <div class="loader-paint" style="--aspect-ratio: 1/1">
-                <span></span>
-              </div>
-              <div></div>
-              <div></div>
-              <div class="loader-logo"></div>
+    <!--fixed elements outside viewport-->
+      <!--loader-->
+      <div class="loader">
+        <div class="loader__container">
+          <div class="inner">
+            <div class="loader-paint" style="--aspect-ratio: 1/1">
+              <span></span>
             </div>
+            <div class="loader-paint" style="--aspect-ratio: 1/1">
+              <span></span>
+            </div>
+            <div class="loader-paint" style="--aspect-ratio: 1/1">
+              <span></span>
+            </div>
+            <div class="loader-paint" style="--aspect-ratio: 1/1">
+              <span></span>
+            </div>
+            <div class="loader-paint" style="--aspect-ratio: 1/1">
+              <span></span>
+            </div>
+            <div class="loader-paint" style="--aspect-ratio: 1/1">
+              <span></span>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="loader-logo"></div>
           </div>
         </div>
-        <!--loader-->
+      </div>
+      <!--end loader-->
 
-        <!--page-content-->
+      <!-- responsive navigation menu -->
+      <div class="toggle-menu-btn">
+        <div class="shapes">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="responsive-menu"></div>
+      <!-- end responsive navigation menu -->
+
+      <div class="modal-fixed"></div>
+    <!--end fixed elements outside viewport-->
+
+    <div id="viewport">
+      <!--barba container - page-content-->
         <div
           class="page-content"
           data-barba="container"
           data-barba-namespace="home"
         >
-          <!--start navigation-->
-          <!-- <section id="navigation">
-            <div class="rect-bg"></div>
-            <nav class="navbar navbar-expand-lg navbar-light py-3">
-              <div class="container">
-                <a class="navbar-brand" href="index.html">
-                  <img loading="eager" src="img/logo-01.png" alt="" />
-                  <span class="brand-hidden">Alejandro Gavriloff</span></a
-                >
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarColor03"
-                  aria-controls="navbarColor03"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarColor03">
-                  <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="biography.html">Biografía</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="artistic-periods.html"
-                        >Etapas artísticas</a
-                      >
-                    </li>
-                    <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown link
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
-                        </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="gallery.html"
-                        >Galería de cuadros</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#contact-form">Contacto</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </section> -->
-          <!--end navigation-->
-
           <div class="rect-bg"></div>
 
           <!--start new navigation-->
@@ -123,9 +77,9 @@
 
                 <div class="brand">
                   <a class="navbar-brand" href="index.html">
-                    <img loading="eager" src="img/logo-01.png" alt="" />
-                  <span class="hide-text">Alejandro Gavriloff</span></a
-                >
+                    <img src="img/logo-01.png" alt="" />
+                    <span class="hide-text">Alejandro Gavriloff</span>
+                  </a>
                 </div>
 
                 <div class="nav-menu-links">
@@ -167,13 +121,11 @@
 
                 </div>
 
-                <div class="toggle-btn"></div>
+                
               </div>
 
 
-            <div class="responsive-menu">
 
-            </div>
             
 
           </nav>
@@ -622,8 +574,6 @@
           <!--end footer-->
         </div>
         <!--page-content-->
-      </div>
-      <!--wrapper-->
     </div>
     <!--end barba container-->
 
