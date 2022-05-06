@@ -15,27 +15,45 @@ import initBioPage from './pages/biography/index.js';
 import initSmoothScrollbar from './utils/smoothScrollbar.js';
 import handleWidthChange from './utils/handleWidthChange.js';
 import initNavigation from './pages/all/navigation.js';
+import { hideToggleBtn, showToggleBtn } from './utils/responsiveMenu.js';
 
 // js media queries
+
+// Screen Breakpoints
+// sm 	≥576px  -> Small	
+// md	  ≥768px  -> Medium	
+// lg	  ≥992px  -> Large	
+// xl	  ≥1200px -> Extra large	
+// xxl  ≥1400px -> Extra extra large	
+
+
 const mediaQueryMd = window.matchMedia('(min-width: 766px)');
 const mediaQueryLg = window.matchMedia('(min-width: 992px)');
 
-console.log(mediaQueryMd.matches);
-
 //page transitions vars
 const loader = select('.loader');
-if (mediaQueryMd.matches) {
-  loader.style.display = 'block';
-}
 
+//screen size functions
+const checkInitialScreenSize = function checkTheInitialScreenSize() {
+  if(mediaQueryLg.matches) hideToggleBtn()
+  if(mediaQueryMd.matches) loader.style.display = 'block';
+}
+const handleMqLgChange = function handleTheMediaQueryLargeScreenChange() {
+  console.log("lg change | ", "is large screen: ", mediaQueryLg.matches);
+  if(mediaQueryLg.matches) {
+    hideToggleBtn();
+    return
+  }
+  showToggleBtn();
+}
+const handleMqMdChange =
+function handleTheMediaQueryMediumScreenChange() {
+  console.log("mg change");
+  gsap.killTweensOf('*');
+};
 //init functions
-const cleanSmallScreenFunc =
-  function cleanTheFunctionalityNotNeededInSmallScreens() {
-    console.log('clean function in small screens');
-    gsap.killTweensOf('*');
-  };
 const initBigScreenFunc = function initializeTheFunctionalityInBigScreens() {
-  initNavigation();
+  initNavigation(mediaQueryLg.matches);
   initHeroAnim();
   initQuoteAnim();
   initArtisticPeriods();
@@ -49,6 +67,7 @@ const handleScreenResize = function handleTheFunctionalityWhenScreenResize() {
 };
 
 const init = function initializeTheSiteFunctionality() {
+  checkInitialScreenSize()
   setCurrentYear();
   resizeBioContainer();
   initCanvas();
@@ -58,7 +77,6 @@ const init = function initializeTheSiteFunctionality() {
   initCarousels();
   initBioPage();
   if (mediaQueryMd.matches) {
-    console.log('big screen');
     initBigScreenFunc();
   }
 };
@@ -137,6 +155,7 @@ const initPageTransitions =
 // initPageTransitions();
 
 //listeners
-mediaQueryMd.addEventListener('change', cleanSmallScreenFunc);
+mediaQueryMd.addEventListener('change', handleMqMdChange);
+mediaQueryLg.addEventListener('change', handleMqLgChange);
 window.addEventListener('resize', handleScreenResize);
 window.addEventListener('load', initPageTransitions);

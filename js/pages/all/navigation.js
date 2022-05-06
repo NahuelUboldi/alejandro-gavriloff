@@ -1,5 +1,43 @@
-import openCloseRespMenu from '../../utils/openCloseRespMenu.js';
+import {openCloseRespMenu,showToggleBtn,hideToggleBtn} from '../../utils/responsiveMenu.js';
 import { select, selectAll } from '../../utils/utilities.js';
+
+const toggleBtnOnScroll = function toggleTheToggleBtnWhenScrolling() {
+  const mediaQueryLg = window.matchMedia('(min-width: 992px)');
+  const toggleBtn = select('.toggle-menu-btn');
+  console.log("Is a large screen: ", mediaQueryLg);
+  console.log("1 should enter here? ",mediaQueryLg && scrollingDown  );
+  if (mediaQueryLg && scrollingDown) {
+    console.log("1 entered"  );
+    toggleBtn.classList.remove('toggle-btn-hidden');
+  }
+  console.log("2 should enter here? ",mediaQueryLg && !scrollingDown  );
+  if (mediaQueryLg && !scrollingDown) {
+    console.log("2 entered"  );
+    toggleBtn.classList.add('toggle-btn-hidden');
+  }
+  console.log("//////////////////////////////");
+}
+
+const navAnimation = function createNavLinksAnimation(
+  direction,
+  links,
+  linksReversed
+) {
+  toggleBtnOnScroll()
+  const scrollingDown = direction === 1;
+  const selectedLinks = scrollingDown ? links : linksReversed;
+  
+  const tl = gsap.timeline();
+  tl.to(selectedLinks, {
+    duration: 0.3,
+    stagger: 0.05,
+    autoAlpha: () => (scrollingDown ? 0 : 1),
+    y: () => (scrollingDown ? 20 : 0),
+    ease: Power0.easeNone,
+  });
+
+  return tl;
+};
 
 const handleMouse = function handleMouseEnterAndLeaveFunctionality(e) {
   const hoverEffectSpan = e.target.querySelector('span');
@@ -20,34 +58,6 @@ const handleMouse = function handleMouseEnterAndLeaveFunctionality(e) {
   return tl;
 };
 
-const navAnimation = function createNavLinksAnimation(
-  direction,
-  links,
-  linksReversed
-) {
-  const toggleBtn = select('.toggle-menu-btn');
-  const scrollingDown = direction === 1;
-  const selectedLinks = scrollingDown ? links : linksReversed;
-
-  if (scrollingDown) {
-    toggleBtn.classList.remove('toggle-btn-hidden');
-  }
-  if (!scrollingDown) {
-    toggleBtn.classList.add('toggle-btn-hidden');
-  }
-
-  const tl = gsap.timeline();
-  tl.to(selectedLinks, {
-    duration: 0.3,
-    stagger: 0.05,
-    autoAlpha: () => (scrollingDown ? 0 : 1),
-    y: () => (scrollingDown ? 20 : 0),
-    ease: Power0.easeNone,
-  });
-
-  return tl;
-};
-
 const createNavLinksAnim = function createTheNavigationLinksAnimation() {
   const links = selectAll('.menu-link');
   const linksReversed = selectAll('.menu-link').reverse();
@@ -59,16 +69,12 @@ const createNavLinksAnim = function createTheNavigationLinksAnimation() {
   ScrollTrigger.create({
     start: 1,
     end: 'bottom bottom',
-    // toggleClass: {
-    //   targets: 'body',
-    //   className: 'has-scrolled',
-    // },
     onEnter: ({ direction }) => navAnimation(direction, links, linksReversed),
     onLeaveBack: ({ direction }) =>
       navAnimation(direction, links, linksReversed),
   });
 };
-const handleToggleBtnClick = function handleTheClickOnTheToggleButton(e) {
+const handleToggleBtnClick = function handleTheClickOnTheToggleButton() {
   openCloseRespMenu();
 };
 

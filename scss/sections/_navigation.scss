@@ -28,7 +28,7 @@
   }
 }
 #navigation-new {
-  nav {
+  
     .container {
       padding: 1rem;
       .nav-menu-links {
@@ -67,35 +67,35 @@
         }
       }
     }
-  }
+  
 }
 .toggle-menu-btn {
   @include transitionProperty;
+  @include backgroundTexture;
   position: fixed;
   top: 1rem;
   right: 2rem;
   width: 3rem;
   height: 3rem;
   z-index: 10;
-  @include backgroundTexture;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
   opacity: 0.5;
   .shapes {
+    @include absoluteCenter;
     pointer-events: none;
     width: 60%;
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    @include absoluteCenter;
     div {
+      @include transitionProperty;
       width: 100%;
       height: 0.3rem;
       border-radius: 0.1rem;
       background-color: $white;
-      @include transitionProperty;
       &:nth-child(1) {
         top: 0%;
       }
@@ -132,13 +132,13 @@
   }
 }
 .responsive-menu {
+  @include transitionProperty;
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 9;
   background-color: rgba($color: #000000, $alpha: 0.8);
   transform: translateX(-100%);
-  @include transitionProperty;
   ul {
     width: 100%;
     height: 100%;
@@ -150,16 +150,19 @@
     align-items: center;
     justify-content: space-evenly;
     li {
+      @include transitionProperty;
       width: 100%;
       text-align: center;
       padding: 1rem;
-      @include transitionProperty;
       &:hover {
         background-color: rgba($color: #000000, $alpha: 0.8);
       }
       .menu-link--res {
         color: $white;
-        font-size: 4rem;
+        opacity: 0.4;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }

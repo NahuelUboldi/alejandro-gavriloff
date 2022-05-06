@@ -11453,35 +11453,35 @@ section#gallery-preview #images-container img {
   font-weight: 500;
 }
 
-#navigation-new nav .container {
+#navigation-new .container {
   padding: 1rem;
 }
-#navigation-new nav .container .nav-menu-links {
+#navigation-new .container .nav-menu-links {
   display: none;
   align-items: center;
 }
 @media (min-width: 992px) {
-  #navigation-new nav .container .nav-menu-links {
+  #navigation-new .container .nav-menu-links {
     display: flex;
   }
 }
-#navigation-new nav .container .nav-menu-links ul {
+#navigation-new .container .nav-menu-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#navigation-new nav .container .nav-menu-links ul li {
+#navigation-new .container .nav-menu-links ul li {
   display: inline;
   padding: 0;
   margin: 0 0.5rem;
 }
-#navigation-new nav .container .nav-menu-links ul li a.menu-link {
+#navigation-new .container .nav-menu-links ul li a.menu-link {
   color: #000;
   text-decoration: none;
   padding: 0;
   position: relative;
 }
-#navigation-new nav .container .nav-menu-links ul li a.menu-link span {
+#navigation-new .container .nav-menu-links ul li a.menu-link span {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -11496,36 +11496,36 @@ section#gallery-preview #images-container img {
 
 .toggle-menu-btn {
   transition: all ease 700ms;
+  background-image: url("../img/bg/dark-bg.png");
   position: fixed;
   top: 1rem;
   right: 2rem;
   width: 3rem;
   height: 3rem;
   z-index: 10;
-  background-image: url("../img/bg/dark-bg.png");
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
   opacity: 0.5;
 }
 .toggle-menu-btn .shapes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   pointer-events: none;
   width: 60%;
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .toggle-menu-btn .shapes div {
+  transition: all ease 700ms;
   width: 100%;
   height: 0.3rem;
   border-radius: 0.1rem;
   background-color: #fff;
-  transition: all ease 700ms;
 }
 .toggle-menu-btn .shapes div:nth-child(1) {
   top: 0%;
@@ -11557,13 +11557,13 @@ section#gallery-preview #images-container img {
 }
 
 .responsive-menu {
+  transition: all ease 700ms;
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.8);
   transform: translateX(-100%);
-  transition: all ease 700ms;
 }
 .responsive-menu ul {
   width: 100%;
@@ -11577,17 +11577,20 @@ section#gallery-preview #images-container img {
   justify-content: space-evenly;
 }
 .responsive-menu ul li {
+  transition: all ease 700ms;
   width: 100%;
   text-align: center;
   padding: 1rem;
-  transition: all ease 700ms;
 }
 .responsive-menu ul li:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .responsive-menu ul li .menu-link--res {
   color: #fff;
-  font-size: 4rem;
+  opacity: 0.4;
+}
+.responsive-menu ul li .menu-link--res:hover {
+  opacity: 1;
 }
 .responsive-menu.is-open {
   transform: translateX(0%);
