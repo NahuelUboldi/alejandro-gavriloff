@@ -11493,29 +11493,23 @@ section#gallery-preview #images-container img {
   transform-origin: left;
   z-index: -1;
 }
-#navigation-new nav .responsive-menu {
-  background-color: #eee;
-}
 
 .toggle-menu-btn {
   transition: all ease 700ms;
   position: fixed;
   top: 1rem;
-  right: 1rem;
+  right: 2rem;
   width: 3rem;
   height: 3rem;
   z-index: 10;
-  background-color: #bb6ef5;
+  background-image: url("../img/bg/dark-bg.png");
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-}
-@media (min-width: 992px) {
-  .toggle-menu-btn {
-    transform: translateY(-4rem);
-  }
+  opacity: 0.5;
 }
 .toggle-menu-btn .shapes {
+  pointer-events: none;
   width: 60%;
   height: 50%;
   display: flex;
@@ -11531,6 +11525,7 @@ section#gallery-preview #images-container img {
   height: 0.3rem;
   border-radius: 0.1rem;
   background-color: #fff;
+  transition: all ease 700ms;
 }
 .toggle-menu-btn .shapes div:nth-child(1) {
   top: 0%;
@@ -11540,6 +11535,62 @@ section#gallery-preview #images-container img {
 }
 .toggle-menu-btn .shapes div:nth-child(3) {
   top: 100%;
+}
+.toggle-menu-btn:hover {
+  opacity: 1;
+}
+.toggle-menu-btn.toggle-btn-hidden {
+  opacity: 0;
+  transform: translateY(-4rem);
+}
+.toggle-menu-btn.toggle-btn-equis {
+  transform: rotate(180deg);
+}
+.toggle-menu-btn.toggle-btn-equis .shapes div:nth-child(1) {
+  transform: translate3d(0, 0.5rem, 0) rotate(45deg);
+}
+.toggle-menu-btn.toggle-btn-equis .shapes div:nth-child(2) {
+  opacity: 0;
+}
+.toggle-menu-btn.toggle-btn-equis .shapes div:nth-child(3) {
+  transform: translate3d(0, -0.5rem, 0) rotate(-45deg);
+}
+
+.responsive-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateX(-100%);
+  transition: all ease 700ms;
+}
+.responsive-menu ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding: 3rem 0rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.responsive-menu ul li {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  transition: all ease 700ms;
+}
+.responsive-menu ul li:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.responsive-menu ul li .menu-link--res {
+  color: #fff;
+  font-size: 4rem;
+}
+.responsive-menu.is-open {
+  transform: translateX(0%);
 }
 
 #contact-form {

@@ -12,16 +12,6 @@
     font-size: 0;
     color: transparent;
   }
-  // .rect-bg {
-  //   @include backgroundTexture;
-  //   position: absolute;
-  //   right: -15px;
-  //   top: -24px;
-  //   width: 800px;
-  //   height: 37px;
-  //   transform: rotate(3deg);
-  //   z-index: -90;
-  // }
   .navbar-toggler {
     z-index: 99;
     background-color: white;
@@ -41,13 +31,11 @@
   nav {
     .container {
       padding: 1rem;
-      .brand {
-      }
       .nav-menu-links {
-        display:none;
+        display: none;
         @media (min-width: 992px) {
           display: flex;
-        }  
+        }
         align-items: center;
         ul {
           list-style: none;
@@ -78,47 +66,104 @@
           }
         }
       }
-
-    }
-    .responsive-menu {
-      background-color: #eee;
     }
   }
 }
 .toggle-menu-btn {
   @include transitionProperty;
-  @media (min-width: 992px) {
-    transform: translateY(-4rem);
-  }  
   position: fixed;
   top: 1rem;
-  right: 1rem;
+  right: 2rem;
   width: 3rem;
   height: 3rem;
-  z-index:10;
-  background-color: $purple-light;
+  z-index: 10;
+  @include backgroundTexture;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  
+  opacity: 0.5;
   .shapes {
+    pointer-events: none;
     width: 60%;
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
-   
     @include absoluteCenter;
     div {
-    
       width: 100%;
       height: 0.3rem;
       border-radius: 0.1rem;
       background-color: $white;
-     &:nth-child(1) {top: 0%;}
-     &:nth-child(2) {top: 50%;}
-     &:nth-child(3) {top: 100%;}
+      @include transitionProperty;
+      &:nth-child(1) {
+        top: 0%;
+      }
+      &:nth-child(2) {
+        top: 50%;
+      }
+      &:nth-child(3) {
+        top: 100%;
+      }
     }
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &.toggle-btn-hidden {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  &.toggle-btn-equis {
+    transform: rotate(180deg);
+    .shapes {
+      div {
+        &:nth-child(1) {
+          transform: translate3d(0, 0.5rem, 0) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translate3d(0, -0.5rem, 0) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+.responsive-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  transform: translateX(-100%);
+  @include transitionProperty;
+  ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 3rem 0rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    li {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      @include transitionProperty;
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.8);
+      }
+      .menu-link--res {
+        color: $white;
+        font-size: 4rem;
+      }
+    }
+  }
+  &.is-open {
+    transform: translateX(0%);
   }
 }

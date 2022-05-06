@@ -1,4 +1,3 @@
-
 import resizeBioContainer from './utils/resizeBioContainer.js';
 import initCanvas from './pages/home/canvas.js';
 import initGalleryPreview from './pages/home/gallerie-preview.js';
@@ -18,12 +17,14 @@ import handleWidthChange from './utils/handleWidthChange.js';
 import initNavigation from './pages/all/navigation.js';
 
 // js media queries
-const mq = window.matchMedia('(min-width: 766px)');
-console.log(mq.matches);
+const mediaQueryMd = window.matchMedia('(min-width: 766px)');
+const mediaQueryLg = window.matchMedia('(min-width: 992px)');
+
+console.log(mediaQueryMd.matches);
 
 //page transitions vars
 const loader = select('.loader');
-if (mq.matches) {
+if (mediaQueryMd.matches) {
   loader.style.display = 'block';
 }
 
@@ -56,7 +57,7 @@ const init = function initializeTheSiteFunctionality() {
   initSmoothScrollbar();
   initCarousels();
   initBioPage();
-  if (mq.matches) {
+  if (mediaQueryMd.matches) {
     console.log('big screen');
     initBigScreenFunc();
   }
@@ -116,7 +117,7 @@ const initPageTransitions =
       transitions: [
         {
           once() {
-            if (mq.matches) {
+            if (mediaQueryMd.matches) {
               initLoaderAnim();
               // loader.style.display = 'none';
             }
@@ -136,6 +137,6 @@ const initPageTransitions =
 // initPageTransitions();
 
 //listeners
-mq.addEventListener('change', cleanSmallScreenFunc);
+mediaQueryMd.addEventListener('change', cleanSmallScreenFunc);
 window.addEventListener('resize', handleScreenResize);
 window.addEventListener('load', initPageTransitions);

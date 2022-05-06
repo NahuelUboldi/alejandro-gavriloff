@@ -1,53 +1,61 @@
+import openCloseRespMenu from '../../utils/openCloseRespMenu.js';
 import { select, selectAll } from '../../utils/utilities.js';
 
 const handleMouse = function handleMouseEnterAndLeaveFunctionality(e) {
   const hoverEffectSpan = e.target.querySelector('span');
   const tl = gsap.timeline({ defaults: { duration: 0.25 } });
   if (e.type === 'mouseenter') {
-    
-    tl.set(hoverEffectSpan, { transformOrigin: 'left' })
-      .to(hoverEffectSpan, { scaleX: 1 }, 0)
+    tl.set(hoverEffectSpan, { transformOrigin: 'left' }).to(
+      hoverEffectSpan,
+      { scaleX: 1 },
+      0
+    );
     return tl;
   }
-  tl.set(hoverEffectSpan, { transformOrigin: 'right' })
-    .to(hoverEffectSpan, { scaleX: 0 }, 0)
+  tl.set(hoverEffectSpan, { transformOrigin: 'right' }).to(
+    hoverEffectSpan,
+    { scaleX: 0 },
+    0
+  );
   return tl;
 };
 
-const navAnimation = function createNavLinksAnimation(direction,links,linksReversed) {
-    const toggleBtn = select(".toggle-menu-btn")
-    const scrollingDown = direction === 1;
-    const selectedLinks = scrollingDown ? links : linksReversed;
-    const tl = gsap.timeline()
-    tl.to(selectedLinks, {
-      duration: 0.3,
-      stagger: 0.05,
-      autoAlpha: () => (scrollingDown ? 0 : 1),
-      y: () => (scrollingDown ? 20 : 0),
-      ease: Power0.easeNone,
-    })
-    .to(toggleBtn,{
-      duration:0.5,
-      delay:0.2,
-      autoAlpha: () => (scrollingDown ? 1 : 0),
-      y: () => (scrollingDown ? 0 : "-4rem"),
-      
-    },0)
+const navAnimation = function createNavLinksAnimation(
+  direction,
+  links,
+  linksReversed
+) {
+  const toggleBtn = select('.toggle-menu-btn');
+  const scrollingDown = direction === 1;
+  const selectedLinks = scrollingDown ? links : linksReversed;
 
+  if (scrollingDown) {
+    toggleBtn.classList.remove('toggle-btn-hidden');
+  }
+  if (!scrollingDown) {
+    toggleBtn.classList.add('toggle-btn-hidden');
+  }
 
-    return tl
-  };
+  const tl = gsap.timeline();
+  tl.to(selectedLinks, {
+    duration: 0.3,
+    stagger: 0.05,
+    autoAlpha: () => (scrollingDown ? 0 : 1),
+    y: () => (scrollingDown ? 20 : 0),
+    ease: Power0.easeNone,
+  });
 
-const initNavigation = function initializeTheNavigationFunctionality() {
+  return tl;
+};
+
+const createNavLinksAnim = function createTheNavigationLinksAnimation() {
   const links = selectAll('.menu-link');
   const linksReversed = selectAll('.menu-link').reverse();
-
 
   links.forEach((link) => {
     link.addEventListener('mouseenter', handleMouse);
     link.addEventListener('mouseleave', handleMouse);
   });
-
   ScrollTrigger.create({
     start: 1,
     end: 'bottom bottom',
@@ -55,9 +63,22 @@ const initNavigation = function initializeTheNavigationFunctionality() {
     //   targets: 'body',
     //   className: 'has-scrolled',
     // },
-    onEnter: ({ direction }) => navAnimation(direction,links,linksReversed),
-    onLeaveBack: ({ direction }) => navAnimation(direction,links,linksReversed),
+    onEnter: ({ direction }) => navAnimation(direction, links, linksReversed),
+    onLeaveBack: ({ direction }) =>
+      navAnimation(direction, links, linksReversed),
   });
+};
+const handleToggleBtnClick = function handleTheClickOnTheToggleButton(e) {
+  openCloseRespMenu();
+};
 
+const toggleBtnFunc = function createTheToggleButtonFunctionality() {
+  const toggleBtn = select('.toggle-menu-btn');
+  toggleBtn.addEventListener('click', handleToggleBtnClick);
+};
+
+const initNavigation = function initializeTheNavigationFunctionality() {
+  createNavLinksAnim();
+  toggleBtnFunc();
 };
 export default initNavigation;

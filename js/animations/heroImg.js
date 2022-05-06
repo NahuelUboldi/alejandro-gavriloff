@@ -31,8 +31,7 @@ const handleMousemove = function handleMouseMovement(e) {
 const initHeroAnim = function initializeTheHeroImagesAnimation() {
   const page = getPage();
   if (page !== 'index.html') return;
-  //uncomment when the final navigation is finished and update the selector
-  // select('#navigation').addEventListener('mousemove', handleMousemove);
+  select('#navigation-new').addEventListener('mousemove', handleMousemove);
   select('#hero').addEventListener('mousemove', handleMousemove);
   select('#quote').addEventListener('mousemove', handleMousemove);
 };
