@@ -1,32 +1,38 @@
-import {openCloseRespMenu,showToggleBtn,hideToggleBtn} from '../../utils/responsiveMenu.js';
+import {
+  openCloseRespMenu,
+  showToggleBtn,
+  hideToggleBtn,
+} from '../../utils/responsiveMenu.js';
 import { select, selectAll } from '../../utils/utilities.js';
 
-const toggleBtnOnScroll = function toggleTheToggleBtnWhenScrolling() {
+const toggleBtnOnScroll = function toggleTheToggleBtnWhenScrolling(
+  scrollingDown
+) {
   const mediaQueryLg = window.matchMedia('(min-width: 992px)');
   const toggleBtn = select('.toggle-menu-btn');
-  console.log("Is a large screen: ", mediaQueryLg);
-  console.log("1 should enter here? ",mediaQueryLg && scrollingDown  );
+  console.log('Is a large screen: ', mediaQueryLg.matches);
+  console.log('1 should enter here? ', mediaQueryLg && scrollingDown);
   if (mediaQueryLg && scrollingDown) {
-    console.log("1 entered"  );
+    console.log('1 entered');
     toggleBtn.classList.remove('toggle-btn-hidden');
   }
-  console.log("2 should enter here? ",mediaQueryLg && !scrollingDown  );
+  console.log('2 should enter here? ', mediaQueryLg && !scrollingDown);
   if (mediaQueryLg && !scrollingDown) {
-    console.log("2 entered"  );
+    console.log('2 entered');
     toggleBtn.classList.add('toggle-btn-hidden');
   }
-  console.log("//////////////////////////////");
-}
+  console.log('//////////////////////////////');
+};
 
 const navAnimation = function createNavLinksAnimation(
   direction,
   links,
   linksReversed
 ) {
-  toggleBtnOnScroll()
   const scrollingDown = direction === 1;
   const selectedLinks = scrollingDown ? links : linksReversed;
-  
+
+  toggleBtnOnScroll(scrollingDown);
   const tl = gsap.timeline();
   tl.to(selectedLinks, {
     duration: 0.3,
