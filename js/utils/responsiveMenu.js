@@ -15,12 +15,10 @@ export const openCloseRespMenu = function openOrCloseTheResponsiveMenu() {
 };
 
 export const showToggleBtn = function showTheToggleBtnForResponsiveMenu() {
-  console.log("show btn");
-  select('.toggle-menu-btn').classList.remove("toggle-btn-hidden")
-  return
-}
+  select('.toggle-menu-btn').classList.remove('toggle-btn-hidden');
+  return;
+};
 export const hideToggleBtn = function hideTheToggleBtnForResponsiveMenu() {
-  console.log("hide btn");
-  select('.toggle-menu-btn').classList.add("toggle-btn-hidden")
-  return
-}
+  select('.toggle-menu-btn').classList.add('toggle-btn-hidden');
+  return;
+};

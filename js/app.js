@@ -3,57 +3,73 @@ import initCanvas from './pages/home/canvas.js';
 import initGalleryPreview from './pages/home/gallerie-preview.js';
 import initGallery from './pages/gallery/index.js';
 import initCarousels from './pages/periods/index.js';
-import {
-  initHomePageAnim,
-  initLoaderAnim,
-  initHeroAnim,
-} from './animations/index.js';
 import initArtisticPeriods from './pages/home/artisticPeriods.js';
 import initQuoteAnim from './pages/home/quote.js';
 import { select, setCurrentYear } from './utils/utilities.js';
 import initBioPage from './pages/biography/index.js';
 import initSmoothScrollbar from './utils/smoothScrollbar.js';
 import handleWidthChange from './utils/handleWidthChange.js';
-import initNavigation from './pages/all/navigation.js';
+import initNavigation from './components/navigation.js';
 import { hideToggleBtn, showToggleBtn } from './utils/responsiveMenu.js';
+import {
+  initHomePageAnim,
+  initLoaderAnim,
+  initHeroAnim,
+} from './animations/index.js';
 
 // js media queries
 
 // Screen Breakpoints
-// sm 	≥576px  -> Small	
-// md	  ≥768px  -> Medium	
-// lg	  ≥992px  -> Large	
-// xl	  ≥1200px -> Extra large	
-// xxl  ≥1400px -> Extra extra large	
-
+// sm 	≥576px  -> Small
+// md	  ≥768px  -> Medium
+// lg	  ≥992px  -> Large
+// xl	  ≥1200px -> Extra large
+// xxl  ≥1400px -> Extra extra large
 
 const mediaQueryMd = window.matchMedia('(min-width: 766px)');
 const mediaQueryLg = window.matchMedia('(min-width: 992px)');
+let screenSize = mediaQueryLg.matches
+  ? 'big screen'
+  : mediaQueryMd.matches
+  ? 'tablet'
+  : 'mobile';
 
+console.log('initial: ', screenSize);
 //page transitions vars
 const loader = select('.loader');
 
 //screen size functions
 const checkInitialScreenSize = function checkTheInitialScreenSize() {
-  if(mediaQueryLg.matches) hideToggleBtn()
-  if(mediaQueryMd.matches) loader.style.display = 'block';
-}
-const handleMqLgChange = function handleTheMediaQueryLargeScreenChange() {
-  console.log("lg change | ", "is large screen: ", mediaQueryLg.matches);
-  if(mediaQueryLg.matches) {
-    hideToggleBtn();
-    return
+  if (mediaQueryLg.matches) hideToggleBtn();
+  if (mediaQueryMd.matches) loader.style.display = 'block';
+};
+const handleMqLgChange = function handleTheMediaQueryLargeScreenChange(e) {
+  console.log(e.matches);
+
+  if (e.matches) {
+    console.log('we are on big screen');
+
+    initNavigation('big screen');
+    return;
   }
-  showToggleBtn();
-}
-const handleMqMdChange =
-function handleTheMediaQueryMediumScreenChange() {
-  console.log("mg change");
+  console.log('we are on tablet');
+  initNavigation('tablet');
+};
+const handleMqMdChange = function handleTheMediaQueryMediumScreenChange(e) {
+  console.log(e.matches);
+
+  if (e.matches) {
+    console.log('we are on tablet');
+    showToggleBtn();
+    return;
+  }
+  console.log('we are on mobile');
+
   gsap.killTweensOf('*');
 };
 //init functions
 const initBigScreenFunc = function initializeTheFunctionalityInBigScreens() {
-  initNavigation(mediaQueryLg.matches);
+  initNavigation(screenSize);
   initHeroAnim();
   initQuoteAnim();
   initArtisticPeriods();
@@ -67,7 +83,7 @@ const handleScreenResize = function handleTheFunctionalityWhenScreenResize() {
 };
 
 const init = function initializeTheSiteFunctionality() {
-  checkInitialScreenSize()
+  checkInitialScreenSize();
   setCurrentYear();
   resizeBioContainer();
   initCanvas();
@@ -76,7 +92,8 @@ const init = function initializeTheSiteFunctionality() {
   initSmoothScrollbar();
   initCarousels();
   initBioPage();
-  if (mediaQueryMd.matches) {
+  initNavigation('big screen');
+  if (screenSize === 'tablet' || screenSize === 'big screen') {
     initBigScreenFunc();
   }
 };
@@ -151,8 +168,6 @@ const initPageTransitions =
       ],
     });
   };
-
-// initPageTransitions();
 
 //listeners
 mediaQueryMd.addEventListener('change', handleMqMdChange);

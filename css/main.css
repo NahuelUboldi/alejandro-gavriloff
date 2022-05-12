@@ -11408,7 +11408,7 @@ section#gallery-preview {
   background-image: url("../img/bg/dark-bg.png");
 }
 section#gallery-preview #images-container img {
-  flex: 1 1 400px;
+  flex: 1 1 300px;
   height: 300px;
   border: solid 1px #000;
   object-fit: cover;

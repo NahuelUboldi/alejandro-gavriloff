@@ -3,29 +3,33 @@ import {
   filterPaintingsByQuality,
   filterPaintingsByTags,
   filterPaintingsByID,
-  getPage
+  getPage,
 } from '../../utils/utilities.js';
 gsap.registerPlugin(ScrollTrigger);
 
 const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage() {
-  const page = getPage()
-  if(page !== "index.html") return
- 
+  const page = getPage();
+  if (page !== 'index.html') return;
+
   const imagesContainer = document.getElementById('images-container');
-  const mostrarCuadrosRandomBtn = document.getElementById('mostrar-cuadros-random');
+  const mostrarCuadrosRandomBtn = document.getElementById(
+    'mostrar-cuadros-random'
+  );
   const modal = document.getElementById('modal');
   const modalCloseBtn = document.querySelector('.close-tag');
   const modalContent = document.getElementById('modal-content');
 
   //variables
-  const imagesRequiredWidth = 400; //400 default
-  
+  const imagesRequiredWidth = 300; //400 default buts breaks in 400 px smaller screens
+
   //functions
   const closeModal = () => {
     modal.classList.add('closed');
   };
   const showModal = async (e) => {
-    const classNeeded = e.target.classList.value.split(' ').includes('modal-img');
+    const classNeeded = e.target.classList.value
+      .split(' ')
+      .includes('modal-img');
     // runAnimation();
 
     if (classNeeded) {
@@ -87,7 +91,7 @@ const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage() {
   mostrarCuadrosRandomBtn.addEventListener('click', showGalleryPreview);
   modalCloseBtn.addEventListener('click', closeModal);
   document.addEventListener('click', showModal);
-  showGalleryPreview()
-}
+  showGalleryPreview();
+};
 
-export default initGalleryPreview
+export default initGalleryPreview;

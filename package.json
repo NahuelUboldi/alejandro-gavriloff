@@ -9,11 +9,11 @@
   "author": "Nahuel Uboldi",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.35.2"
+    "sass": "1.35.2"
   },
   "dependencies": {
-    "autoprefixer": "^10.3.1",
-    "bootstrap": "^5.0.2",
-    "postcss-cli": "^8.3.1"
+    "autoprefixer": "10.3.1",
+    "bootstrap": "5.0.2",
+    "postcss-cli": "8.3.1"
   }
 }

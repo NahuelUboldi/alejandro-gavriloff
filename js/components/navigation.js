@@ -2,37 +2,26 @@ import {
   openCloseRespMenu,
   showToggleBtn,
   hideToggleBtn,
-} from '../../utils/responsiveMenu.js';
-import { select, selectAll } from '../../utils/utilities.js';
-
-const toggleBtnOnScroll = function toggleTheToggleBtnWhenScrolling(
-  scrollingDown
-) {
-  const mediaQueryLg = window.matchMedia('(min-width: 992px)');
-  const toggleBtn = select('.toggle-menu-btn');
-  console.log('Is a large screen: ', mediaQueryLg.matches);
-  console.log('1 should enter here? ', mediaQueryLg && scrollingDown);
-  if (mediaQueryLg && scrollingDown) {
-    console.log('1 entered');
-    toggleBtn.classList.remove('toggle-btn-hidden');
-  }
-  console.log('2 should enter here? ', mediaQueryLg && !scrollingDown);
-  if (mediaQueryLg && !scrollingDown) {
-    console.log('2 entered');
-    toggleBtn.classList.add('toggle-btn-hidden');
-  }
-  console.log('//////////////////////////////');
-};
+} from '../utils/responsiveMenu.js';
+import { select, selectAll } from '../utils/utilities.js';
 
 const navAnimation = function createNavLinksAnimation(
   direction,
   links,
-  linksReversed
+  linksReversed,
+  screenSize
 ) {
   const scrollingDown = direction === 1;
   const selectedLinks = scrollingDown ? links : linksReversed;
+  console.log('screen size: ', screenSize);
+  if (screenSize === 'big screen') {
+    console.log('big screen, lo muestra o lo oculta');
+    scrollingDown ? showToggleBtn() : hideToggleBtn();
+  } else {
+    console.log('debería mostrar el boton');
+    showToggleBtn();
+  }
 
-  toggleBtnOnScroll(scrollingDown);
   const tl = gsap.timeline();
   tl.to(selectedLinks, {
     duration: 0.3,
@@ -41,7 +30,6 @@ const navAnimation = function createNavLinksAnimation(
     y: () => (scrollingDown ? 20 : 0),
     ease: Power0.easeNone,
   });
-
   return tl;
 };
 
@@ -64,22 +52,36 @@ const handleMouse = function handleMouseEnterAndLeaveFunctionality(e) {
   return tl;
 };
 
-const createNavLinksAnim = function createTheNavigationLinksAnimation() {
+const createNavLinksAnim = function createTheNavigationLinksAnimation(
+  screenSize
+) {
   const links = selectAll('.menu-link');
   const linksReversed = selectAll('.menu-link').reverse();
+  console.log('nav: ', screenSize);
 
   links.forEach((link) => {
     link.addEventListener('mouseenter', handleMouse);
     link.addEventListener('mouseleave', handleMouse);
   });
-  ScrollTrigger.create({
-    start: 1,
-    end: 'bottom bottom',
-    onEnter: ({ direction }) => navAnimation(direction, links, linksReversed),
-    onLeaveBack: ({ direction }) =>
-      navAnimation(direction, links, linksReversed),
-  });
+
+  const navAnimProps = {
+    links: links,
+    linksReversed: linksReversed,
+    screenSize: screenSize,
+  };
+
+  if (screenSize === 'big screen') {
+    ScrollTrigger.create({
+      start: 1,
+      end: 'bottom bottom',
+      onEnter: ({ direction }) =>
+        navAnimation(direction, links, linksReversed, screenSize),
+      onLeaveBack: ({ direction }) =>
+        navAnimation(direction, direction, links, linksReversed, screenSize),
+    });
+  }
 };
+
 const handleToggleBtnClick = function handleTheClickOnTheToggleButton() {
   openCloseRespMenu();
 };
@@ -89,8 +91,11 @@ const toggleBtnFunc = function createTheToggleButtonFunctionality() {
   toggleBtn.addEventListener('click', handleToggleBtnClick);
 };
 
-const initNavigation = function initializeTheNavigationFunctionality() {
-  createNavLinksAnim();
+const initNavigation = function initializeTheNavigationFunctionality(
+  screenSize
+) {
+  screenSize === 'big screen' ? hideToggleBtn() : showToggleBtn();
+  createNavLinksAnim(screenSize);
   toggleBtnFunc();
 };
 export default initNavigation;
