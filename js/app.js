@@ -10,12 +10,8 @@ import initBioPage from './pages/biography/index.js';
 import initSmoothScrollbar from './utils/smoothScrollbar.js';
 import handleWidthChange from './utils/handleWidthChange.js';
 import initNavigation from './components/navigation.js';
-import { hideToggleBtn, showToggleBtn } from './utils/responsiveMenu.js';
-import {
-  initHomePageAnim,
-  initLoaderAnim,
-  initHeroAnim,
-} from './animations/index.js';
+import {openCloseRespMenu, hideToggleBtn, showToggleBtn } from './components/responsiveMenu.js';
+import {initHomePageAnim,initLoaderAnim,initHeroAnim,} from './animations/index.js';
 
 // js media queries
 
@@ -34,38 +30,27 @@ let screenSize = mediaQueryLg.matches
   ? 'tablet'
   : 'mobile';
 
-console.log('initial: ', screenSize);
 //page transitions vars
 const loader = select('.loader');
 
 //screen size functions
 const checkInitialScreenSize = function checkTheInitialScreenSize() {
-  if (mediaQueryLg.matches) hideToggleBtn();
+  // if (mediaQueryLg.matches) hideToggleBtn();
   if (mediaQueryMd.matches) loader.style.display = 'block';
 };
 const handleMqLgChange = function handleTheMediaQueryLargeScreenChange(e) {
-  console.log(e.matches);
-
   if (e.matches) {
-    console.log('we are on big screen');
-
     initNavigation('big screen');
     return;
   }
-  console.log('we are on tablet');
   initNavigation('tablet');
 };
-const handleMqMdChange = function handleTheMediaQueryMediumScreenChange(e) {
-  console.log(e.matches);
 
+const handleMqMdChange = function handleTheMediaQueryMediumScreenChange(e) {
   if (e.matches) {
-    console.log('we are on tablet');
     showToggleBtn();
     return;
   }
-  console.log('we are on mobile');
-
-  gsap.killTweensOf('*');
 };
 //init functions
 const initBigScreenFunc = function initializeTheFunctionalityInBigScreens() {
@@ -92,7 +77,7 @@ const init = function initializeTheSiteFunctionality() {
   initSmoothScrollbar();
   initCarousels();
   initBioPage();
-  initNavigation('big screen');
+  select('.toggle-menu-btn').addEventListener('click', () => openCloseRespMenu());
   if (screenSize === 'tablet' || screenSize === 'big screen') {
     initBigScreenFunc();
   }

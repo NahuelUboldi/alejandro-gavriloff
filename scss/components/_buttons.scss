@@ -1,7 +1,7 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
-// experiment btn - delete if dont use
+
 .btn--reset {
   /*Reset's every elements apperance*/
   background: none repeat scroll 0 0 transparent;
@@ -44,11 +44,11 @@
     }
     span {
       position: relative;
-      font-size: 16px;
-      line-height: 18px;
-      font-weight: 900;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
+      // font-size: 16px;
+      // line-height: 18px;
+      // font-weight: 900;
+      letter-spacing: 0.15em;
+      // text-transform: uppercase;
       vertical-align: middle;
     }
     svg {

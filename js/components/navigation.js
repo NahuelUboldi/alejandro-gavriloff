@@ -1,26 +1,13 @@
-import {
-  openCloseRespMenu,
-  showToggleBtn,
-  hideToggleBtn,
-} from '../utils/responsiveMenu.js';
-import { select, selectAll } from '../utils/utilities.js';
+import {showToggleBtn,hideToggleBtn,} from './responsiveMenu.js';
+import { selectAll } from '../utils/utilities.js';
 
-const navAnimation = function createNavLinksAnimation(
-  direction,
-  links,
-  linksReversed,
-  screenSize
-) {
+const navAnimation = function createNavLinksAnimation(direction, links, linksReversed) {
+  if(window.innerWidth < 992) return
+
   const scrollingDown = direction === 1;
   const selectedLinks = scrollingDown ? links : linksReversed;
-  console.log('screen size: ', screenSize);
-  if (screenSize === 'big screen') {
-    console.log('big screen, lo muestra o lo oculta');
-    scrollingDown ? showToggleBtn() : hideToggleBtn();
-  } else {
-    console.log('debería mostrar el boton');
-    showToggleBtn();
-  }
+
+  scrollingDown ? showToggleBtn() : hideToggleBtn();
 
   const tl = gsap.timeline();
   tl.to(selectedLinks, {
@@ -52,50 +39,25 @@ const handleMouse = function handleMouseEnterAndLeaveFunctionality(e) {
   return tl;
 };
 
-const createNavLinksAnim = function createTheNavigationLinksAnimation(
-  screenSize
-) {
+const createNavLinksAnim = function createTheNavigationLinksAnimation() {
   const links = selectAll('.menu-link');
   const linksReversed = selectAll('.menu-link').reverse();
-  console.log('nav: ', screenSize);
-
   links.forEach((link) => {
     link.addEventListener('mouseenter', handleMouse);
     link.addEventListener('mouseleave', handleMouse);
   });
 
-  const navAnimProps = {
-    links: links,
-    linksReversed: linksReversed,
-    screenSize: screenSize,
-  };
-
-  if (screenSize === 'big screen') {
-    ScrollTrigger.create({
-      start: 1,
-      end: 'bottom bottom',
-      onEnter: ({ direction }) =>
-        navAnimation(direction, links, linksReversed, screenSize),
-      onLeaveBack: ({ direction }) =>
-        navAnimation(direction, direction, links, linksReversed, screenSize),
-    });
-  }
+  ScrollTrigger.create({
+    start: 1,
+    end: 'bottom bottom',
+    onEnter: ({ direction }) => navAnimation(direction, links, linksReversed),
+    onLeaveBack: ({ direction }) => navAnimation(direction, links, linksReversed),
+  });
+  
 };
 
-const handleToggleBtnClick = function handleTheClickOnTheToggleButton() {
-  openCloseRespMenu();
-};
-
-const toggleBtnFunc = function createTheToggleButtonFunctionality() {
-  const toggleBtn = select('.toggle-menu-btn');
-  toggleBtn.addEventListener('click', handleToggleBtnClick);
-};
-
-const initNavigation = function initializeTheNavigationFunctionality(
-  screenSize
-) {
+const initNavigation = function initializeTheNavigationFunctionality(screenSize) {
   screenSize === 'big screen' ? hideToggleBtn() : showToggleBtn();
-  createNavLinksAnim(screenSize);
-  toggleBtnFunc();
+  createNavLinksAnim();
 };
 export default initNavigation;

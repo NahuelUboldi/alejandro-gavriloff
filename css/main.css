@@ -10868,11 +10868,7 @@ a {
 }
 .btn__custom--circle-purple .cta span {
   position: relative;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 900;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
   vertical-align: middle;
 }
 .btn__custom--circle-purple .cta svg {

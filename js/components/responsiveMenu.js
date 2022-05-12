@@ -1,4 +1,4 @@
-import { select } from './utilities.js';
+import { select } from '../utils/utilities.js';
 export const openCloseRespMenu = function openOrCloseTheResponsiveMenu() {
   const responsiveMenu = select('.responsive-menu');
   const toggleBtn = select('.toggle-menu-btn');
