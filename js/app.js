@@ -8,10 +8,13 @@ import initQuoteAnim from './pages/home/quote.js';
 import { select, setCurrentYear } from './utils/utilities.js';
 import initBioPage from './pages/biography/index.js';
 import initSmoothScrollbar from './utils/smoothScrollbar.js';
-import handleWidthChange from './utils/handleWidthChange.js';
 import initNavigation from './components/navigation.js';
-import {openCloseRespMenu, hideToggleBtn, showToggleBtn } from './components/responsiveMenu.js';
-import {initHomePageAnim,initLoaderAnim,initHeroAnim,} from './animations/index.js';
+import {
+  openCloseRespMenu,
+  hideToggleBtn,
+  showToggleBtn,
+} from './components/responsiveMenu.js';
+import { initLoaderAnim, initHeroAnim } from './animations/index.js';
 
 // js media queries
 
@@ -58,7 +61,6 @@ const initBigScreenFunc = function initializeTheFunctionalityInBigScreens() {
   initHeroAnim();
   initQuoteAnim();
   initArtisticPeriods();
-  // initHomePageAnim();
 };
 
 const handleScreenResize = function handleTheFunctionalityWhenScreenResize() {
@@ -77,7 +79,9 @@ const init = function initializeTheSiteFunctionality() {
   initSmoothScrollbar();
   initCarousels();
   initBioPage();
-  select('.toggle-menu-btn').addEventListener('click', () => openCloseRespMenu());
+  select('.toggle-menu-btn').addEventListener('click', () =>
+    openCloseRespMenu()
+  );
   if (screenSize === 'tablet' || screenSize === 'big screen') {
     initBigScreenFunc();
   }

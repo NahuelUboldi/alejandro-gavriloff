@@ -3,13 +3,13 @@ import {
   filterPaintingsByQuality,
   filterPaintingsByTags,
   filterPaintingsByID,
-  getPage
+  getPage,
 } from '../../utils/utilities.js';
 
 const initCanvas = function initializeTheCanvasSection() {
-  const page = getPage()
-  if(page !== "index.html") return;
-  //selectors
+  const page = getPage();
+  if (page !== 'index.html') return;
+
   const canvas = document.querySelector('#canvas-art');
   const context = canvas.getContext('2d');
   const btnClear = document.getElementById('btn-clear-canvas');
@@ -17,9 +17,8 @@ const initCanvas = function initializeTheCanvasSection() {
   const canvasImgContainer = document.querySelector('.canvas-cont');
   const picturesPaintedContainer = document.getElementById('pictures-painted');
 
-  //variables
   let paintCounter = 0;
-  //functions
+
   const resizeCanvas = () => {
     const parentHeigth = canvas.parentElement.getBoundingClientRect().height;
     const parentWidth = canvas.parentElement.getBoundingClientRect().width;
@@ -32,7 +31,7 @@ const initCanvas = function initializeTheCanvasSection() {
   const addLastPicturePainted = async () => {
     const paintings = await getPaintings();
     const paint = filterPaintingsByID(paintings, lastPictureId);
-
+    console.log('add last picture painted');
     const img = document.createElement('img');
     img.src = `${paint[0].img.sm}`;
     img.classList.add('painting-helped');
@@ -67,7 +66,8 @@ const initCanvas = function initializeTheCanvasSection() {
 
       function startPosition(e) {
         painting = true;
-        canvas.style.cursor = 'url("../img/icons/pincel-pressed-icon.png"), auto';
+        canvas.style.cursor =
+          'url("../img/icons/pincel-pressed-icon.png"), auto';
         paint(e);
       }
 
@@ -102,10 +102,7 @@ const initCanvas = function initializeTheCanvasSection() {
     canvas.addEventListener('mouseenter', startDrawingApp);
     btnClear.addEventListener('click', clearCanvas);
   };
- window.addEventListener('resize', resizeCanvas);
- createCanvas()
-}
-export default initCanvas
-//listeners
-// window.addEventListener('load', createCanvas);
-// 
+  window.addEventListener('resize', resizeCanvas);
+  createCanvas();
+};
+export default initCanvas;

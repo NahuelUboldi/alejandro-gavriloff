@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 import {
   getPaintings,
   filterPaintingsByQuality,
@@ -5,7 +6,7 @@ import {
   filterPaintingsByID,
   getPage,
 } from '../../utils/utilities.js';
-gsap.registerPlugin(ScrollTrigger);
+import { showModal } from '../../utils/modal.js';
 
 const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage() {
   const page = getPage();
@@ -15,17 +16,12 @@ const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage() {
   const mostrarCuadrosRandomBtn = document.getElementById(
     'mostrar-cuadros-random'
   );
-  const modal = document.getElementById('modal');
-  const modalCloseBtn = document.querySelector('.close-tag');
-  const modalContent = document.getElementById('modal-content');
 
   //variables
   const imagesRequiredWidth = 300; //400 default buts breaks in 400 px smaller screens
 
   //functions
-  const closeModal = () => {
-    modal.classList.add('closed');
-  };
+
   const showModal = async (e) => {
     const classNeeded = e.target.classList.value
       .split(' ')

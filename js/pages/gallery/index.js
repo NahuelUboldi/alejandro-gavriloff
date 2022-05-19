@@ -22,25 +22,6 @@ const initGallery = function initializeTheImgGallerySection() {
     paintings: [],
     paintingsShufled: [],
   };
-  // gsap animations
-  const gsapAnimation = (element, staggerFrom) => {
-    return gsap.from(element, {
-      duration: 2,
-      opacity: 0,
-      scale: 0.9,
-      stagger: {
-        from: staggerFrom,
-        amount: 1,
-      },
-      delay: 0.4,
-    });
-  };
-  const runGsapAnimationImg = () => {
-    return gsapAnimation('.gallery-img', 'random');
-  };
-  const runGsapAnimationBtn = () => {
-    return gsapAnimation('.gallery-filter-btn', 0);
-  };
 
   //btns
   const getPaintingsCategories = (paintings) => {
@@ -71,7 +52,6 @@ const initGallery = function initializeTheImgGallerySection() {
     const categories = getPaintingsCategories(state.paintings);
     const filterBtns = getFilterBtns(categories);
     filterBtnsContainer.innerHTML = filterBtns;
-    // runGsapAnimationBtn();
   };
   //images
   const getPaintingsToShow = (paintings) => {
@@ -128,9 +108,6 @@ const initGallery = function initializeTheImgGallerySection() {
     state.paintings = paintings;
     loadFilterBtns();
     loadImages();
-    // setTimeout(() => {
-    //   runGsapAnimatioknImg();
-    // }, 2500);
   };
   filterBtnsContainer.addEventListener('click', handleBtnClick);
   galleryContainer.addEventListener('click', handleImgClick);

@@ -10906,60 +10906,62 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-#modal {
+.modal-fixed {
+  transition: all ease 700ms;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  z-index: 94;
+  z-index: 11;
+  transform: translateX(-100%);
 }
-#modal .modal-bg {
+.modal-fixed .modal-bg {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-#modal .modal-bg .close-tag {
+.modal-fixed .modal-bg .close-tag {
+  transition: all ease 700ms;
   position: absolute;
   right: 1rem;
   top: 1rem;
   cursor: pointer;
 }
-#modal .modal-bg .close-tag:hover {
+.modal-fixed .modal-bg .close-tag:hover {
+  transform: rotate(180deg);
   color: #555;
 }
-#modal .arrow-btns i {
+.modal-fixed .arrow-btns i {
   transition: all ease 700ms;
   position: absolute;
   top: 50%;
   left: 5%;
   cursor: pointer;
   transform: translate(-50%, 0%);
-}
-#modal .arrow-btns i:hover {
   opacity: 0.5;
 }
-#modal .arrow-btns i.fa-chevron-right {
+.modal-fixed .arrow-btns i:hover {
+  opacity: 1;
+}
+.modal-fixed .arrow-btns i.fa-chevron-right {
   left: 95%;
 }
-#modal #modal-content {
+.modal-fixed .modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin: 0;
   z-index: 95;
 }
-#modal #modal-content img {
+.modal-fixed .modal-content img {
   max-width: 90%;
   max-height: 90%;
 }
 
-.closed {
-  display: none;
-  transition: all 1s ease;
+.show-modal {
+  transform: translateX(0%);
 }
 
 .glider-contain .btn-container {
@@ -11191,7 +11193,7 @@ body {
   background-image: url("../img/bg/dark-bg.png");
 }
 #quote svg {
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   margin-top: -1px;
 }
 

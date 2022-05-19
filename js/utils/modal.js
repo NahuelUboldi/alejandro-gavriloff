@@ -1,17 +1,27 @@
+import { select } from './utilities.js';
 const closeModal = () => {
-  modal.classList.add('closed');
+  modal.classList.remove('show-modal');
 };
-const loadModalContent = (modalContent, img) => {
+const loadModalContent = (img) => {
+  const modalContent = modal.querySelector('.modal-content');
   modalContent.innerHTML = `
     <img src='${img}' alt='' />
     `;
 };
-const showModal = (modal, arr, id) => {
-  modal.classList.remove('closed');
-  const modalContent = modal.querySelector('#modal-content');
-  let index = arr.findIndex((obj) => obj.id === id);
-  loadModalContent(modalContent, arr[index].img.lg);
 
+const handleCloseBtn = () => {
+  const closeBtn = modal.querySelector('.close-tag i');
+  closeBtn.addEventListener('click', closeModal);
+};
+
+const handleBackgroundClick = () => {
+  const modalBackground = modal.querySelector('.modal-bg');
+  modalBackground.addEventListener('click', closeModal);
+};
+
+const loadContentAndHandleArrows = (modal, arr, id) => {
+  let index = arr.findIndex((obj) => obj.id === id);
+  loadModalContent(arr[index].img.lg);
   modal.querySelector('.arrow-btns').addEventListener('click', (e) => {
     const isLeftArrow = e.target.classList.value
       .split(' ')
@@ -26,8 +36,17 @@ const showModal = (modal, arr, id) => {
 
     if (index < 0) index = arr.length - 1;
     if (index > arr.length - 1) index = 0;
-    loadModalContent(modalContent, arr[index].img.lg);
+    loadModalContent(arr[index].img.lg);
   });
 };
 
-export { showModal, closeModal };
+const showModal = (arr, id) => {
+  const modal = select('.modal-fixed');
+  modal.classList.add('show-modal');
+
+  handleCloseBtn(modal);
+  handleBackgroundClick(modal);
+  loadContentAndHandleArrows(modal, arr, id);
+};
+
+export { showModal };
