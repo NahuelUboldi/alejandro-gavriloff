@@ -15,6 +15,7 @@ import {
   showToggleBtn,
 } from './components/responsiveMenu.js';
 import { initLoaderAnim, initHeroAnim } from './animations/index.js';
+import initModal from './components/modal.js';
 
 // js media queries
 
@@ -74,7 +75,8 @@ const init = function initializeTheSiteFunctionality() {
   setCurrentYear();
   resizeBioContainer();
   initCanvas();
-  initGalleryPreview();
+  initModal();
+  // initGalleryPreview(); // its not working well
   initGallery();
   initSmoothScrollbar();
   initCarousels();

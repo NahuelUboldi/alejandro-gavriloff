@@ -6,7 +6,6 @@ import {
   filterPaintingsByID,
   getPage,
 } from '../../utils/utilities.js';
-import { showModal } from '../../utils/modal.js';
 
 const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage() {
   const page = getPage();

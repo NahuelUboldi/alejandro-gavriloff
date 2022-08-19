@@ -1,5 +1,6 @@
 import { select } from './utilities.js';
 const closeModal = () => {
+  const modal = select('.modal-fixed');
   modal.classList.remove('show-modal');
 };
 const loadModalContent = (img) => {
@@ -49,4 +50,4 @@ const showModal = (arr, id) => {
   loadContentAndHandleArrows(modal, arr, id);
 };
 
-export { showModal };
+export { showModal, closeModal };
