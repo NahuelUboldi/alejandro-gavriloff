@@ -3,6 +3,7 @@ import {
   filterPaintingsByQuality,
   filterPaintingsByTags,
   filterPaintingsByID,
+  excludePaintings,
   getPage,
 } from '../../utils/utilities.js';
 
@@ -28,10 +29,13 @@ const initCanvas = function initializeTheCanvasSection() {
   };
 
   let lastPictureId;
+
+  const finishedPaintings = [];
   const addLastPicturePainted = async () => {
     const paintings = await getPaintings();
     const paint = filterPaintingsByID(paintings, lastPictureId);
-    console.log('add last picture painted');
+    finishedPaintings.push(paint[0].id);
+
     const img = document.createElement('img');
     img.src = `${paint[0].img.sm}`;
     img.classList.add('painting-helped');
@@ -53,6 +57,7 @@ const initCanvas = function initializeTheCanvasSection() {
     const cuadros = await getPaintings();
     let filtered = filterPaintingsByQuality(cuadros);
     filtered = filterPaintingsByTags(filtered, 'religion', false);
+    filtered = excludePaintings(filtered, finishedPaintings);
     let randomNumber = Math.floor(Math.random() * filtered.length);
     canvasImgContainer.style.backgroundImage = `url("${filtered[randomNumber].img.lg}")`;
     lastPictureId = filtered[randomNumber].id;

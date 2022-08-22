@@ -89,7 +89,7 @@ const init = function initializeTheSiteFunctionality() {
   }
 };
 
-//site lifecycle - controled with barba app
+// site lifecycle - controled with barba app
 const pageTransitionLeave = function pageTransitionLeavingTheActualPage({
   container,
 }) {

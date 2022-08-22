@@ -1,9 +1,15 @@
+// TEMP COMPONENT,
+// THEN DELETE
+
 import { select } from './utilities.js';
+
 const closeModal = () => {
+  return;
   const modal = select('.modal-fixed');
   modal.classList.remove('show-modal');
 };
 const loadModalContent = (img) => {
+  return;
   const modalContent = modal.querySelector('.modal-content');
   modalContent.innerHTML = `
     <img src='${img}' alt='' />
@@ -42,6 +48,7 @@ const loadContentAndHandleArrows = (modal, arr, id) => {
 };
 
 const showModal = (arr, id) => {
+  return;
   const modal = select('.modal-fixed');
   modal.classList.add('show-modal');
 

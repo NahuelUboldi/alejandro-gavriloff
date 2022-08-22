@@ -57,6 +57,9 @@ const filterPaintingsByTags = (paintsArr, param, bool) => {
 const filterPaintingsByID = (paintsArr, id) => {
   return paintsArr.filter((paint) => paint.id === id);
 };
+const excludePaintings = (paintsArr, notWantedPaintings) => {
+  return paintsArr.filter((paint) => !notWantedPaintings.includes(paint.id));
+};
 
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -99,6 +102,7 @@ export {
   filterPaintingsByTags,
   filterPaintingsByID,
   filterPaintingsByPeriod,
+  excludePaintings,
   shuffleArray,
   isInViewport,
   getPage,
