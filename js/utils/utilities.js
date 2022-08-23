@@ -50,9 +50,9 @@ const filterPaintingsByPeriod = (paintsArr) => {
 };
 const filterPaintingsByTags = (paintsArr, param, bool) => {
   if (bool) {
-    return paintsArr.filter((paint) => paint.tags.includes('religion'));
+    return paintsArr.filter((paint) => paint.tags.includes(param));
   }
-  return paintsArr.filter((paint) => !paint.tags.includes('religion'));
+  return paintsArr.filter((paint) => !paint.tags.includes(param));
 };
 const filterPaintingsByID = (paintsArr, id) => {
   return paintsArr.filter((paint) => paint.id === id);

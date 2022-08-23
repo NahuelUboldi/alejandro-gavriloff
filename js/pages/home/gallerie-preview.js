@@ -21,24 +21,6 @@ const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage() {
 
   //functions
 
-  const showModal = async (e) => {
-    const classNeeded = e.target.classList.value
-      .split(' ')
-      .includes('modal-img');
-    // runAnimation();
-
-    if (classNeeded) {
-      modal.classList.remove('closed');
-      const paintings = await getPaintings();
-      const filtered = filterPaintingsByID(paintings, e.target.id);
-      modalContent.innerHTML = `
-      <img src='${filtered[0].img.lg}' alt='' />
-      `;
-    }
-    if (e.target.classList.value === 'modal-bg') {
-      closeModal();
-    }
-  };
   function getImagesQuantity() {
     const imagesContainerWidth = imagesContainer.getBoundingClientRect().width;
     const imagesForEachRow = Math.floor(
@@ -63,7 +45,7 @@ const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage() {
       const randomNum = Math.floor(Math.random() * filtered.length);
       const individualImage = `
       
-      <img class="modal-img" id="${filtered[randomNum].id}" src="${filtered[randomNum].img.md}"  alt="Cuadro del pintor argentino Alejandro Gavriloff" />
+      <img id="${filtered[randomNum].id}" src="${filtered[randomNum].img.md}"  alt="Cuadro del pintor argentino Alejandro Gavriloff" />
       
       `;
       imagesArr.push(individualImage);
