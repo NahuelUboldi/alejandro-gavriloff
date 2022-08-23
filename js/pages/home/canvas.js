@@ -16,10 +16,12 @@ const initCanvas = function initializeTheCanvasSection() {
   const btnClear = document.getElementById('btn-clear-canvas');
   const paintingCompletedSpan = document.querySelector('.paintings-completed');
   const canvasImgContainer = document.querySelector('.canvas-cont');
-  const picturesPaintedContainer = document.getElementById('pictures-painted');
+  const finishedPaintingsContainer =
+    document.getElementById('pictures-painted');
 
   let paintCounter = 0;
-
+  let lastPictureId;
+  const finishedPaintings = [];
   const resizeCanvas = () => {
     const parentHeigth = canvas.parentElement.getBoundingClientRect().height;
     const parentWidth = canvas.parentElement.getBoundingClientRect().width;
@@ -28,42 +30,45 @@ const initCanvas = function initializeTheCanvasSection() {
     canvas.height = parentHeigth;
   };
 
-  let lastPictureId;
+  const printFinishedPaintings = (paintings, finishedPaintings) => {
+    const htmlOutput = finishedPaintings.reduce((acc, p) => {
+      acc =
+        `<img src=${p.img.sm} class="painting-helped modal-img" id=${p.id} />` +
+        acc;
+      return acc;
+    }, '');
+    finishedPaintingsContainer.innerHTML = htmlOutput;
+  };
 
-  const finishedPaintings = [];
-  const addLastPicturePainted = async () => {
+  const addLastFinishedPainting = async () => {
     const paintings = await getPaintings();
     const paint = filterPaintingsByID(paintings, lastPictureId);
-    finishedPaintings.push(paint[0].id);
+    finishedPaintings.push(...paint);
 
-    const img = document.createElement('img');
-    img.src = `${paint[0].img.sm}`;
-    img.classList.add('painting-helped');
-    img.classList.add('modal-img');
-    img.setAttribute('id', paint[0].id);
-
-    picturesPaintedContainer.prepend(img);
+    printFinishedPaintings(paintings, finishedPaintings);
   };
 
-  const clearCanvas = async () => {
-    await addLastPicturePainted();
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    paintCounter += 1;
-    paintingCompletedSpan.innerHTML = paintCounter;
-    await getRandomPicture();
-  };
-
-  const getRandomPicture = async () => {
-    const cuadros = await getPaintings();
-    let filtered = filterPaintingsByQuality(cuadros);
+  const getRandomPainting = async () => {
+    const paintings = await getPaintings();
+    let filtered = filterPaintingsByQuality(paintings);
     filtered = filterPaintingsByTags(filtered, 'religion', false);
-    filtered = excludePaintings(filtered, finishedPaintings);
+    const finishedPaintingsIDs = finishedPaintings.map((p) => p.id);
+    filtered = excludePaintings(filtered, finishedPaintingsIDs);
     let randomNumber = Math.floor(Math.random() * filtered.length);
     canvasImgContainer.style.backgroundImage = `url("${filtered[randomNumber].img.lg}")`;
     lastPictureId = filtered[randomNumber].id;
   };
+
+  const clearCanvas = async () => {
+    await addLastFinishedPainting();
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    paintCounter += 1;
+    paintingCompletedSpan.innerHTML = paintCounter;
+    await getRandomPainting();
+  };
+
   const createCanvas = async () => {
-    await getRandomPicture();
+    await getRandomPainting();
     let painting = false;
     resizeCanvas();
     function startDrawingApp() {
