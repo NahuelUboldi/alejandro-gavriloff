@@ -75,7 +75,7 @@ const init = function initializeTheSiteFunctionality() {
   setCurrentYear();
   resizeBioContainer();
   initCanvas();
-  initModal();
+  //initModal();
   // initGalleryPreview(); // its not working well
   initGallery();
   initSmoothScrollbar();

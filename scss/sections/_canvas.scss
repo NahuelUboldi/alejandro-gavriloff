@@ -22,10 +22,9 @@ canvas {
   left: 0px;
 }
 #pictures-painted {
-  .painting-helped {
+  .finished-paintings {
     &:nth-child(1) {
       outline: solid 2px black;
     }
-
   }
 }

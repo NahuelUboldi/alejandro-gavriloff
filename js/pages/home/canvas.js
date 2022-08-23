@@ -7,6 +7,8 @@ import {
   getPage,
 } from '../../utils/utilities.js';
 
+import showModal from '../../components/modal.js';
+
 const initCanvas = function initializeTheCanvasSection() {
   const page = getPage();
   if (page !== 'index.html') return;
@@ -30,10 +32,16 @@ const initCanvas = function initializeTheCanvasSection() {
     canvas.height = parentHeigth;
   };
 
+  const addModalFunctionality = () => {
+    finishedPaintingsContainer.addEventListener('click', (e) => {
+      showModal(finishedPaintings, e.target.dataset.id);
+    });
+  };
+
   const printFinishedPaintings = (paintings, finishedPaintings) => {
     const htmlOutput = finishedPaintings.reduce((acc, p) => {
       acc =
-        `<img src=${p.img.sm} class="painting-helped modal-img" id=${p.id} />` +
+        `<img src=${p.img.sm} class="finished-paintings" data-id=${p.id} />` +
         acc;
       return acc;
     }, '');
@@ -44,7 +52,6 @@ const initCanvas = function initializeTheCanvasSection() {
     const paintings = await getPaintings();
     const paint = filterPaintingsByID(paintings, lastPictureId);
     finishedPaintings.push(...paint);
-
     printFinishedPaintings(paintings, finishedPaintings);
   };
 
@@ -114,5 +121,7 @@ const initCanvas = function initializeTheCanvasSection() {
   };
   window.addEventListener('resize', resizeCanvas);
   createCanvas();
+
+  addModalFunctionality();
 };
 export default initCanvas;
