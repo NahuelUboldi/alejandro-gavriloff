@@ -28,20 +28,20 @@
   }
   .arrow-btns {
     i {
-      @include transitionProperty;
-      position: absolute;
-      top: 50%;
-      left: 5%;
+      @include absoluteCenter;
+      font-size: 3rem;
+
+      left: 2%;
       cursor: pointer;
       transform: translate(-50%, 0%);
-      opacity: 0.5;
+      z-index: 99;
       &:hover {
-        opacity: 1;
+        color: #555;
       }
     }
 
     i.fa-chevron-right {
-      left: 95%;
+      left: 98%;
     }
   }
   .modal-content {
@@ -49,11 +49,14 @@
     max-width: 90%;
     max-height: 90%;
     z-index: 95;
-
+    background-color: transparent;
+    border: 0px;
+    overflow: hidden;
     @include absoluteCenter;
     img {
       max-width: 100%;
-      max-height: 100%;
+      max-height: auto;
+      object-fit: contain;
     }
   }
 }

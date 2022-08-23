@@ -145,7 +145,7 @@ const initPageTransitions =
           once() {
             if (mediaQueryMd.matches) {
               initLoaderAnim();
-              // loader.style.display = 'none';
+              //loader.style.display = 'none';
             }
             init();
           },
