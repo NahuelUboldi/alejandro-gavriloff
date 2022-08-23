@@ -2,7 +2,10 @@ const loadContent = (modalContent, img) => {
   modalContent.innerHTML = `<img src='${img.img.lg}' alt='pintura del artista Alejandro Gavriloff' />`;
 };
 
-const closeModal = (container) => container.classList.remove('show-modal');
+const closeModal = (container) => {
+  //!!!!KILL EVENT LISTENERS!!!!!
+  container.classList.remove('show-modal');
+};
 
 const showModal = (images, imgID) => {
   const modalContainer = document.querySelector('.modal-fixed');
@@ -14,21 +17,25 @@ const showModal = (images, imgID) => {
 
   modalContainer.classList.add('show-modal');
 
-  console.log({ images, imgID });
-  let imgIndex = 0;
-  for (let i = 0; i < images.length; i++) {
-    if ((images[i].id, imgID)) {
-      imgIndex = i;
-    }
-  }
-  console.log({ imgIndex });
-  loadContent(modalContent, images[0]);
+  let imgIndex = images.findIndex((e) => e.id == imgID);
+  loadContent(modalContent, images[imgIndex]);
+
+  modalArrowLeft.addEventListener('click', () => {
+    imgIndex = imgIndex - 1 < 0 ? images.length - 1 : imgIndex - 1;
+    loadContent(modalContent, images[imgIndex]);
+  });
+
+  modalArrowRight.addEventListener('click', () => {
+    imgIndex = imgIndex + 1 >= images.length ? 0 : imgIndex + 1;
+    loadContent(modalContent, images[imgIndex]);
+  });
 
   modalCloseBtn.addEventListener('click', () => {
     closeModal(modalContainer);
   });
-  modalBg.addEventListener('click', () => {
-    closeModal(modalContainer);
+  modalBg.addEventListener('click', (e) => {
+    if ([...e.target.classList].includes('modal-bg'))
+      closeModal(modalContainer);
   });
 };
 
