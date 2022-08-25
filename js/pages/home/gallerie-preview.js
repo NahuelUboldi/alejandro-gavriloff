@@ -3,72 +3,62 @@ import {
   getPaintings,
   filterPaintingsByQuality,
   filterPaintingsByTags,
-  filterPaintingsByID,
   getPage,
 } from '../../utils/utilities.js';
+import showModal from '../../components/modal.js';
 
-const initGalleryPreview = function initializeTheImgGalleryPreviewInHomePage() {
-  const page = getPage();
-  if (page !== 'index.html') return;
-
-  const imagesContainer = document.getElementById('images-container');
-  const mostrarCuadrosRandomBtn = document.getElementById(
-    'mostrar-cuadros-random'
-  );
-
-  //variables
-  const imagesRequiredWidth = 300; //400 default buts breaks in 400 px smaller screens
-
-  //functions
-
-  function getImagesQuantity() {
-    const imagesContainerWidth = imagesContainer.getBoundingClientRect().width;
-    const imagesForEachRow = Math.floor(
-      imagesContainerWidth / imagesRequiredWidth
-    );
-    if (imagesForEachRow < 3) {
-      return imagesForEachRow * 3;
-    } else {
-      return imagesForEachRow * 2;
-    }
-  }
-
-  //main function
-  async function showGalleryPreview() {
-    const imagesNeeded = getImagesQuantity();
-    let paintings = await getPaintings();
-    let filtered = filterPaintingsByQuality(paintings);
-    filtered = filterPaintingsByTags(filtered, 'religion', false);
-
-    let imagesArr = [];
-    for (let i = 0; i < imagesNeeded; i++) {
-      const randomNum = Math.floor(Math.random() * filtered.length);
-      const individualImage = `
-      
-      <img id="${filtered[randomNum].id}" src="${filtered[randomNum].img.md}"  alt="Cuadro del pintor argentino Alejandro Gavriloff" />
-      
-      `;
-      imagesArr.push(individualImage);
-    }
-
-    let imagesToShow = imagesArr.join('');
-    imagesContainer.innerHTML = imagesToShow;
-    gsap.from('.modal-img', {
-      scrollTrigger: '.modal-img',
-      duration: 1,
-      opacity: 0,
-      scale: 0.9,
-      stagger: {
-        from: 'random',
-        amount: 0.6,
-      },
-      delay: 0,
-    });
-  }
-  mostrarCuadrosRandomBtn.addEventListener('click', showGalleryPreview);
-  modalCloseBtn.addEventListener('click', closeModal);
-  document.addEventListener('click', showModal);
-  showGalleryPreview();
+const printRandomPaintings = (container, paintings) => {
+  const htmlOutput = paintings.reduce((acc, p) => {
+    acc =
+      `<img src=${p.img.sm} data-id=${p.id} alt="cuadro del pintor argentino Alejandro Gavriloff" />` +
+      acc;
+    return acc;
+  }, '');
+  container.innerHTML = htmlOutput;
 };
+
+const getRandomPaintings = (paintings, numWanted) => {
+  console.log({ paintings, numWanted });
+  const randomPaintings = [];
+  while (randomPaintings.length < numWanted) {
+    const randomNum = Math.floor(Math.random() * paintings.length);
+    if (
+      !randomPaintings.find((paint) => paint.id === paintings[randomNum].id)
+    ) {
+      randomPaintings.push(paintings[randomNum]);
+    }
+  }
+  return randomPaintings;
+};
+
+const filterPaintings = (paintings) => {
+  let filtered = filterPaintingsByQuality(paintings);
+  filtered = filterPaintingsByTags(filtered, 'religion', false);
+  return filtered;
+};
+
+const initGalleryPreview =
+  async function initializeTheImgGalleryPreviewInHomePage() {
+    const page = getPage();
+    if (page !== 'index.html') return;
+
+    const imagesContainer = document.querySelector('#images-container');
+    const randomBtn = document.querySelector('#random-btn');
+
+    const paintings = await getPaintings();
+    const filteredPaintings = filterPaintings(paintings);
+    const numWanted = 9;
+    let randomPaintings = getRandomPaintings(filteredPaintings, numWanted);
+
+    printRandomPaintings(imagesContainer, randomPaintings);
+
+    randomBtn.addEventListener('click', () => {
+      randomPaintings = getRandomPaintings(filteredPaintings, numWanted);
+      printRandomPaintings(imagesContainer, randomPaintings);
+    });
+    imagesContainer.addEventListener('click', (e) => {
+      showModal(randomPaintings, e.target.dataset.id);
+    });
+  };
 
 export default initGalleryPreview;

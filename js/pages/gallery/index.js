@@ -4,7 +4,7 @@ import {
   shuffleArray,
   getPage,
 } from '../../utils/utilities.js';
-import { showModal, closeModal } from '../../utils/modal.js';
+// import { showModal, closeModal } from '../../utils/modal.js';
 gsap.registerPlugin(ScrollTrigger);
 
 const initGallery = function initializeTheImgGallerySection() {
@@ -85,13 +85,13 @@ const initGallery = function initializeTheImgGallerySection() {
         state.categoryActive
       );
       const paintingID = e.target.attributes.key.value;
-      showModal(modal, paintings, paintingID);
+      // showModal(modal, paintings, paintingID);
     }
     if (
       e.target.id === 'close-modal-btn' ||
       e.target.classList.value === 'modal-bg'
     ) {
-      closeModal();
+      // closeModal();
     }
   };
   const handleBtnClick = (e) => {

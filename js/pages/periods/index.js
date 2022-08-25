@@ -2,13 +2,13 @@ import {
   getPaintings,
   filterPaintingsByPeriod,
   shuffleArray,
-  getPage
+  getPage,
 } from '../../utils/utilities.js';
-import { showModal, closeModal } from '../../utils/modal.js';
+// import { showModal, closeModal } from '../../utils/modal.js';
 
 const initCarousels = function initializeThePeriodsPageGliderCarousel() {
-  const page = getPage()
-  if(page !== "artistic-periods.html") return;
+  const page = getPage();
+  if (page !== 'artistic-periods.html') return;
 
   //selectors
   const periodGalleryCarousel = document.querySelectorAll('.period-gallery');
@@ -61,40 +61,40 @@ const initCarousels = function initializeThePeriodsPageGliderCarousel() {
     );
 
     //modal
-    const handleClick = (e) => {
-      if (e.target.id === 'carousel-img') {
-        if (e.target.classList.contains('first-period'))
-          showModal(
-            modal,
-            firstPeriodPaintingsShufled,
-            e.target.attributes.key.value
-          );
-        if (e.target.classList.contains('second-period'))
-          showModal(
-            modal,
-            secondPeriodPaintingsShufled,
-            e.target.attributes.key.value
-          );
-        if (e.target.classList.contains('third-period'))
-          showModal(
-            modal,
-            thirdPeriodPaintingsShufled,
-            e.target.attributes.key.value
-          );
-      }
-    };
+    // const handleClick = (e) => {
+    //   if (e.target.id === 'carousel-img') {
+    //     if (e.target.classList.contains('first-period'))
+    //       showModal(
+    //         modal,
+    //         firstPeriodPaintingsShufled,
+    //         e.target.attributes.key.value
+    //       );
+    //     if (e.target.classList.contains('second-period'))
+    //       showModal(
+    //         modal,
+    //         secondPeriodPaintingsShufled,
+    //         e.target.attributes.key.value
+    //       );
+    //     if (e.target.classList.contains('third-period'))
+    //       showModal(
+    //         modal,
+    //         thirdPeriodPaintingsShufled,
+    //         e.target.attributes.key.value
+    //       );
+    //   }
+    // };
 
     periodGalleryCarousel.forEach((gallery) => {
       gallery.addEventListener('click', handleClick);
     });
-    modal.addEventListener('click', (e) => {
-      if (
-        e.target.id === 'close-modal-btn' ||
-        e.target.classList.value === 'modal-bg'
-      ) {
-        closeModal();
-      }
-    });
+    // modal.addEventListener('click', (e) => {
+    //   if (
+    //     e.target.id === 'close-modal-btn' ||
+    //     e.target.classList.value === 'modal-bg'
+    //   ) {
+    //     closeModal();
+    //   }
+    // });
   };
 
   const startGlider = (glider, identificator) => {
@@ -141,9 +141,8 @@ const initCarousels = function initializeThePeriodsPageGliderCarousel() {
     startGlider(firstPeriodGlider, 'fp-');
     startGlider(secondPeriodGlider, 'sp-');
     startGlider(thirdPeriodGlider, 'tp-');
-
   };
-  main()
-}
+  main();
+};
 // window.addEventListener('load', main);
-export default initCarousels
+export default initCarousels;

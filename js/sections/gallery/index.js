@@ -3,13 +3,11 @@ import {
   filterPaintingsByCategory,
   shuffleArray,
 } from '../../utils/utilities.js';
-import { showModal, closeModal } from '../../utils/modal.js';
+// import { showModal, closeModal } from '../../utils/modal.js';
 gsap.registerPlugin(ScrollTrigger);
 
-
 const initGallery = function initializeTheImgGallerySection(page) {
-  
-  if(page !== "galeria.html") return;
+  if (page !== 'galeria.html') return;
 
   //selectors
   const filterBtnsContainer = document.querySelector('.gallery-btns-container');
@@ -105,13 +103,13 @@ const initGallery = function initializeTheImgGallerySection(page) {
         state.categoryActive
       );
       const paintingID = e.target.attributes.key.value;
-      showModal(modal, paintings, paintingID);
+      // showModal(modal, paintings, paintingID);
     }
     if (
       e.target.id === 'close-modal-btn' ||
       e.target.classList.value === 'modal-bg'
     ) {
-      closeModal();
+      // closeModal();
     }
   };
   const handleBtnClick = (e) => {
@@ -131,12 +129,11 @@ const initGallery = function initializeTheImgGallerySection(page) {
       loadImages();
       runGsapAnimationImg();
     }, 2500);
-      
   };
   filterBtnsContainer.addEventListener('click', handleBtnClick);
   galleryContainer.addEventListener('click', handleImgClick);
-  startGallery()
-}
+  startGallery();
+};
 
 // window.addEventListener('load', startGallery);
-export default initGallery
+export default initGallery;

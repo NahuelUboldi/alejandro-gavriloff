@@ -38,7 +38,7 @@ const initCanvas = function initializeTheCanvasSection() {
     });
   };
 
-  const printFinishedPaintings = (paintings, finishedPaintings) => {
+  const printFinishedPaintings = (finishedPaintings) => {
     const htmlOutput = finishedPaintings.reduce((acc, p) => {
       acc =
         `<img src=${p.img.sm} class="finished-paintings" data-id=${p.id} />` +
@@ -52,7 +52,7 @@ const initCanvas = function initializeTheCanvasSection() {
     const paintings = await getPaintings();
     const paint = filterPaintingsByID(paintings, lastPictureId);
     finishedPaintings.push(...paint);
-    printFinishedPaintings(paintings, finishedPaintings);
+    printFinishedPaintings(finishedPaintings);
   };
 
   const getRandomPainting = async () => {

@@ -1,4 +1,4 @@
-import { select, selectAll } from '../../utils/utilities.js';
+import { select } from '../../utils/utilities.js';
 const initQuoteAnim = function initializeTheQuoteAnimation() {
   const paragraph = select('#quote p');
   const fig = select('#quote figcaption');

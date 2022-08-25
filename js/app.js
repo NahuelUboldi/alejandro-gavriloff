@@ -11,11 +11,9 @@ import initSmoothScrollbar from './utils/smoothScrollbar.js';
 import initNavigation from './components/navigation.js';
 import {
   openCloseRespMenu,
-  hideToggleBtn,
   showToggleBtn,
 } from './components/responsiveMenu.js';
 import { initLoaderAnim, initHeroAnim } from './animations/index.js';
-import initModal from './components/modal.js';
 
 // js media queries
 
@@ -75,8 +73,8 @@ const init = function initializeTheSiteFunctionality() {
   setCurrentYear();
   resizeBioContainer();
   initCanvas();
-  //initModal();
-  // initGalleryPreview(); // its not working well
+  // initModal(); // not needed
+  initGalleryPreview(); // its not working well
   initGallery();
   initSmoothScrollbar();
   initCarousels();
