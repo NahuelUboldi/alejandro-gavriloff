@@ -37,6 +37,10 @@ const filterPaintings = (paintings) => {
   return filtered;
 };
 
+const calcNumOfPaintingsWanted = () => {
+  return 9;
+};
+
 const initGalleryPreview =
   async function initializeTheImgGalleryPreviewInHomePage() {
     const page = getPage();
@@ -47,7 +51,7 @@ const initGalleryPreview =
 
     const paintings = await getPaintings();
     const filteredPaintings = filterPaintings(paintings);
-    const numWanted = 9;
+    const numWanted = calcNumOfPaintingsWanted();
     let randomPaintings = getRandomPaintings(filteredPaintings, numWanted);
 
     printRandomPaintings(imagesContainer, randomPaintings);
