@@ -129,12 +129,16 @@ const initPageTransitions =
   function initializeThePageTransitionsBarbaAnimations() {
     barba.hooks.before(() => {
       document.querySelector('html').classList.add('is-transitioning');
+      console.log('barba before -> bug when surfing from responsive nave');
+      // openCloseRespMenu();
     });
     barba.hooks.after(() => {
       document.querySelector('html').classList.remove('is-transitioning');
+      console.log('barba after');
     });
     barba.hooks.enter(() => {
       window.scrollTo(0, 0);
+      console.log('barba enter');
     });
 
     barba.init({
