@@ -1,5 +1,8 @@
-import { select } from '../../utils/utilities.js';
+import { select, getPage } from '../../utils/utilities.js';
 const initQuoteAnim = function initializeTheQuoteAnimation() {
+  const page = getPage();
+  if (page !== 'index.html') return;
+
   const paragraph = select('#quote p');
   const fig = select('#quote figcaption');
   const tl = gsap.timeline({

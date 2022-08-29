@@ -18,7 +18,7 @@ const printRandomPaintings = (container, paintings) => {
 };
 
 const getRandomPaintings = (paintings, numWanted) => {
-  console.log({ paintings, numWanted });
+  // console.log({ paintings, numWanted });
   const randomPaintings = [];
   while (randomPaintings.length < numWanted) {
     const randomNum = Math.floor(Math.random() * paintings.length);

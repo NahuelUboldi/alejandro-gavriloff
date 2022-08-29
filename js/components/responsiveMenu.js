@@ -1,8 +1,9 @@
-import { select } from '../utils/utilities.js';
 export const openCloseRespMenu = function openOrCloseTheResponsiveMenu() {
-  const responsiveMenu = select('.responsive-menu');
-  const toggleBtn = select('.toggle-menu-btn');
+  const responsiveMenu = document.querySelector('.responsive-menu');
+  const toggleBtn = document.querySelector('.toggle-menu-btn');
+
   const isResponsiveMenuOpen = responsiveMenu.classList.contains('is-open');
+
   if (isResponsiveMenuOpen) {
     responsiveMenu.classList.remove('is-open');
     toggleBtn.classList.remove('toggle-btn-equis');
@@ -15,10 +16,12 @@ export const openCloseRespMenu = function openOrCloseTheResponsiveMenu() {
 };
 
 export const showToggleBtn = function showTheToggleBtnForResponsiveMenu() {
-  select('.toggle-menu-btn').classList.remove('toggle-btn-hidden');
+  document
+    .querySelector('.toggle-menu-btn')
+    .classList.remove('toggle-btn-hidden');
   return;
 };
 export const hideToggleBtn = function hideTheToggleBtnForResponsiveMenu() {
-  select('.toggle-menu-btn').classList.add('toggle-btn-hidden');
+  document.querySelector('.toggle-menu-btn').classList.add('toggle-btn-hidden');
   return;
 };

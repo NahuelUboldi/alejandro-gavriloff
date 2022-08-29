@@ -73,15 +73,14 @@ const init = function initializeTheSiteFunctionality() {
   setCurrentYear();
   resizeBioContainer();
   initCanvas();
-  // initModal(); // not needed
   initGalleryPreview(); // its not working well
   initGallery();
   initSmoothScrollbar();
   initCarousels();
   initBioPage();
-  select('.toggle-menu-btn').addEventListener('click', () =>
-    openCloseRespMenu()
-  );
+  document
+    .querySelector('.toggle-menu-btn')
+    .addEventListener('click', openCloseRespMenu);
   if (screenSize === 'tablet' || screenSize === 'big screen') {
     initBigScreenFunc();
   }
@@ -129,16 +128,17 @@ const initPageTransitions =
   function initializeThePageTransitionsBarbaAnimations() {
     barba.hooks.before(() => {
       document.querySelector('html').classList.add('is-transitioning');
-      console.log('barba before -> bug when surfing from responsive nave');
-      // openCloseRespMenu();
+      if (
+        document.querySelector('.responsive-menu').classList.contains('is-open')
+      ) {
+        openCloseRespMenu();
+      }
     });
     barba.hooks.after(() => {
       document.querySelector('html').classList.remove('is-transitioning');
-      console.log('barba after');
     });
     barba.hooks.enter(() => {
       window.scrollTo(0, 0);
-      console.log('barba enter');
     });
 
     barba.init({
