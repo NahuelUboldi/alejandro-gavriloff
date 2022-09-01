@@ -3,24 +3,14 @@ section#gallery-preview {
   @include backgroundTexture;
 
   #images-container {
+    display: grid;
+    gap: 0.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
     img {
-      flex: 1 1 300px;
-      height: 300px;
-      border: solid 1px #000;
+      width: 100%;
       object-fit: cover;
-      position: relative;
       cursor: pointer;
-      // &::before {
-      //   content: '';
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   width: 100%;
-      //   height: 100%;
-      //   background-color: red;
-      //   backdrop-filter: blur(1rem);
-      //   z-index: 10;
-      // }
     }
   }
 }

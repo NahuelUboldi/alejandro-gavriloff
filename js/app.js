@@ -138,6 +138,7 @@ const initPageTransitions =
       document.querySelector('html').classList.remove('is-transitioning');
     });
     barba.hooks.enter(() => {
+      console.log('enter');
       window.scrollTo(0, 0);
     });
 

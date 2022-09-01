@@ -38,7 +38,7 @@ const filterPaintings = (paintings) => {
 };
 
 const calcNumOfPaintingsWanted = () => {
-  return 9;
+  return 12;
 };
 
 const initGalleryPreview =

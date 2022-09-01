@@ -11413,12 +11413,14 @@ canvas {
 section#gallery-preview {
   background-image: url("../img/bg/dark-bg.png");
 }
+section#gallery-preview #images-container {
+  display: grid;
+  gap: 0.2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
 section#gallery-preview #images-container img {
-  flex: 1 1 300px;
-  height: 300px;
-  border: solid 1px #000;
+  width: 100%;
   object-fit: cover;
-  position: relative;
   cursor: pointer;
 }
 
