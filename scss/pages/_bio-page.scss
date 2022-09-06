@@ -1,9 +1,12 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 .bio-fase {
+  margin-bottom: 20rem;
+
   .img-mask {
     overflow: hidden;
     position: relative;
+
     img {
       position: absolute;
       top: -30%;

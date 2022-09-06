@@ -11640,6 +11640,9 @@ section#gallery-preview #images-container img {
   transform: scaleX(1);
 }
 
+.bio-fase {
+  margin-bottom: 20rem;
+}
 .bio-fase .img-mask {
   overflow: hidden;
   position: relative;
