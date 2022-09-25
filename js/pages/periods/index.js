@@ -4,7 +4,7 @@ import {
   shuffleArray,
   getPage,
 } from '../../utils/utilities.js';
-// import { showModal, closeModal } from '../../utils/modal.js';
+import showModal from '../../components/modal.js';
 
 const initCarousels = function initializeThePeriodsPageGliderCarousel() {
   const page = getPage();
@@ -12,7 +12,6 @@ const initCarousels = function initializeThePeriodsPageGliderCarousel() {
 
   //selectors
   const periodGalleryCarousel = document.querySelectorAll('.period-gallery');
-  const modal = document.getElementById('modal');
   const firstPeriodGlider = document.querySelector('.first-period-glider');
   const secondPeriodGlider = document.querySelector('.second-period-glider');
   const thirdPeriodGlider = document.querySelector('.third-period-glider');
@@ -24,9 +23,10 @@ const initCarousels = function initializeThePeriodsPageGliderCarousel() {
         acc +
         `<img 
       key=${paint.id} 
+      data-imgid=${paint.id} 
       src=${paint.img.sm} 
       id="carousel-img" 
-      class=${
+      data-imgperiod=${
         paint.period == '1'
           ? 'first-period'
           : paint.period == '2'
@@ -60,41 +60,19 @@ const initCarousels = function initializeThePeriodsPageGliderCarousel() {
       thirdPeriodPaintingsShufled
     );
 
-    //modal
-    // const handleClick = (e) => {
-    //   if (e.target.id === 'carousel-img') {
-    //     if (e.target.classList.contains('first-period'))
-    //       showModal(
-    //         modal,
-    //         firstPeriodPaintingsShufled,
-    //         e.target.attributes.key.value
-    //       );
-    //     if (e.target.classList.contains('second-period'))
-    //       showModal(
-    //         modal,
-    //         secondPeriodPaintingsShufled,
-    //         e.target.attributes.key.value
-    //       );
-    //     if (e.target.classList.contains('third-period'))
-    //       showModal(
-    //         modal,
-    //         thirdPeriodPaintingsShufled,
-    //         e.target.attributes.key.value
-    //       );
-    //   }
-    // };
-
+    const paintingsCollections = {
+      'first-period': firstPeriodPaintingsShufled.reverse(),
+      'second-period': secondPeriodPaintingsShufled.reverse(),
+      'third-period': thirdPeriodPaintingsShufled.reverse(),
+    };
     periodGalleryCarousel.forEach((gallery) => {
-      gallery.addEventListener('click', handleClick);
+      gallery.addEventListener('click', (e) => {
+        if (e.target.id !== 'carousel-img') return;
+        const imgId = e.target.dataset.imgid;
+        const paintings = paintingsCollections[e.target.dataset.imgperiod];
+        showModal(paintings, imgId);
+      });
     });
-    // modal.addEventListener('click', (e) => {
-    //   if (
-    //     e.target.id === 'close-modal-btn' ||
-    //     e.target.classList.value === 'modal-bg'
-    //   ) {
-    //     closeModal();
-    //   }
-    // });
   };
 
   const startGlider = (glider, identificator) => {
