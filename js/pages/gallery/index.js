@@ -4,7 +4,8 @@ import {
   shuffleArray,
   getPage,
 } from '../../utils/utilities.js';
-// import { showModal, closeModal } from '../../utils/modal.js';
+import showModal from '../../components/modal.js';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const initGallery = function initializeTheImgGallerySection() {
@@ -14,7 +15,6 @@ const initGallery = function initializeTheImgGallerySection() {
   //selectors
   const filterBtnsContainer = document.querySelector('.gallery-btns-container');
   const galleryContainer = document.getElementById('img-container');
-  const modal = document.getElementById('modal');
 
   //state
   const state = {
@@ -63,7 +63,7 @@ const initGallery = function initializeTheImgGallerySection() {
     return pantingsDeepCopy.reduce((acc, paint) => {
       return (
         acc +
-        `<img  loading="lazy" src=${paint.img.sm} alt="pintura del artista Alex Gavriloff" class="gallery-img" key=${paint.id} />`
+        `<img loading="lazy" src=${paint.img.sm} alt="pintura del artista Alex Gavriloff" class="gallery-img" key=${paint.id} data-imgid=${paint.id} />`
       );
     }, '');
   };
@@ -79,25 +79,15 @@ const initGallery = function initializeTheImgGallerySection() {
 
   //handlers
   const handleImgClick = (e) => {
-    if (e.target.id === 'gallery-img') {
-      const paintings = filterPaintingsByCategory(
-        state.paintingsShufled,
-        state.categoryActive
-      );
-      const paintingID = e.target.attributes.key.value;
-      // showModal(modal, paintings, paintingID);
-    }
-    if (
-      e.target.id === 'close-modal-btn' ||
-      e.target.classList.value === 'modal-bg'
-    ) {
-      // closeModal();
-    }
+    if (!e.target.classList.contains('gallery-img')) return;
+    const target = e.target.dataset.imgid;
+    const paintings = JSON.parse(JSON.stringify(state.paintingsShufled));
+    showModal(paintings.reverse(), target);
   };
   const handleBtnClick = (e) => {
     if (e.target.classList.value.split(' ').includes('gallery-filter-btn')) {
       state.categoryActive = e.target.innerText;
-      loadFilterBtns(state.paintings);
+      loadFilterBtns();
       loadImages();
       // runGsapAnimationImg();
     }
