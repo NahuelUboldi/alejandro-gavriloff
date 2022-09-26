@@ -2,29 +2,34 @@ $size-value: 100px;
 // .canvas-shadow {
 //   @include shadowDrop;
 // }
-.canvas-cont {
-  outline: solid 0.5rem black;
-  transform: translateX(0.5rem);
-  border-radius: 0.5rem;
-  background-image: none;
-  background-size: cover;
-  background-position: center;
-  font-size: 10px;
-  min-height: 500px;
-  isolation: isolate;
-  position: relative;
-}
-canvas {
-  background-color: rgba(255, 255, 255, 0.9);
-  mix-blend-mode: screen;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-#pictures-painted {
-  .finished-paintings {
-    &:nth-child(1) {
-      outline: solid 2px black;
+section#canvas {
+  @media (max-width: 768px) {
+    display: none;
+  }
+  .canvas-cont {
+    outline: solid 0.5rem black;
+    transform: translateX(0.5rem);
+    border-radius: 0.5rem;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    font-size: 10px;
+    min-height: 500px;
+    isolation: isolate;
+    position: relative;
+  }
+  canvas {
+    background-color: rgba(255, 255, 255, 0.9);
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  #pictures-painted {
+    .finished-paintings {
+      &:nth-child(1) {
+        outline: solid 2px black;
+      }
     }
   }
 }

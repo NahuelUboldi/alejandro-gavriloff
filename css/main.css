@@ -11385,7 +11385,12 @@ body {
   background-image: url(../../img/carousel/pic-07.jpg);
 }
 
-.canvas-cont {
+@media (max-width: 768px) {
+  section#canvas {
+    display: none;
+  }
+}
+section#canvas .canvas-cont {
   outline: solid 0.5rem black;
   transform: translateX(0.5rem);
   border-radius: 0.5rem;
@@ -11397,16 +11402,14 @@ body {
   isolation: isolate;
   position: relative;
 }
-
-canvas {
+section#canvas canvas {
   background-color: rgba(255, 255, 255, 0.9);
   mix-blend-mode: screen;
   position: absolute;
   top: 0px;
   left: 0px;
 }
-
-#pictures-painted .finished-paintings:nth-child(1) {
+section#canvas #pictures-painted .finished-paintings:nth-child(1) {
   outline: solid 2px black;
 }
 

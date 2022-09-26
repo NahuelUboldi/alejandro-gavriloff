@@ -50,6 +50,7 @@ const handleMqLgChange = function handleTheMediaQueryLargeScreenChange(e) {
 
 const handleMqMdChange = function handleTheMediaQueryMediumScreenChange(e) {
   if (e.matches) {
+    console.log('hola');
     showToggleBtn();
     return;
   }
