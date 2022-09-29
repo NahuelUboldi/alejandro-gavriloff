@@ -1,4 +1,4 @@
-import { select, selectAll, getPage } from '../../utils/utilities.js';
+import { selectAll, getPage } from '../../utils/utilities.js';
 
 const animParallaxText = function animTheTextWithParallaxEffect() {
   selectAll('.with-parallax').forEach((section) => {

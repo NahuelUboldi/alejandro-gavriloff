@@ -61,24 +61,26 @@ const initBigScreenFunc = function initializeTheFunctionalityInBigScreens() {
   initHeroAnim();
   initQuoteAnim();
   initArtisticPeriods();
+  initBioPage();
+  resizeBioContainer();
 };
 
-const handleScreenResize = function handleTheFunctionalityWhenScreenResize() {
-  resizeBioContainer();
+const handleScreenResize = function handleTheFunctionalityWhenScreenResize(e) {
+  const windowWidth = e.currentTarget.innerWidth;
+  resizeBioContainer(windowWidth);
   initCanvas();
-  initGalleryPreview();
+  // initGalleryPreview();
 };
 
 const init = function initializeTheSiteFunctionality() {
   checkInitialScreenSize();
   setCurrentYear();
-  resizeBioContainer();
   initCanvas();
-  initGalleryPreview(); // its not working well
+  initGalleryPreview();
   initGallery();
   initSmoothScrollbar();
   initCarousels();
-  initBioPage();
+  // initBioPage();
   document
     .querySelector('.toggle-menu-btn')
     .addEventListener('click', openCloseRespMenu);
