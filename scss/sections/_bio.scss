@@ -1,5 +1,5 @@
-@use "../components/mixins" as *;
-@use "../custom" as *;
+@use '../components/mixins' as *;
+@use '../custom' as *;
 .columna-3d {
   perspective: 500px;
 }
@@ -27,7 +27,7 @@
   transform-style: preserve-3d;
 }
 .fondo {
-  background-image: url(../../img/bio/fondo.png);
+  background-image: url(../img/bio/fondo.png);
   background-size: cover;
   background-position: center;
   transform: scale(1.1) translate3d(0, 0, -20px);
@@ -35,7 +35,7 @@
   z-index: 30;
 }
 .caballo {
-  background-image: url(../../img/bio/caballo.png);
+  background-image: url(../img/bio/caballo.png);
   background-size: cover;
   background-position: center;
   transform: translate3d(5px, 0, 0px);
@@ -43,7 +43,7 @@
   z-index: 31;
 }
 .cactus {
-  background-image: url(../../img/bio/cactus.png);
+  background-image: url(../img/bio/cactus.png);
   background-size: cover;
   background-position: center;
   transform: translate3d(10px, 0, 20px);

@@ -79,18 +79,17 @@ const initCanvas = function initializeTheCanvasSection() {
     let painting = false;
     resizeCanvas();
     function startDrawingApp() {
-      canvas.style.cursor = 'url("../img/icons/pincel-icon.png"), auto';
+      canvas.style.cursor = 'url("img/icons/pincel-icon.png"), auto';
 
       function startPosition(e) {
         painting = true;
-        canvas.style.cursor =
-          'url("../img/icons/pincel-pressed-icon.png"), auto';
+        canvas.style.cursor = 'url("img/icons/pincel-pressed-icon.png"), auto';
         paint(e);
       }
 
       function finishedPosition() {
         painting = false;
-        canvas.style.cursor = 'url("../img/icons/pincel-icon.png"), auto';
+        canvas.style.cursor = 'url("img/icons/pincel-icon.png"), auto';
         context.beginPath();
       }
 

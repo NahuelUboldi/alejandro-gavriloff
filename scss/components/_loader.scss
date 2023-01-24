@@ -5,7 +5,7 @@
   min-height: 100vh;
   width: 100%;
   background-color: #eee;
-  background-image: url('../../img/bg/image-2bufu55o.png');
+  background-image: url('../img/bg/image-2bufu55o.png');
   top: 0%;
   left: 0;
   // visibility: hidden;
@@ -40,26 +40,26 @@
         opacity: 0;
 
         &:nth-child(1) {
-          background-image: url('../../img/hero/cuadro-01.jpg');
+          background-image: url('../img/hero/cuadro-01.jpg');
         }
         &:nth-child(2) {
-          background-image: url('../../img/hero/cuadro-02.jpg');
+          background-image: url('../img/hero/cuadro-02.jpg');
         }
         &:nth-child(3) {
-          background-image: url('../../img/hero/cuadro-03.jpg');
+          background-image: url('../img/hero/cuadro-03.jpg');
         }
         &:nth-child(4) {
-          background-image: url('../../img/hero/cuadro-06.jpg');
+          background-image: url('../img/hero/cuadro-06.jpg');
         }
         &:nth-child(5) {
-          background-image: url('../../img/hero/cuadro-07.jpg');
+          background-image: url('../img/hero/cuadro-07.jpg');
         }
         &:nth-child(6) {
-          background-image: url('../../img/hero/cuadro-09.jpg');
+          background-image: url('../img/hero/cuadro-09.jpg');
         }
       }
       .loader-logo {
-        background: url('../../img/logo-firma.svg') no-repeat center;
+        background: url('../img/logo-firma.svg') no-repeat center;
         -webkit-box-shadow: none;
         box-shadow: none;
         background-size: contain;
@@ -70,7 +70,7 @@
 }
 .page-transition-logo {
   background-color: red;
-  background: url('../../img/logo-firma.svg') no-repeat center;
+  background: url('../img/logo-firma.svg') no-repeat center;
   background-size: 20%;
   position: absolute;
   top: 0px;
