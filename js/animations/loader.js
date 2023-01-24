@@ -18,6 +18,7 @@ const initLoaderAnim = function initializeTheLoaderAnimation() {
         y: '0vh',
         stagger: 0.05,
         delay: 0.1,
+        opacity: 1,
         onUpdate: () => window.scrollTo(0, 0),
       },
       0

@@ -11017,6 +11017,11 @@ body {
   overflow: hidden;
   z-index: 99;
 }
+@media (max-width: 768px) {
+  .loader {
+    display: none;
+  }
+}
 .loader .loader__container {
   position: absolute;
   width: 100%;
@@ -11044,6 +11049,7 @@ body {
   background-size: cover;
   background-position: center;
   background-size: cover;
+  opacity: 0;
 }
 .loader .loader__container .inner .loader-paint:nth-child(1) {
   background-image: url("../../img/hero/cuadro-01.jpg");
@@ -11068,6 +11074,7 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
   background-size: contain;
+  opacity: 0;
 }
 
 .page-transition-logo {
